@@ -8,6 +8,7 @@ const audioHalo         = document.getElementById('audio-halo')
 const btnReproducir     = document.getElementById('reproducir')
 
 let i = 0;
+let t = 't'
 console.log(audioHalo)
 btnReproducir.addEventListener('click',()=>{
     (i >1) ? i = 0 : '' ;
