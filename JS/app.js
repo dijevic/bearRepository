@@ -16,7 +16,7 @@ btnReproducir.addEventListener('click',()=>{
     console.log(i)
     
 })
-audioHalo.reset()
+
 
 
 
