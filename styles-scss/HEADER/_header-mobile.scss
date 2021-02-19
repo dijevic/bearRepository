@@ -1,0 +1,204 @@
+
+@keyframes hidde{
+    0%{transform: translate(-100%);}
+    100%{transform: translate(0);}
+}
+@keyframes opacidad {
+    25%{opacity:0.25}
+    50%{opacity:0.5}
+    75%{opacity:0.75}
+    100%{opacity:1}
+
+}
+@keyframes hiddeback{
+    0%{transform: translate(0);}
+    100%{transform: translate(-100%0);}
+}
+
+@keyframes widthpositive {
+    25%{width:25px}
+    50%{width:50px}
+    75%{width:75px}
+    100%{width:100px}
+
+}
+@keyframes widthBars {
+    25%{width: 20px;}
+    25%{width: 20px;}
+    25%{width: 20px;}
+    25%{width: 20px;}
+
+}
+
+
+
+
+
+
+.header{
+    width: 100%;
+    height: 80px;
+    background: #ffff;
+    display: flex;
+    justify-content: space-between;
+    background:#172A3A;
+    border-bottom: #DEFFFC 10px solid;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    align-items:  center;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    .logo{
+        margin-left: 20px;
+        color:#fff;
+        font-size:18px;
+        animation-name: hidde , opacidad;
+        animation-duration:1s;
+        animation-iteration-count: initial;
+
+
+        .desarrollo-titulo{
+            color: #E29578;
+            font-family: 'Oswald';
+            display: block;
+        }
+    }
+
+    .btn-bars{
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content:center;
+        flex-direction:column;
+        align-content: center;
+        margin-right:20px;
+        position: relative;
+        align-items: center;
+        transition: 1s ease all;
+      
+      
+    
+      
+        span{
+            width: 25px;
+            height:3px;
+            background: #fff;
+            display: block;
+            border-radius:2px;
+            margin-top:4px
+           
+        }
+        .line-top{
+            &.actived{
+               transition: 0.8s ease all;
+               width: 0px;
+               height:0px;
+               position: absolute;
+               top: 5px;
+
+            }
+            &.nonactived{
+                transition: 0.8s ease all;
+                height:3px;
+                width: 25px;
+            }
+        }
+        .line-center{
+           &.actived{
+            transition: 0.5s ease all;
+            position: absolute;
+            transform:rotate(45deg)
+           }
+           &.nonactived{
+            transition: 0.5s ease all;
+            transform:rotate(0deg);
+           
+
+
+
+           }
+
+        }
+        .line-bottom{
+            &.actived{
+                transition: 0.5s ease all;
+                position: absolute;
+                transform:rotate(-45deg)
+            }
+            &.nonactived{
+                transition: 0.5s ease all;
+                transform:rotate(0deg)
+    
+               }
+        }
+    }
+
+
+
+    .menu{
+        width: 50%;
+        margin-left: -100%;
+        height:400px;
+        position: absolute;
+        border-top: 2px solid #ffffff;
+        background:rgba($color: #172A3A, $alpha: 0.8);
+        top: 80px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        transition: 0.5s ease-in-out all;
+        &::after{
+            content: '';
+            display: block;
+            width: 30%;
+            background:#DEFFFC;
+            height:5px;
+            position: absolute;
+            bottom:10px;
+            left: 36%;
+            border-radius: 15px;
+         
+        }
+        &.actived{
+            margin: 0;
+        }
+
+        ul{
+            li{
+                a{
+                    color:#fff;
+                    font-size: 22px;
+                    font-weight:400;
+                    display: inline-block;
+                    padding: 20px;
+                    position: relative;
+                    text-transform: uppercase;
+                    &.actived{
+                        animation-name: hidde , opacidad;
+                        animation-duration:1s;
+                        animation-iteration-count: initial;
+                    }
+                    &.nonactived{
+                    transition: 0.5s ease-in-out all;
+                     transform:translate(0px);
+                     transform:translate(-100%);
+
+
+                    }
+                   
+                   
+                    
+                    
+                }
+                .fist-letter{
+                    color: #E29578;
+                    font-family: 'Oswald';
+                    font-weight: 494;
+                    font-size:26px
+                }
+            }
+        }
+    }
+
+}

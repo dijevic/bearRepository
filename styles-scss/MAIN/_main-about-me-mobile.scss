@@ -1,0 +1,121 @@
+@keyframes cambiar{
+    0%{background:url('/assets/images/emilio-garcia-BnXwRYu-S90-unsplash.jpg');background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        };
+    25%{background:url('/assets/images/emilio-garcia-UGNXT7QryGA-unsplash.jpg');background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;}
+    50%{background:url('/assets/images/ken-cheung-MKv9gQHpICM-unsplash.jpg');background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;}
+    75%{background:url('/assets/images/emilio-garcia-UGNXT7QryGA-unsplash.jpg');background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;}
+    100%{background:url('/assets/images/frander-rosales-v-aXlNNbGWhuI-unsplash.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;}
+}
+.main{
+    .container-presentation{
+        height:600px;
+        width: 100%;
+        animation-name: cambiar ;
+        animation-duration:10s;
+        animation-iteration-count: infinite;
+      
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        position: absolute;
+        margin-top: 24px;
+        padding-left: 20px;
+        padding-right: 20px;
+        transition: 3s ease-in-out all;
+        filter: grayscale(2);
+
+
+        .presentation{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+            z-index: 6;
+            margin-bottom: 20px;
+              button{
+                width: 120px;
+                display: block;
+                border-radius:10px;
+                font-family: 'Oswald';
+                font-weight: 494;
+                font-style: italic;
+                cursor: pointer;
+                position:relative;
+                top: 70px;
+                background: #defffc;
+                box-shadow: 5px 2px #000;
+                transition: 1s ease all;
+                font-size:16px;
+                border: 2px solid transparent;
+
+                &:hover{
+                    width: 150px;
+                    color: #fff;
+                    border: 2px solid rgba($color: #fff, $alpha: 1.0);
+                    background: rgba($color: #000000, $alpha: 0.2);
+                    box-shadow: 5px 2px #fff;
+
+                }
+            
+              }
+
+            .welcome-text{
+                font-family: 'Oswald';
+                font-weight: 494;
+                font-size:50px;
+                line-height:62px;
+                z-index: 6;
+             
+            }
+            .message{
+                line-height: 32px;
+                font-family:'Oswald';
+                font-weight: 494;
+                font-size: 25px;
+                color: #fff;
+                position: relative;
+                margin-top: 15px;
+                letter-spacing: 5px;
+                .name{
+                    position: absolute;
+                    right: 0;
+                    color: #000;
+                    font-family: 'Truculenta';
+                    font-weight: 500;
+                    
+
+
+
+                }
+                .quotation{
+                    position: relative;
+                    top: -10px;
+                    left:-10px;
+                    font-size:42px;
+                    font-style: italic;
+                }
+                .quotation1{
+                    position: relative;
+                    top: -10px;
+                    right:-10px;
+                    font-size:42px;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}
