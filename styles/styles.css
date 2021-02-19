@@ -175,7 +175,7 @@ body .punto {
 .header .logo {
   margin-left: 20px;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   -webkit-animation-name: hidde , opacidad;
           animation-name: hidde , opacidad;
   -webkit-animation-duration: 1s;
@@ -335,8 +335,11 @@ body .punto {
   font-size: 26px;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 320px) {
   .header .logo {
+    font-size: 14px;
+  }
+  .header .logo .desarrollo-titulo {
     font-size: 14px;
   }
 }

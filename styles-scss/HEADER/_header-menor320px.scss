@@ -1,7 +1,10 @@
-@media screen and(max-width:300px){
+@media screen and(max-width:320px){
     .header{
         .logo{
-            font-size:14px
+            font-size:14px;
+            .desarrollo-titulo{
+                font-size: 14px;
+            }
         }
     }
 }
