@@ -1,0 +1,150 @@
+
+
+.main{
+    .about-me{
+        margin-top: 35px;
+        width:100%;
+        height: auto;
+        animation-name: hidde;
+        transition: 5s ease all;
+        animation-duration: 0.6s;
+        animation-iteration-count: initial;
+       
+        
+        .titulo-about{
+           text-align: left;
+            margin: 0 auto;
+            font-size: 28px;
+            line-height: 42px;
+            font-weight: 500;
+            margin: 0 auto;
+            display: inline;
+            background:#508991;
+            padding: 0px 20px 0px 20px;
+            height: 120px;
+            color: #fff;
+           
+    
+
+
+            .letter{
+                font-size: 75px;
+                color: #ffff;
+                line-height: 42px;
+                text-shadow: 4px 4px 4px #000;
+
+            }
+        }
+        .contenedor{
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            justify-items: center;
+            grid-gap:30px;
+            
+            .story1{
+               border-radius: 20px;
+               overflow: hidden;
+               max-width: 390px;
+               box-shadow: 0px 0px 0px  #000;
+               margin-top: 20px;
+               background:url('/assets/images/scott-goodwill-PCGYCkfNgtg-unsplash.jpg') #172A3A;
+               background-position: center;
+               background-repeat: no-repeat;
+               background-size: cover;
+               padding: 20px;
+               overflow: visible;
+            
+               .thumb-greet{
+                   display: flex;
+                   align-items: center;
+                   justify-content: space-between;
+               }
+                img{
+                    width:  40%;
+                    max-height: 300px;
+                    max-width: 300px;
+                    filter: grayscale(10);
+                    border-bottom-right-radius:20px ;
+                    border-top-left-radius:20px ;
+                    display: block;
+                    animation-name: hidde;
+                    transition: 5s ease all;
+                    animation-duration: 1.8s;
+                    animation-iteration-count: initial;
+
+                   
+
+                }
+                .greet{
+                    display: inline-block;
+                    font-size: 55px;
+                    color: #fff;
+                    font-family: 'oswald';
+                    font-weight: 494;
+                    animation-name: hidde;
+                    transition: 5s ease all;
+                    animation-duration: 1s;
+                    animation-iteration-count: initial;
+                   
+
+                    .hi{
+                        font-size: 68px;
+                        font-family: 'truculenta';
+                       color: #508991;
+                       margin-right: 20px;
+                       
+
+                    }
+
+                }
+                .subtitulo{
+                    margin-top: 20px;
+                    width: 90%;
+                    text-align: center;
+                    margin: 0px auto;
+                    margin-top: 10px;
+                    font-family: 'oswald';
+                    font-weight: 494;
+                    color: #fff;
+                    margin-right: -10px;
+                    font-size: 30px;
+                    animation-name: hidde;
+                    transition: 5s ease all;
+                    animation-duration: 2.5s;
+                    animation-iteration-count: initial;
+                    .letter{
+                        color: #508991;
+                        font-family: 'oswald';
+                        font-size: 42px;
+
+                    }
+                  
+                }
+                .text{
+                    color:  #fff;
+                    font-size: 22px;
+                    text-align: left;
+                    margin-top: 10px;
+                    animation-name: hidde;
+                    animation-duration: 3.5s;
+                    animation-iteration-count: initial;
+                    .name{
+                        color:#E29578 ;
+                        
+                        font-family: 'oswald';
+                        font-weight: 400;
+                        font-size: 29px
+                        
+                    }
+                    .carrera{
+                        @extend .name;
+                        font-size: 25px;
+
+                    }
+                }
+            }
+        }
+    }
+}

@@ -5,17 +5,10 @@ const btnBars           = document.querySelector('.btn-bars');
 const menu              = document.querySelector('.menu');
 const optionsMenu       = document.querySelectorAll('.navBarOptions');
 const audioHalo         = document.getElementById('audio-halo')
-const btnReproducir     = document.getElementById('reproducir')
+const message           = document.querySelector('.message');
 
 let i = 0;
 
-
-// reproductor de prueba
-btnReproducir.addEventListener('click',()=>{
-    (i >1) ? i = 0 : '' ;
-    (i == 0) ? audioHalo.play() : audioHalo.pause();
-    i++
-})
 
 
 
@@ -31,12 +24,12 @@ btnBars.addEventListener('click',()=>{
         barTop.classList.add('actived');
         barCenter.classList.add('actived');
         barBottom.classList.add('actived');
-      
-
+        
+        
         // agg propiedades al menu
-
+        
         menu.classList.toggle('actived');
-
+        
         // agg efecto a mi menu;
 
         optionsMenu.forEach(option=>{
@@ -46,7 +39,7 @@ btnBars.addEventListener('click',()=>{
             },1000)
 
         })
-    
+        
     }else{
         // remuevo propiedades a mis bars 
         barTop.classList.remove('actived');
@@ -57,25 +50,35 @@ btnBars.addEventListener('click',()=>{
         barTop.classList.add('nonactived');
 
         
-
+        
         // remuevo el efecto a mis opcione-menu
-
+        
         optionsMenu.forEach(option=>{
             option.classList.add('nonactived')
             setTimeout(()=>{
                 option.classList.remove('nonactived')
             },1000)
-
+            
         })
         setTimeout(() => {
             // remuevo la clase actived a el menu para crear un efecto con delay
-        menu.classList.remove('actived');
+            menu.classList.remove('actived');
         },200);
-
+        
     }
-
-
+    
+    
 })
-// galeria imagenes PRUEBA
-let sobreMe = document.querySelector('.about-me');
+let y;
 
+const menuSticky = ()=>{
+    window.onscroll = function() {
+        y = window.scrollY;
+        console.log(y)
+        let ejeY = Math.round(y)
+        let pantalla = window.screen.width;
+    
+    }
+}
+
+menuSticky()

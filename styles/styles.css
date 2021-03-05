@@ -150,6 +150,9 @@ body .punto {
 }
 
 .header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   width: 100%;
   height: 80px;
   background: #ffff;
@@ -160,13 +163,12 @@ body .punto {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: #172A3A;
-  border-bottom: #DEFFFC 10px solid;
+  border-bottom: #fff 10px solid;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 20;
@@ -275,6 +277,7 @@ body .punto {
   height: 400px;
   position: absolute;
   border-top: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
   background: rgba(23, 42, 58, 0.8);
   top: 80px;
   border-top-right-radius: 15px;
@@ -455,69 +458,73 @@ body .punto {
   }
 }
 
-@-webkit-keyframes cambiar {
-  0% {
-    background: url("/assets/images/emilio-garcia-BnXwRYu-S90-unsplash.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  25% {
-    background: url("/assets/images/emilio-garcia-UGNXT7QryGA-unsplash.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  50% {
-    background: url("/assets/images/ken-cheung-MKv9gQHpICM-unsplash.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+@-webkit-keyframes trasladar {
+  33% {
+    -webkit-transform: translate(-180%);
+            transform: translate(-180%);
   }
   75% {
-    background: url("/assets/images/emilio-garcia-UGNXT7QryGA-unsplash.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    -webkit-transform: translate(180%);
+            transform: translate(180%);
+    z-index: -1;
   }
   100% {
-    background: url("/assets/images/frander-rosales-v-aXlNNbGWhuI-unsplash.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    z-index: 2;
   }
 }
 
-@keyframes cambiar {
-  0% {
-    background: url("/assets/images/emilio-garcia-BnXwRYu-S90-unsplash.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  25% {
-    background: url("/assets/images/emilio-garcia-UGNXT7QryGA-unsplash.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  50% {
-    background: url("/assets/images/ken-cheung-MKv9gQHpICM-unsplash.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+@keyframes trasladar {
+  33% {
+    -webkit-transform: translate(-180%);
+            transform: translate(-180%);
   }
   75% {
-    background: url("/assets/images/emilio-garcia-UGNXT7QryGA-unsplash.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    -webkit-transform: translate(180%);
+            transform: translate(180%);
+    z-index: -1;
   }
   100% {
-    background: url("/assets/images/frander-rosales-v-aXlNNbGWhuI-unsplash.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    z-index: 2;
+  }
+}
+
+@-webkit-keyframes welcometext {
+  0% {
+    font-size: 100px;
+  }
+  100% {
+    font-size: 50px;
+  }
+}
+
+@keyframes welcometext {
+  0% {
+    font-size: 100px;
+  }
+  100% {
+    font-size: 50px;
+  }
+}
+
+@-webkit-keyframes messagetext {
+  0% {
+    font-size: 0px;
+  }
+  100% {
+    font-size: 25px;
+  }
+}
+
+@keyframes messagetext {
+  0% {
+    font-size: 0px;
+  }
+  100% {
+    font-size: 25px;
   }
 }
 
@@ -525,16 +532,17 @@ body .punto {
   height: 600px;
   width: 100%;
   background: #fff;
+  background: url("/assets/images/emilio-garcia-UGNXT7QryGA-unsplash.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
-  position: absolute;
-  margin-top: 24px;
   padding-left: 20px;
   padding-right: 20px;
   -webkit-transition: 3s ease-in-out all;
   transition: 3s ease-in-out all;
+  -webkit-filter: grayscale(2);
+          filter: grayscale(2);
 }
 
 .main .container-presentation .presentation {
@@ -550,14 +558,14 @@ body .punto {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   z-index: 6;
   margin-bottom: 20px;
 }
 
-.main .container-presentation .presentation button {
+.main .container-presentation .presentation .start-here {
   width: 120px;
   display: block;
   border-radius: 10px;
@@ -577,6 +585,7 @@ body .punto {
   border: 2px solid transparent;
   border-top: 1px solid #172A3A;
   border-left: 1px solid #172A3A;
+  text-align: center;
 }
 
 .main .container-presentation .presentation .welcome-text {
@@ -585,6 +594,16 @@ body .punto {
   font-size: 50px;
   line-height: 62px;
   z-index: 6;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  -webkit-animation-name: welcometext;
+          animation-name: welcometext;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+  text-align: left;
+  text-shadow: 1px 1px 2px black;
 }
 
 .main .container-presentation .presentation .message {
@@ -592,13 +611,21 @@ body .punto {
   font-family: 'Oswald';
   font-weight: 494;
   font-size: 25px;
-  color: #000;
+  color: #fff;
   position: relative;
   margin-top: 15px;
   letter-spacing: 5px;
+  -webkit-transition: 2s;
+  transition: 2s;
+  -webkit-animation-name: messagetext;
+          animation-name: messagetext;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
 }
 
-.main .container-presentation .presentation .message .name {
+.main .container-presentation .presentation .message .name, .main .container-presentation .presentation .message .about-me .contenedor .story1 .text .carrera, .main .about-me .contenedor .story1 .text .container-presentation .presentation .message .carrera {
   position: absolute;
   right: 0;
   color: #000;
@@ -623,13 +650,200 @@ body .punto {
 }
 
 @media screen and (min-width: 968px) {
-  .main #reproducir:hover {
-    width: 150px;
+  .main .container-presentation:hover {
+    -webkit-filter: none;
+            filter: none;
+    z-index: 150;
+  }
+  .main .container-presentation:hover .presentation .start-here:hover {
+    background: #000;
     color: #fff;
-    border: 2px solid white;
-    background: rgba(0, 0, 0, 0.2);
+    width: 150px;
+    -webkit-transition: 0.6s ease all;
+    transition: 0.6s ease all;
     -webkit-box-shadow: 5px 2px #fff;
             box-shadow: 5px 2px #fff;
   }
+  .main .container-presentation:hover .presentation .start-here:hover::first-letter {
+    font-size: 22px;
+    color: #004346;
+  }
+  .main .container-presentation .presentation .start-here:hover {
+    background: #fff;
+    color: #000;
+    width: 150px;
+    -webkit-transition: 0.6s ease all;
+    transition: 0.6s ease all;
+  }
+  .main .container-presentation .presentation .start-here:hover::first-letter {
+    font-size: 22px;
+    color: #E29578;
+  }
+}
+
+.main .about-me {
+  margin-top: 35px;
+  width: 100%;
+  height: auto;
+  -webkit-animation-name: hidde;
+          animation-name: hidde;
+  -webkit-transition: 5s ease all;
+  transition: 5s ease all;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+}
+
+.main .about-me .titulo-about {
+  text-align: left;
+  margin: 0 auto;
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 500;
+  margin: 0 auto;
+  display: inline;
+  background: #508991;
+  padding: 0px 20px 0px 20px;
+  height: 120px;
+  color: #fff;
+}
+
+.main .about-me .titulo-about .letter {
+  font-size: 75px;
+  color: #ffff;
+  line-height: 42px;
+  text-shadow: 4px 4px 4px #000;
+}
+
+.main .about-me .contenedor {
+  width: 100%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  grid-gap: 30px;
+}
+
+.main .about-me .contenedor .story1 {
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 390px;
+  -webkit-box-shadow: 0px 0px 0px  #000;
+          box-shadow: 0px 0px 0px  #000;
+  margin-top: 20px;
+  background: url("/assets/images/scott-goodwill-PCGYCkfNgtg-unsplash.jpg") #172A3A;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  overflow: visible;
+}
+
+.main .about-me .contenedor .story1 .thumb-greet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .about-me .contenedor .story1 img {
+  width: 40%;
+  max-height: 300px;
+  max-width: 300px;
+  -webkit-filter: grayscale(10);
+          filter: grayscale(10);
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  display: block;
+  -webkit-animation-name: hidde;
+          animation-name: hidde;
+  -webkit-transition: 5s ease all;
+  transition: 5s ease all;
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+}
+
+.main .about-me .contenedor .story1 .greet {
+  display: inline-block;
+  font-size: 55px;
+  color: #fff;
+  font-family: 'oswald';
+  font-weight: 494;
+  -webkit-animation-name: hidde;
+          animation-name: hidde;
+  -webkit-transition: 5s ease all;
+  transition: 5s ease all;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+}
+
+.main .about-me .contenedor .story1 .greet .hi {
+  font-size: 68px;
+  font-family: 'truculenta';
+  color: #508991;
+  margin-right: 20px;
+}
+
+.main .about-me .contenedor .story1 .subtitulo {
+  margin-top: 20px;
+  width: 90%;
+  text-align: center;
+  margin: 0px auto;
+  margin-top: 10px;
+  font-family: 'oswald';
+  font-weight: 494;
+  color: #fff;
+  margin-right: -10px;
+  font-size: 30px;
+  -webkit-animation-name: hidde;
+          animation-name: hidde;
+  -webkit-transition: 5s ease all;
+  transition: 5s ease all;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+}
+
+.main .about-me .contenedor .story1 .subtitulo .letter {
+  color: #508991;
+  font-family: 'oswald';
+  font-size: 42px;
+}
+
+.main .about-me .contenedor .story1 .text {
+  color: #fff;
+  font-size: 22px;
+  text-align: left;
+  margin-top: 10px;
+  -webkit-animation-name: hidde;
+          animation-name: hidde;
+  -webkit-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+}
+
+.main .about-me .contenedor .story1 .text .name, .main .about-me .contenedor .story1 .text .carrera {
+  color: #E29578;
+  font-family: 'oswald';
+  font-weight: 400;
+  font-size: 29px;
+}
+
+.main .about-me .contenedor .story1 .text .carrera {
+  font-size: 25px;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,53 +1,49 @@
-@keyframes cambiar{
-    0%{background:url('/assets/images/emilio-garcia-BnXwRYu-S90-unsplash.jpg');background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        };
-    25%{background:url('/assets/images/emilio-garcia-UGNXT7QryGA-unsplash.jpg');background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;}
-    50%{background:url('/assets/images/ken-cheung-MKv9gQHpICM-unsplash.jpg');background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;}
-    75%{background:url('/assets/images/emilio-garcia-UGNXT7QryGA-unsplash.jpg');background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;}
-    100%{background:url('/assets/images/frander-rosales-v-aXlNNbGWhuI-unsplash.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;}
+@keyframes trasladar{
+    33%{transform: translate(-180%);}
+    75%{transform: translate(180%);z-index: -1;}
+    100%{transform: translate(0);z-index: 2;}
+
+
 }
+@keyframes welcometext{
+  0%{font-size: 100px;}
+  100%{font-size: 50px;}
+
+}
+@keyframes messagetext{
+    0%{font-size: 0px;}
+    100%{font-size: 25px;}
+  
+  }
+
 .main{
     .container-presentation{
         height:600px;
         width: 100%;
         background:#fff;
-        // animation-name: cambiar ;
-        // animation-duration:10s;
-        // animation-iteration-count: infinite;
-      
+        background:url('/assets/images/emilio-garcia-UGNXT7QryGA-unsplash.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         background-position-x: center;
-        position: absolute;
-        margin-top: 24px;
         padding-left: 20px;
         padding-right: 20px;
         transition: 3s ease-in-out all;
-        // filter: grayscale(2);
+        filter: grayscale(2);
+        
 
 
         .presentation{
+           
             width: 100%;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content:center;
-            align-items:center;
+            align-items:flex-start;
             z-index: 6;
             margin-bottom: 20px;
-              button{
+              .start-here{
                 width: 120px;
                 display: block;
                 border-radius:10px;
@@ -65,6 +61,7 @@
                 border: 2px solid transparent;
                 border-top:  1px solid #172A3A;
                 border-left: 1px solid #172A3A;
+                text-align: center;
 
                 
 
@@ -77,6 +74,12 @@
                 font-size:50px;
                 line-height:62px;
                 z-index: 6;
+                transition: 1s ease all;
+                animation-name: welcometext;
+                animation-duration: 2s;
+                animation-iteration-count: initial;
+                text-align: left;
+                 text-shadow: 1px 1px 2px black;
              
             }
             .message{
@@ -84,10 +87,14 @@
                 font-family:'Oswald';
                 font-weight: 494;
                 font-size: 25px;
-                color: #000;
+                color: #fff;
                 position: relative;
                 margin-top: 15px;
                 letter-spacing: 5px;
+                transition: 2s;
+                animation-name: messagetext;
+                animation-duration: 2s;
+                animation-iteration-count: initial;
                 .name{
                     position: absolute;
                     right: 0;
@@ -113,6 +120,7 @@
                     font-size:42px;
                     font-style: italic;
                 }
+                
             }
         }
     }
