@@ -771,7 +771,7 @@ body .punto {
 }
 
 .main .about-me {
-  background: #172A3A;
+  background: rgba(23, 42, 58, 0.9);
   margin-top: 35px;
   width: 100%;
   height: auto;
@@ -1024,8 +1024,8 @@ body .punto {
   opacity: 1;
   -webkit-animation-name: ocultaright, opp;
           animation-name: ocultaright, opp;
-  -webkit-animation-duration: 1.8s;
-          animation-duration: 1.8s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
   -webkit-animation-iteration-count: initial;
           animation-iteration-count: initial;
 }

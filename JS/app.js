@@ -116,8 +116,6 @@ let y;
             if(altura - 500 < y){
                 cards[i].classList.add('animacion')
                 
-            }else{
-                cards[i].classList.remove('animacion')
             }
         }
     }
