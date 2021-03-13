@@ -1,0 +1,23 @@
+@media screen and (min-width:850px){
+    .main{
+        .about-me{
+            .titulo-about{
+                font-size: 34px;
+                line-height: 46px;
+            }
+            .contenedor{
+                grid-template-columns: repeat(2,1fr);
+                margin-top: 22px;
+                .card2{
+                    position: relative;
+                    top: 50px;
+                }
+              
+                .card4{
+                    position: relative;
+                    top: 50px;
+                }
+            }
+        }
+    }
+}

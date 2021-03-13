@@ -16,6 +16,12 @@
   
   }
 
+@keyframes meteoro{
+    0%{display: block; transform: translate(0);};
+    100%{transform: translate(-350vh,540px)};
+
+}
+
 .main{
     .container-presentation{
         height:600px;
@@ -30,6 +36,7 @@
         padding-right: 20px;
         transition: 3s ease-in-out all;
         filter: grayscale(2);
+        position: relative;
         
 
 
@@ -43,6 +50,28 @@
             align-items:flex-start;
             z-index: 6;
             margin-bottom: 20px;
+            i{
+                display: block;
+                position: absolute;
+                font-size: 50px;
+                color: #fff;
+                right: 0;
+                transition: 1s ease all;
+                animation-name: meteoro;
+                animation-duration: 5s;
+                animation-iteration-count: initial;
+                display: none;
+                // transform: translate(50px,50px);
+            }
+            .meteorito{
+                top: 20px;
+            }
+            .meteorito2{
+                top: 80px;
+            }
+            .meteorito3{
+                top: 150px;
+            }
               .start-here{
                 width: 120px;
                 display: block;
@@ -62,6 +91,7 @@
                 border-top:  1px solid #172A3A;
                 border-left: 1px solid #172A3A;
                 text-align: center;
+               
 
                 
 

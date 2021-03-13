@@ -6,6 +6,10 @@ const menu              = document.querySelector('.menu');
 const optionsMenu       = document.querySelectorAll('.navBarOptions');
 const audioHalo         = document.getElementById('audio-halo')
 const message           = document.querySelector('.message');
+const btnStart          = document.querySelector('.start-here');
+const sectionAbout      = document.getElementById('about');
+const cards             = document.querySelectorAll('.card');
+const btnAboutNav       = document.getElementById('btn-nav-about')
 
 let i = 0;
 
@@ -71,14 +75,47 @@ btnBars.addEventListener('click',()=>{
 })
 let y;
 
-const menuSticky = ()=>{
-    window.onscroll = function() {
-        y = window.scrollY;
-        console.log(y)
-        let ejeY = Math.round(y)
-        let pantalla = window.screen.width;
-    
-    }
+
+// animacion para hacer aparecer las cartas
+const aggAnimacion = ()=>{
+    // le doy propiedades al contenedor a cada carta
+    cards[0].style.display='block';
+    cards[0].classList.add('animacion');
+
+    setTimeout(() => {
+    cards[1].style.display='block';
+    cards[1].classList.add('animacion')
+        
+    },1000);
+    setTimeout(()=>{
+        cards[2].style.display='block';
+        cards[2].classList.add('animacion')
+    },2000)
+
+    setTimeout(()=>{
+        cards[3].style.display='block';
+        cards[3].classList.add('animacion')
+    },3000)
 }
 
-menuSticky()
+
+// btnStart.addEventListener('click',aggAnimacion);
+// btnAboutNav.addEventListener('click',aggAnimacion)
+
+
+ 
+
+
+
+    // window.addEventListener('scroll',scrollAnimacion)
+       window.onscroll = ()=>{
+           console.log('hola2')
+           var y = window. scrollY
+        for(let i =0; i < cards.length;i++){
+            let altura = cards[i].offsetTop;
+            if(altura - 700 < y){
+                aggAnimacion()
+            }else{
+            }
+        }
+    }
