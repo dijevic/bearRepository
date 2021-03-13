@@ -77,26 +77,26 @@ let y;
 
 
 // animacion para hacer aparecer las cartas
-const aggAnimacion = ()=>{
-    // le doy propiedades al contenedor a cada carta
-    cards[0].style.display='block';
-    cards[0].classList.add('animacion');
+// const aggAnimacion = ()=>{
+//     // le doy propiedades al contenedor a cada carta
+//     cards[0].style.display='block';
+//     cards[0].classList.add('animacion');
 
-    setTimeout(() => {
-    cards[1].style.display='block';
-    cards[1].classList.add('animacion')
+//     setTimeout(() => {
+//     cards[1].style.display='block';
+//     cards[1].classList.add('animacion')
         
-    },1000);
-    setTimeout(()=>{
-        cards[2].style.display='block';
-        cards[2].classList.add('animacion')
-    },2000)
+//     },1000);
+//     setTimeout(()=>{
+//         cards[2].style.display='block';
+//         cards[2].classList.add('animacion')
+//     },2000)
 
-    setTimeout(()=>{
-        cards[3].style.display='block';
-        cards[3].classList.add('animacion')
-    },3000)
-}
+//     setTimeout(()=>{
+//         cards[3].style.display='block';
+//         cards[3].classList.add('animacion')
+//     },3000)
+// }
 
 
 // btnStart.addEventListener('click',aggAnimacion);
@@ -113,9 +113,11 @@ const aggAnimacion = ()=>{
            var y = window. scrollY
         for(let i =0; i < cards.length;i++){
             let altura = cards[i].offsetTop;
-            if(altura - 700 < y){
-                aggAnimacion()
+            if(altura - 500 < y){
+                cards[i].classList.add('animacion')
+                
             }else{
+                cards[i].classList.remove('animacion')
             }
         }
     }
