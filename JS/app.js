@@ -17,7 +17,8 @@ const html              = document.querySelector('.html');
 const tituloDeveloper   = document.querySelector('.desarrollo-titulo');
 const firstLetter       =document.querySelectorAll('.fist-letter');
 const welcomeText       =document.querySelector('.welcome-text');
-const messageText           =document.querySelector('.message')
+const messageText       =document.querySelector('.message');
+const navBarOptions     =document.querySelectorAll('.navBarOptions');
 let numbers             = [2,'almost there','ready !'];
 let num = 0;
 
@@ -117,6 +118,10 @@ btnBars.addEventListener('click',()=>{
 
                     letter.classList.add('blue') 
                 })
+              
+                navBarOptions.forEach(option=>{
+                    option.classList.add('blue')
+                })
                 
             }
             else{
@@ -127,6 +132,11 @@ btnBars.addEventListener('click',()=>{
                    
 
                     
+                })
+              
+
+                navBarOptions.forEach(option=>{
+                    option.classList.remove('blue')
                 })
 
                 
@@ -141,3 +151,7 @@ btnBars.addEventListener('click',()=>{
 
         }
     }
+
+    document.addEventListener('DOMContentLoaded',()=>{
+        window.location.hash=''
+    })

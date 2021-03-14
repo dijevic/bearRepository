@@ -10,6 +10,7 @@
     100%{transform: translate(0,0);}
 }
 
+
 .pantalla-carga{
     transition: 0.5s ease all;
     background: #508991;
@@ -18,7 +19,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 990;
     overflow: hidden;
     scroll-behavior: none;
     .contenedor{
@@ -84,6 +85,7 @@
         height: 150px;
         background-repeat: no-repeat;
         background-size: cover;
+    
         
     }
     &.hidde{

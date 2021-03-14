@@ -1,17 +1,4 @@
 @media screen and(min-width:968px){
-
-    @keyframes hiddenTop{
-        
-        0%{transform: translateY(-100%);}
-        100%{transform: translate(0);}
-        
-    }
-    @keyframes hiddenRight{
-        0%{trantransform: translate(100%)}
-        100%{trantransform: translate(0)}
-
-        
-    }
     .header{
 
         .logo{
@@ -49,26 +36,35 @@
                
                
                 li{
-                    &:hover .fist-letter{
-                        color: #E29578;
-                        transition: 0.4s ease all;
-                       
-                    }
-                    a{
+                   
+                
+                    .navBarOptions{
                         padding: 0px;
                         font-size: 18px;
                         margin-left: 10px;
                         display: inline-block;
                         &:hover{
                             border-bottom: 1.5px solid #E29578;
+                            .fist-letter{
+                                color:#E29578 ;
+                        transition: 0.4s ease all;
+
+                            }
+                        }
+                        &.blue{
+                            &:hover{
+                            border-bottom: 1.5px solid #fff;
+                            .fist-letter{
+                                color: #508991;
+                            }
+
+                            }
                         }
                     }
                     .fist-letter{
                         color: #fff;
                         display: inline-block;
-                        animation-name: hiddenTop;
-                        animation-duration: 1s;
-                        animation-iteration-count: initial;
+                       
 
                     }
                 }
