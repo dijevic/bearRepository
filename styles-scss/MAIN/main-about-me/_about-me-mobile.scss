@@ -10,9 +10,9 @@
 }
 .main{
     .about-me{
-       background: rgba($color: #172A3A, $alpha: 0.9);
+       background: #508991;
        
-
+        padding-bottom: 20px;
         margin-top: 35px;
         width:100%;
         height: auto;
@@ -36,13 +36,14 @@
             padding: 0px 20px 0px 20px;
             height: 120px;
             color: #fff;
+            border-bottom: 1px solid #E29578;
            
     
 
 
             .letter{
                 font-size: 75px;
-                color: #ffff;
+                color: #E29578;
                 line-height: 42px;
                 text-shadow: 4px 4px 4px #000;
 
@@ -101,7 +102,7 @@
                     .hi{
                         font-size: 68px;
                         font-family: 'truculenta';
-                       color: #508991;
+                       color: #172A3A;
                        margin-right: 20px;
                        
 
@@ -119,11 +120,14 @@
                     color: #fff;
                     margin-right: -10px;
                     font-size: 30px;
+                    text-shadow: 4px 4px 4px #000;
+                    
                    
                     .letter{
-                        color: #508991;
+                        color: #172A3A;
                         font-family: 'oswald';
                         font-size: 42px;
+                        text-shadow: none;
 
                     }
                   
@@ -175,14 +179,14 @@
                 }
                 .text{
                       .bs-as{
-                        color: #E29578;
+                        color: #172A3A;
                         font-size: 25px;
                         font-family: 'oswald';
                         font-weight: 494;
 
                     }
                     .merida{
-                        color: #E29578;
+                        color: #172A3A;
                         font-size: 25px;
                         font-family: 'oswald';
                         font-weight: 494;
@@ -193,9 +197,9 @@
                     font-size: 25px;
                     font-family: 'oswald';
                     font-weight: 494;
-                    color:#508991 ;
+                    color: #172A3A;
                     
-
+                    
                 }
                 a{
                     color: #fff;
@@ -203,6 +207,7 @@
                 }
                 .new-skills{
                     @extend .university ;
+                    color:#E29578 ;
                     
                 }
             

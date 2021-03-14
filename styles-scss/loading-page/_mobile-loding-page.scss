@@ -1,0 +1,94 @@
+@keyframes ancho {
+    0%{width: 0%;color: transparent;}
+    100%{width: 80%;}
+}
+
+
+@keyframes winds{
+    0%{transform: translate(20px,10px);}
+    50%{transform: translate(10px,20px);}
+    100%{transform: translate(0,0);}
+}
+
+.pantalla-carga{
+    transition: 0.5s ease all;
+    background: #508991;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    overflow: hidden;
+    scroll-behavior: none;
+    .contenedor{
+        display: flex;
+        position: fixed;
+        height: 100vh;
+        justify-content: space-around;
+        width: 100%;
+        position: fixed;
+        top: 200px;
+        left: 0;
+        padding: 20px;
+    
+    }
+    .loader{
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 400px;
+        left: 0;
+        h2{
+            text-align: center;
+            color: #E29578;
+            font-size: 32px;
+            margin: auto;
+            font-weight: 500;
+
+        }
+        .fire{
+            width: 80%;
+            height: 50px;
+            border-radius: 100px;
+            background:#004346;
+            margin: 0 auto;
+            animation-name: ancho;
+            animation-duration: 5s;
+            animation-iteration-count: initial;
+            transition: 3s ease-in-out;
+            text-align: center;
+            color: #fff;
+            font-size: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+           
+        }
+       
+    }
+    .wind{
+        background: url('/assets/images/pantalla_carga/wind.svg');
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation-name: winds;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+    }
+    .tree{
+        background: url('/assets/images/pantalla_carga/arbol.svg');
+        width: 150px;
+        height: 150px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    &.hidde{
+        transform: translate(-100%);
+        transition: 0.5s ease-in-out;
+        
+    }
+}

@@ -11,12 +11,166 @@
 
 html {
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 body .punto {
   color: #fff;
   font-family: 'Oswald';
   font-size: 30px;
+}
+
+@-webkit-keyframes ancho {
+  0% {
+    width: 0%;
+    color: transparent;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes ancho {
+  0% {
+    width: 0%;
+    color: transparent;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@-webkit-keyframes winds {
+  0% {
+    -webkit-transform: translate(20px, 10px);
+            transform: translate(20px, 10px);
+  }
+  50% {
+    -webkit-transform: translate(10px, 20px);
+            transform: translate(10px, 20px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes winds {
+  0% {
+    -webkit-transform: translate(20px, 10px);
+            transform: translate(20px, 10px);
+  }
+  50% {
+    -webkit-transform: translate(10px, 20px);
+            transform: translate(10px, 20px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+.pantalla-carga {
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  background: #508991;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  overflow: hidden;
+  scroll-behavior: none;
+}
+
+.pantalla-carga .contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  height: 100vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  position: fixed;
+  top: 200px;
+  left: 0;
+  padding: 20px;
+}
+
+.pantalla-carga .loader {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 400px;
+  left: 0;
+}
+
+.pantalla-carga .loader h2 {
+  text-align: center;
+  color: #E29578;
+  font-size: 32px;
+  margin: auto;
+  font-weight: 500;
+}
+
+.pantalla-carga .loader .fire {
+  width: 80%;
+  height: 50px;
+  border-radius: 100px;
+  background: #004346;
+  margin: 0 auto;
+  -webkit-animation-name: ancho;
+          animation-name: ancho;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+  -webkit-transition: 3s ease-in-out;
+  transition: 3s ease-in-out;
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 500;
+}
+
+.pantalla-carga .wind {
+  background: url("/assets/images/pantalla_carga/wind.svg");
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-animation-name: winds;
+          animation-name: winds;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.pantalla-carga .tree {
+  background: url("/assets/images/pantalla_carga/arbol.svg");
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pantalla-carga.hidde {
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 @-webkit-keyframes hidde {
@@ -175,7 +329,7 @@ body .punto {
           align-items: center;
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 500;
 }
 
 .header .logo {
@@ -190,10 +344,14 @@ body .punto {
           animation-iteration-count: initial;
 }
 
-.header .logo .desarrollo-titulo {
+.header .logo .desarrollo-titulo, .header .logo .desarrollo-titulo.blue {
   color: #E29578;
   font-family: 'Oswald';
   display: block;
+}
+
+.header .logo .blue.desarrollo-titulo {
+  color: #508991;
 }
 
 .header .btn-bars {
@@ -342,11 +500,18 @@ body .punto {
   font-size: 26px;
 }
 
+.header .menu ul li .fist-letter.blue {
+  font-family: 'Oswald';
+  font-weight: 494;
+  font-size: 26px;
+  color: #508991;
+}
+
 @media screen and (max-width: 320px) {
   .header .logo {
     font-size: 14px;
   }
-  .header .logo .desarrollo-titulo {
+  .header .logo .desarrollo-titulo, .header .logo .desarrollo-titulo.blue {
     font-size: 14px;
   }
 }
@@ -355,7 +520,7 @@ body .punto {
   .header .logo {
     font-size: 22px;
   }
-  .header .logo .desarrollo-titulo {
+  .header .logo .desarrollo-titulo, .header .logo .desarrollo-titulo.blue {
     display: inline;
     font-size: 24px;
   }
@@ -402,7 +567,7 @@ body .punto {
     font-size: 25px;
     margin-left: 50px;
   }
-  .header .logo .desarrollo-titulo {
+  .header .logo .desarrollo-titulo, .header .logo .desarrollo-titulo.blue {
     display: inline;
     font-size: 25px;
     -webkit-text-decoration: underline #fff 2px;
@@ -532,32 +697,8 @@ body .punto {
   }
 }
 
-@-webkit-keyframes meteoro {
-  0% {
-    display: block;
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  100% {
-    -webkit-transform: translate(-350vh, 540px);
-            transform: translate(-350vh, 540px);
-  }
-}
-
-@keyframes meteoro {
-  0% {
-    display: block;
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  100% {
-    -webkit-transform: translate(-350vh, 540px);
-            transform: translate(-350vh, 540px);
-  }
-}
-
 .main .container-presentation {
-  height: 600px;
+  height: 100vh;
   width: 100%;
   background: #fff;
   background: url("/assets/images/emilio-garcia-UGNXT7QryGA-unsplash.jpg");
@@ -594,35 +735,6 @@ body .punto {
   margin-bottom: 20px;
 }
 
-.main .container-presentation .presentation i {
-  display: block;
-  position: absolute;
-  font-size: 50px;
-  color: #fff;
-  right: 0;
-  -webkit-transition: 1s ease all;
-  transition: 1s ease all;
-  -webkit-animation-name: meteoro;
-          animation-name: meteoro;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
-  display: none;
-}
-
-.main .container-presentation .presentation .meteorito {
-  top: 20px;
-}
-
-.main .container-presentation .presentation .meteorito2 {
-  top: 80px;
-}
-
-.main .container-presentation .presentation .meteorito3 {
-  top: 150px;
-}
-
 .main .container-presentation .presentation .start-here {
   width: 120px;
   display: block;
@@ -654,14 +766,17 @@ body .punto {
   z-index: 6;
   -webkit-transition: 1s ease all;
   transition: 1s ease all;
+  text-align: left;
+  text-shadow: 1px 1px 2px black;
+}
+
+.main .container-presentation .presentation .welcome-text.efecto {
   -webkit-animation-name: welcometext;
           animation-name: welcometext;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-iteration-count: initial;
           animation-iteration-count: initial;
-  text-align: left;
-  text-shadow: 1px 1px 2px black;
 }
 
 .main .container-presentation .presentation .message {
@@ -675,6 +790,9 @@ body .punto {
   letter-spacing: 5px;
   -webkit-transition: 2s;
   transition: 2s;
+}
+
+.main .container-presentation .presentation .message.efecto {
   -webkit-animation-name: messagetext;
           animation-name: messagetext;
   -webkit-animation-duration: 2s;
@@ -713,10 +831,10 @@ body .punto {
             filter: none;
     z-index: 150;
   }
-  .main .container-presentation:hover .presentation .start-here {
+  .main .container-presentation .presentation .start-here {
     padding: 5px;
   }
-  .main .container-presentation:hover .presentation .start-here:hover {
+  .main .container-presentation .presentation .start-here:hover {
     background: #000;
     color: #fff;
     width: 150px;
@@ -725,7 +843,7 @@ body .punto {
     -webkit-box-shadow: 5px 2px #fff;
             box-shadow: 5px 2px #fff;
   }
-  .main .container-presentation:hover .presentation .start-here:hover::first-letter {
+  .main .container-presentation .presentation .start-here:hover::first-letter {
     color: #004346;
   }
 }
@@ -771,7 +889,8 @@ body .punto {
 }
 
 .main .about-me {
-  background: rgba(23, 42, 58, 0.9);
+  background: #508991;
+  padding-bottom: 20px;
   margin-top: 35px;
   width: 100%;
   height: auto;
@@ -800,11 +919,12 @@ body .punto {
   padding: 0px 20px 0px 20px;
   height: 120px;
   color: #fff;
+  border-bottom: 1px solid #E29578;
 }
 
 .main .about-me .titulo-about .letter {
   font-size: 75px;
-  color: #ffff;
+  color: #E29578;
   line-height: 42px;
   text-shadow: 4px 4px 4px #000;
 }
@@ -871,7 +991,7 @@ body .punto {
 .main .about-me .contenedor .story .greet .hi, .main .about-me .contenedor .story2 .greet .hi {
   font-size: 68px;
   font-family: 'truculenta';
-  color: #508991;
+  color: #172A3A;
   margin-right: 20px;
 }
 
@@ -886,12 +1006,14 @@ body .punto {
   color: #fff;
   margin-right: -10px;
   font-size: 30px;
+  text-shadow: 4px 4px 4px #000;
 }
 
 .main .about-me .contenedor .story .subtitulo .letter, .main .about-me .contenedor .story2 .subtitulo .letter {
-  color: #508991;
+  color: #172A3A;
   font-family: 'oswald';
   font-size: 42px;
+  text-shadow: none;
 }
 
 .main .about-me .contenedor .story .text, .main .about-me .contenedor .story2 .text {
@@ -943,14 +1065,14 @@ body .punto {
 }
 
 .main .about-me .contenedor .story2 .text .bs-as {
-  color: #E29578;
+  color: #172A3A;
   font-size: 25px;
   font-family: 'oswald';
   font-weight: 494;
 }
 
 .main .about-me .contenedor .story2 .text .merida {
-  color: #E29578;
+  color: #172A3A;
   font-size: 25px;
   font-family: 'oswald';
   font-weight: 494;
@@ -960,12 +1082,16 @@ body .punto {
   font-size: 25px;
   font-family: 'oswald';
   font-weight: 494;
-  color: #508991;
+  color: #172A3A;
 }
 
 .main .about-me .contenedor .story2 a {
   color: #fff;
   font-style: italic;
+}
+
+.main .about-me .contenedor .story2 .new-skills {
+  color: #E29578;
 }
 
 .main .about-me .contenedor .card1.animacion, .main .about-me .contenedor .animacion.card3 {
@@ -1088,7 +1214,14 @@ body .punto {
   }
   .main .about-me .contenedor .card4 {
     position: relative;
-    top: 50px;
+    top: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .pantalla-carga .loader .fire {
+    -webkit-animation-duration: 8.5s;
+            animation-duration: 8.5s;
   }
 }
 /*# sourceMappingURL=styles.css.map */

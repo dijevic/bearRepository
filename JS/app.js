@@ -9,13 +9,42 @@ const message           = document.querySelector('.message');
 const btnStart          = document.querySelector('.start-here');
 const sectionAbout      = document.getElementById('about');
 const cards             = document.querySelectorAll('.card');
-const btnAboutNav       = document.getElementById('btn-nav-about')
+const btnAboutNav       = document.getElementById('btn-nav-about');
+const imgCard           = document.querySelectorAll('.img-card');
+const pantallaLoading   = document.querySelector('.pantalla-carga');
+const loader            = document.querySelector('.fire');
+const html              = document.querySelector('.html');
+const tituloDeveloper   = document.querySelector('.desarrollo-titulo');
+const firstLetter       =document.querySelectorAll('.fist-letter');
+const welcomeText       =document.querySelector('.welcome-text');
+const messageText           =document.querySelector('.message')
+let numbers             = [2,'almost there','ready !'];
+let num = 0;
+
+
+html.style.overflow ='hidden';
+setInterval(() => {
+    loader.textContent =  numbers[num]
+    num++
+}, 800);
+setTimeout(() => {
+    
+pantallaLoading.classList.add('hidde')
+html.style.overflow ='visible';
+welcomeText.classList.add('efecto');
+messageText.classList.add('efecto')
+}, 3000);
+setTimeout(() => {
+    
+    pantallaLoading.style.display = 'none'
+   
+}, 4000);
 
 let i = 0;
 
 
 
-
+// efectos y animaciones
 
 // evento para mi boton hamburguesa !
 btnBars.addEventListener('click',()=>{
@@ -73,49 +102,42 @@ btnBars.addEventListener('click',()=>{
     
     
 })
-let y;
 
-
-// animacion para hacer aparecer las cartas
-// const aggAnimacion = ()=>{
-//     // le doy propiedades al contenedor a cada carta
-//     cards[0].style.display='block';
-//     cards[0].classList.add('animacion');
-
-//     setTimeout(() => {
-//     cards[1].style.display='block';
-//     cards[1].classList.add('animacion')
-        
-//     },1000);
-//     setTimeout(()=>{
-//         cards[2].style.display='block';
-//         cards[2].classList.add('animacion')
-//     },2000)
-
-//     setTimeout(()=>{
-//         cards[3].style.display='block';
-//         cards[3].classList.add('animacion')
-//     },3000)
-// }
-
-
-// btnStart.addEventListener('click',aggAnimacion);
-// btnAboutNav.addEventListener('click',aggAnimacion)
-
-
- 
-
-
-
-    // window.addEventListener('scroll',scrollAnimacion)
+// agrego efectos para que aparezcan las cartas de presentacion
        window.onscroll = ()=>{
-           console.log('hola2')
-           var y = window. scrollY
+           let y = window. scrollY
         for(let i =0; i < cards.length;i++){
             let altura = cards[i].offsetTop;
             if(altura - 500 < y){
                 cards[i].classList.add('animacion')
                 
+            }else if(altura -800 < y){
+                tituloDeveloper.classList.add('blue')
+                firstLetter.forEach(letter=>{
+
+                    letter.classList.add('blue') 
+                })
+                
             }
+            else{
+                cards[i].classList.remove('animacion');
+                tituloDeveloper.classList.remove('blue')
+                firstLetter.forEach(letter=>{
+                    letter.classList.remove('blue')
+                   
+
+                    
+                })
+
+                
+
+                
+
+            }
+        }
+        if(y = 0){
+            tituloDeveloper.classList.add('blue')
+            
+
         }
     }

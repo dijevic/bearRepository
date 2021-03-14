@@ -10,12 +10,14 @@
 }
 html{
     scroll-behavior: smooth;
+    overflow: hidden;
 }
 body{
     .punto{
         color: #fff;
         font-family: 'Oswald';
         font-size:30px;
+
     
     }
 }

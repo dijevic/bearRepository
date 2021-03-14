@@ -50,7 +50,7 @@
     align-items:  center;
     position: sticky;
     top: 0;
-    z-index: 20;
+    z-index: 500;
     .logo{
         margin-left: 20px;
         color:#fff;
@@ -64,6 +64,10 @@
             color: #E29578;
             font-family: 'Oswald';
             display: block;
+            &.blue{
+                @extend .desarrollo-titulo;
+                color: #508991;
+            }
         }
     }
 
@@ -191,7 +195,6 @@
 
                     }
                    
-                   
                     
                     
                 }
@@ -199,8 +202,16 @@
                     color: #E29578;
                     font-family: 'Oswald';
                     font-weight: 494;
-                    font-size:26px
+                    font-size:26px;
+                    &.blue{
+                        font-family: 'Oswald';
+                        font-weight: 494;
+                        font-size:26px;
+                        color: #508991;
+                    }
+
                 }
+
             }
         }
     }
