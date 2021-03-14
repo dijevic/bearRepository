@@ -9,6 +9,7 @@
 
 }
 .main{
+    display: none;
     .about-me{
        background: #508991;
        
@@ -191,6 +192,13 @@
                         font-family: 'oswald';
                         font-weight: 494;
 
+                    }
+
+                    .year{
+                        @extend .university;
+                    }
+                    .word{
+                        @extend .new-skills;
                     }
                 }
                 .university{

@@ -330,6 +330,7 @@ body .punto {
   position: sticky;
   top: 0;
   z-index: 500;
+  display: none;
 }
 
 .header .logo {
@@ -574,7 +575,7 @@ body .punto {
     transition: 0.4s ease all;
   }
   .header .menu ul li .navBarOptions.blue:hover {
-    border-bottom: 1.5px solid #fff;
+    border-bottom: 1.5px solid #508991;
   }
   .header .menu ul li .navBarOptions.blue:hover .fist-letter {
     color: #508991;
@@ -846,6 +847,10 @@ body .punto {
   }
 }
 
+.main {
+  display: none;
+}
+
 .main .about-me {
   background: #508991;
   padding-bottom: 20px;
@@ -1036,7 +1041,7 @@ body .punto {
   font-weight: 494;
 }
 
-.main .about-me .contenedor .story2 .university, .main .about-me .contenedor .story2 .new-skills {
+.main .about-me .contenedor .story2 .university, .main .about-me .contenedor .story2 .text .year, .main .about-me .contenedor .story2 .new-skills, .main .about-me .contenedor .story2 .text .word {
   font-size: 25px;
   font-family: 'oswald';
   font-weight: 494;
@@ -1048,7 +1053,7 @@ body .punto {
   font-style: italic;
 }
 
-.main .about-me .contenedor .story2 .new-skills {
+.main .about-me .contenedor .story2 .new-skills, .main .about-me .contenedor .story2 .text .word {
   color: #E29578;
 }
 

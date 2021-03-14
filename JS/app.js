@@ -19,33 +19,19 @@ const firstLetter       =document.querySelectorAll('.fist-letter');
 const welcomeText       =document.querySelector('.welcome-text');
 const messageText       =document.querySelector('.message');
 const navBarOptions     =document.querySelectorAll('.navBarOptions');
+const main              =document.querySelector('.main');
+const header            =document.querySelector('.header')
 let numbers             = [2,'almost there','ready !'];
 let num = 0;
 
 
-html.style.overflow ='hidden';
-setInterval(() => {
-    loader.textContent =  numbers[num]
-    num++
-}, 800);
-setTimeout(() => {
-    
-pantallaLoading.classList.add('hidde')
-html.style.overflow ='visible';
-welcomeText.classList.add('efecto');
-messageText.classList.add('efecto')
-}, 3000);
-setTimeout(() => {
-    
-    pantallaLoading.style.display = 'none'
-   
-}, 4000);
-
-let i = 0;
 
 
 
-// efectos y animaciones
+
+
+
+// ##### EFECTOS Y ANIMACIONES #################
 
 // evento para mi boton hamburguesa !
 btnBars.addEventListener('click',()=>{
@@ -125,7 +111,6 @@ btnBars.addEventListener('click',()=>{
                 
             }
             else{
-                cards[i].classList.remove('animacion');
                 tituloDeveloper.classList.remove('blue')
                 firstLetter.forEach(letter=>{
                     letter.classList.remove('blue')
@@ -145,13 +130,35 @@ btnBars.addEventListener('click',()=>{
 
             }
         }
-        if(y = 0){
-            tituloDeveloper.classList.add('blue')
-            
-
-        }
     }
 
-    document.addEventListener('DOMContentLoaded',()=>{
-        window.location.hash=''
-    })
+    // funcion que me permite disponer de la pagina de loading mientras mis imagnes se cargan correctamente
+// tambien oculto la barra de navegacion
+const loadingPage = ()=>{
+    html.style.overflow ='hidden';
+    setInterval(() => {
+        loader.textContent =  numbers[num]
+        num++
+    }, 800);
+    setTimeout(() => {
+        
+    pantallaLoading.classList.add('hidde')
+    html.style.overflow ='visible';
+    welcomeText.classList.add('efecto');
+    messageText.classList.add('efecto');
+    header.style.display='flex';
+    main.style.display='block';
+    }, 3000);
+    setTimeout(() => {
+        
+        pantallaLoading.style.display = 'none'
+       
+    }, 4000);
+}
+
+
+
+ // evento para que cuando la pagina recargue o inicie
+ document.addEventListener('DOMContentLoaded',()=>{
+     loadingPage()
+ })
