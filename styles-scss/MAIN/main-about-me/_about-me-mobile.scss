@@ -8,12 +8,18 @@
     100%{transform: translate(0);}
 
 }
+@keyframes toptop{
+    0%{
+        transform: translateY(20px);
+    }100%{transform: translateY(0);}
+}
 .main{
     
     .about-me{
        background:url('/assets/images/mountaint.svg');
        background-size: cover;
-       background-repeat: no;
+       background-repeat: no-repeat;
+       background-position: center;
         padding-bottom: 20px;
         margin-top: 35px;
         width:100%;
@@ -255,6 +261,11 @@
                         animation-iteration-count: initial;
                      }
                     }
+                &.animation1{
+                    @extend .animacion;
+                    animation-name: toptop;
+
+                }
                 
             }
             .card2{
@@ -292,6 +303,11 @@
                       animation-iteration-count: initial;
                    }
                     
+                }
+                &.animation1{
+                    @extend .animacion;
+                    animation-name: toptop;
+
                 }
             }
             .card3{

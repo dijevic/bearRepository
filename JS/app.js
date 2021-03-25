@@ -132,7 +132,16 @@ if(window.screen.width >= 968){
  }
 }else{
     for(let i =0; i < cards.length;i++){
-        cards[i].style.opacity='1'
+        cards[i].style.opacity='1';
+   
     }
+    window.onscroll = ()=>{
+        let y = window. scrollY
+        for(let i =0; i < cards.length;i++){
+            cards[i].classList.add('animation1')
+       
+        }
+        
+ }
 }
 
