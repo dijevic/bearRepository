@@ -11,166 +11,12 @@
 
 html {
   scroll-behavior: smooth;
-  overflow: hidden;
 }
 
 body .punto {
   color: #fff;
   font-family: 'Oswald';
   font-size: 30px;
-}
-
-@-webkit-keyframes ancho {
-  0% {
-    width: 0%;
-    color: transparent;
-  }
-  100% {
-    width: 80%;
-  }
-}
-
-@keyframes ancho {
-  0% {
-    width: 0%;
-    color: transparent;
-  }
-  100% {
-    width: 80%;
-  }
-}
-
-@-webkit-keyframes winds {
-  0% {
-    -webkit-transform: translate(20px, 10px);
-            transform: translate(20px, 10px);
-  }
-  50% {
-    -webkit-transform: translate(10px, 20px);
-            transform: translate(10px, 20px);
-  }
-  100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-}
-
-@keyframes winds {
-  0% {
-    -webkit-transform: translate(20px, 10px);
-            transform: translate(20px, 10px);
-  }
-  50% {
-    -webkit-transform: translate(10px, 20px);
-            transform: translate(10px, 20px);
-  }
-  100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-}
-
-.pantalla-carga {
-  -webkit-transition: 0.5s ease all;
-  transition: 0.5s ease all;
-  background: #508991;
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 990;
-  overflow: hidden;
-  scroll-behavior: none;
-}
-
-.pantalla-carga .contenedor {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: fixed;
-  height: 100vh;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 100%;
-  position: fixed;
-  top: 200px;
-  left: 0;
-  padding: 20px;
-}
-
-.pantalla-carga .loader {
-  width: 100%;
-  height: auto;
-  position: fixed;
-  top: 400px;
-  left: 0;
-}
-
-.pantalla-carga .loader h2 {
-  text-align: center;
-  color: #E29578;
-  font-size: 32px;
-  margin: auto;
-  font-weight: 500;
-}
-
-.pantalla-carga .loader .fire {
-  width: 80%;
-  height: 50px;
-  border-radius: 100px;
-  background: #004346;
-  margin: 0 auto;
-  -webkit-animation-name: ancho;
-          animation-name: ancho;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
-  -webkit-transition: 3s ease-in-out;
-  transition: 3s ease-in-out;
-  text-align: center;
-  color: #fff;
-  font-size: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-weight: 500;
-}
-
-.pantalla-carga .wind {
-  background: url("/assets/images/pantalla_carga/wind.svg");
-  width: 50px;
-  height: 50px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-animation-name: winds;
-          animation-name: winds;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-.pantalla-carga .tree {
-  background: url("/assets/images/pantalla_carga/arbol.svg");
-  width: 150px;
-  height: 150px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.pantalla-carga.hidde {
-  -webkit-transform: translate(-100%);
-          transform: translate(-100%);
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
 }
 
 @-webkit-keyframes hidde {
@@ -330,7 +176,6 @@ body .punto {
   position: sticky;
   top: 0;
   z-index: 500;
-  display: none;
 }
 
 .header .logo {
@@ -656,21 +501,23 @@ body .punto {
   }
 }
 
-.main .container-presentation {
+.main {
   height: 100vh;
+}
+
+.main .container-presentation {
+  height: 600px;
   width: 100%;
   background: #fff;
-  background: url("/assets/images/emilio-garcia-UGNXT7QryGA-unsplash.jpg");
+  background: url("/assets/images/T_4.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-x: center;
+  background-position: center;
   padding-left: 20px;
   padding-right: 20px;
   -webkit-transition: 3s ease-in-out all;
   transition: 3s ease-in-out all;
-  -webkit-filter: grayscale(2);
-          filter: grayscale(2);
   position: relative;
 }
 
@@ -785,11 +632,6 @@ body .punto {
 }
 
 @media screen and (min-width: 968px) {
-  .main .container-presentation:hover {
-    -webkit-filter: none;
-            filter: none;
-    z-index: 150;
-  }
   .main .container-presentation .presentation .start-here {
     padding: 5px;
   }
@@ -847,16 +689,13 @@ body .punto {
   }
 }
 
-.main {
-  display: none;
-}
-
 .main .about-me {
-  background: #508991;
+  background: url("/assets/images/mountaint.svg");
+  background-size: cover;
+  background-repeat: no;
   padding-bottom: 20px;
   margin-top: 35px;
   width: 100%;
-  height: auto;
 }
 
 .main .about-me.animacion {
@@ -1178,13 +1017,6 @@ body .punto {
   .main .about-me .contenedor .card4 {
     position: relative;
     top: 20px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .pantalla-carga .loader .fire {
-    -webkit-animation-duration: 8.5s;
-            animation-duration: 8.5s;
   }
 }
 /*# sourceMappingURL=styles.css.map */

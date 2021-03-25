@@ -11,8 +11,6 @@ const sectionAbout      = document.getElementById('about');
 const cards             = document.querySelectorAll('.card');
 const btnAboutNav       = document.getElementById('btn-nav-about');
 const imgCard           = document.querySelectorAll('.img-card');
-const pantallaLoading   = document.querySelector('.pantalla-carga');
-const loader            = document.querySelector('.fire');
 const html              = document.querySelector('.html');
 const tituloDeveloper   = document.querySelector('.desarrollo-titulo');
 const firstLetter       =document.querySelectorAll('.fist-letter');
@@ -21,7 +19,7 @@ const messageText       =document.querySelector('.message');
 const navBarOptions     =document.querySelectorAll('.navBarOptions');
 const main              =document.querySelector('.main');
 const header            =document.querySelector('.header')
-let numbers             = [2,'almost there','ready !'];
+
 let num = 0;
 
 
@@ -132,33 +130,3 @@ btnBars.addEventListener('click',()=>{
         }
     }
 
-    // funcion que me permite disponer de la pagina de loading mientras mis imagnes se cargan correctamente
-// tambien oculto la barra de navegacion
-const loadingPage = ()=>{
-    html.style.overflow ='hidden';
-    setInterval(() => {
-        loader.textContent =  numbers[num]
-        num++
-    }, 800);
-    setTimeout(() => {
-        
-    pantallaLoading.classList.add('hidde')
-    html.style.overflow ='visible';
-    welcomeText.classList.add('efecto');
-    messageText.classList.add('efecto');
-    header.style.display='flex';
-    main.style.display='block';
-    }, 3000);
-    setTimeout(() => {
-        
-        pantallaLoading.style.display = 'none'
-       
-    }, 4000);
-}
-
-
-
- // evento para que cuando la pagina recargue o inicie
- document.addEventListener('DOMContentLoaded',()=>{
-     loadingPage()
- })

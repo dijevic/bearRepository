@@ -19,19 +19,20 @@
 
 
 .main{
+    height: 100vh;
     .container-presentation{
-        height:100vh;
+        height:600px;
         width: 100%;
         background:#fff;
-        background:url('/assets/images/emilio-garcia-UGNXT7QryGA-unsplash.jpg');
+        background:url('/assets/images/T_4.svg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position-x: center;
+        background-position: center;
         padding-left: 20px;
         padding-right: 20px;
+       
         transition: 3s ease-in-out all;
-        filter: grayscale(2);
         position: relative;
         
 

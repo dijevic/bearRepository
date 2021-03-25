@@ -9,14 +9,14 @@
 
 }
 .main{
-    display: none;
+    
     .about-me{
-       background: #508991;
-       
+       background:url('/assets/images/mountaint.svg');
+       background-size: cover;
+       background-repeat: no;
         padding-bottom: 20px;
         margin-top: 35px;
         width:100%;
-        height: auto;
         &.animacion{
             animation-name: hidde, opp;
           transition: 5s ease all;
@@ -71,6 +71,7 @@
                overflow: visible;
                transition: 1.4s ease all;
                opacity: 0;
+
               
             
                .thumb-greet{
