@@ -506,7 +506,7 @@ body .punto {
 }
 
 .main .container-presentation {
-  height: 600px;
+  height: 100vh;
   width: 100%;
   background: #fff;
   background: url("/assets/images/T_4.svg");
@@ -779,7 +779,7 @@ body .punto {
           filter: grayscale(10);
   border-bottom-right-radius: 20px;
   border-top-left-radius: 20px;
-  display: none;
+  display: block;
 }
 
 .main .about-me .contenedor .story .greet, .main .about-me .contenedor .story2 .greet {

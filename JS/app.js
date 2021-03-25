@@ -89,44 +89,48 @@ btnBars.addEventListener('click',()=>{
 })
 
 // agrego efectos para que aparezcan las cartas de presentacion
-       window.onscroll = ()=>{
-           let y = window. scrollY
-        for(let i =0; i < cards.length;i++){
-            let altura = cards[i].offsetTop;
-            if(altura - 500 < y){
-                cards[i].classList.add('animacion')
-                
-            }else if(altura -800 < y){
-                tituloDeveloper.classList.add('blue')
-                firstLetter.forEach(letter=>{
+if(window.screen.width >= 968){
+    window.onscroll = ()=>{
+        let y = window. scrollY
+     for(let i =0; i < cards.length;i++){
+         let altura = cards[i].offsetTop;
+         if(altura - 500 < y){
+             cards[i].classList.add('animacion')
+             
+         }else if(altura -800 < y){
+             tituloDeveloper.classList.add('blue')
+             firstLetter.forEach(letter=>{
 
-                    letter.classList.add('blue') 
-                })
-              
-                navBarOptions.forEach(option=>{
-                    option.classList.add('blue')
-                })
-                
-            }
-            else{
-                tituloDeveloper.classList.remove('blue')
-                firstLetter.forEach(letter=>{
-                    letter.classList.remove('blue')
-                   
-
-                    
-                })
-              
-
-                navBarOptions.forEach(option=>{
-                    option.classList.remove('blue')
-                })
-
+                 letter.classList.add('blue') 
+             })
+           
+             navBarOptions.forEach(option=>{
+                 option.classList.add('blue')
+             })
+             
+         }
+         else{
+             tituloDeveloper.classList.remove('blue')
+             firstLetter.forEach(letter=>{
+                 letter.classList.remove('blue')
                 
 
-                
+                 
+             })
+           
 
-            }
-        }
-    }
+             navBarOptions.forEach(option=>{
+                 option.classList.remove('blue')
+             })
+
+             
+
+             
+
+         }
+     }
+ }
+}else{
+    console.log('algo paso')
+}
 
