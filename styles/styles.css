@@ -779,7 +779,7 @@ body .punto {
           filter: grayscale(10);
   border-bottom-right-radius: 20px;
   border-top-left-radius: 20px;
-  display: block;
+  display: none;
 }
 
 .main .about-me .contenedor .story .greet, .main .about-me .contenedor .story2 .greet {
