@@ -131,6 +131,8 @@ if(window.screen.width >= 968){
      }
  }
 }else{
-    console.log('algo paso')
+    for(let i =0; i < cards.length;i++){
+        cards[i].style.opacity='1'
+    }
 }
 
