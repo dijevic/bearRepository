@@ -708,7 +708,7 @@ body .punto {
 }
 
 .main .about-me {
-  background: url("/assets/images/mountaint.svg");
+  background: #508991;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -717,7 +717,7 @@ body .punto {
   width: 100%;
 }
 
-.main .about-me.animacion, .main .about-me .contenedor .about-me.card1.animation1, .main .about-me .contenedor .about-me.animation1.card3, .main .about-me .contenedor .about-me.card2.animation1, .main .about-me .contenedor .about-me.animation1.card4 {
+.main .about-me.animacion {
   -webkit-animation-name: hidde, opp;
           animation-name: hidde, opp;
   -webkit-transition: 5s ease all;
@@ -915,118 +915,56 @@ body .punto {
   color: #E29578;
 }
 
-.main .about-me .contenedor .card1.animacion, .main .about-me .contenedor .card1.animation1, .main .about-me .contenedor .animation1.card3, .main .about-me .contenedor .animacion.card3 {
+.main .about-me .contenedor .card.animacion1 {
   opacity: 1;
-  -webkit-animation-name: hidde, opp;
-          animation-name: hidde, opp;
-  -webkit-animation-duration: 1.8s;
-          animation-duration: 1.8s;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
-}
-
-.main .about-me .contenedor .card1.animacion img, .main .about-me .contenedor .card1.animation1 img, .main .about-me .contenedor .animation1.card3 img, .main .about-me .contenedor .animacion.card3 img {
-  -webkit-animation-name: hidde;
-          animation-name: hidde;
-  -webkit-animation-duration: 1.8s;
-          animation-duration: 1.8s;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
-}
-
-.main .about-me .contenedor .card1.animacion .greet, .main .about-me .contenedor .card1.animation1 .greet, .main .about-me .contenedor .animation1.card3 .greet, .main .about-me .contenedor .animacion.card3 .greet {
-  -webkit-animation-name: hidde, opp;
-          animation-name: hidde, opp;
-  -webkit-transition: 5s ease all;
-  transition: 5s ease all;
-  -webkit-animation-duration: 1.8s;
-          animation-duration: 1.8s;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
-}
-
-.main .about-me .contenedor .card1.animacion .subtitulo, .main .about-me .contenedor .card1.animation1 .subtitulo, .main .about-me .contenedor .animation1.card3 .subtitulo, .main .about-me .contenedor .animacion.card3 .subtitulo {
-  -webkit-animation-name: hidde, opp;
-          animation-name: hidde, opp;
-  -webkit-transition: 5s ease all;
-  transition: 5s ease all;
-  -webkit-animation-duration: 1.8s;
-          animation-duration: 1.8s;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
-}
-
-.main .about-me .contenedor .card1.animacion .text, .main .about-me .contenedor .card1.animation1 .text, .main .about-me .contenedor .animation1.card3 .text, .main .about-me .contenedor .animacion.card3 .text {
-  -webkit-animation-name: ocultaright, opp;
-          animation-name: ocultaright, opp;
-  -webkit-transition: 5s ease all;
-  transition: 5s ease all;
-  -webkit-animation-duration: 1.8s;
-          animation-duration: 1.8s;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
-}
-
-.main .about-me .contenedor .card1.animation1, .main .about-me .contenedor .animation1.card3 {
   -webkit-animation-name: toptop;
           animation-name: toptop;
-}
-
-.main .about-me .contenedor .card2.animacion, .main .about-me .contenedor .card2.animation1, .main .about-me .contenedor .animation1.card4, .main .about-me .contenedor .animacion.card4 {
-  opacity: 1;
-  -webkit-animation-name: ocultaright, opp;
-          animation-name: ocultaright, opp;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
   -webkit-animation-iteration-count: initial;
           animation-iteration-count: initial;
 }
 
-.main .about-me .contenedor .card2.animacion img, .main .about-me .contenedor .card2.animation1 img, .main .about-me .contenedor .animation1.card4 img, .main .about-me .contenedor .animacion.card4 img {
-  -webkit-animation-name: ocultaright;
-          animation-name: ocultaright;
+.main .about-me .contenedor .card.animacion1 img {
+  -webkit-animation-name: toptoo;
+          animation-name: toptoo;
   -webkit-animation-duration: 1.8s;
           animation-duration: 1.8s;
   -webkit-animation-iteration-count: initial;
           animation-iteration-count: initial;
 }
 
-.main .about-me .contenedor .card2.animacion .greet, .main .about-me .contenedor .card2.animation1 .greet, .main .about-me .contenedor .animation1.card4 .greet, .main .about-me .contenedor .animacion.card4 .greet {
-  -webkit-animation-name: ocultaright, opp;
-          animation-name: ocultaright, opp;
-  -webkit-transition: 5s ease all;
-  transition: 5s ease all;
-  -webkit-animation-duration: 1.8s;
-          animation-duration: 1.8s;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
-}
-
-.main .about-me .contenedor .card2.animacion .subtitulo, .main .about-me .contenedor .card2.animation1 .subtitulo, .main .about-me .contenedor .animation1.card4 .subtitulo, .main .about-me .contenedor .animacion.card4 .subtitulo {
-  -webkit-animation-name: ocultaright, opp;
-          animation-name: ocultaright, opp;
-  -webkit-transition: 5s ease all;
-  transition: 5s ease all;
-  -webkit-animation-duration: 1.8s;
-          animation-duration: 1.8s;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
-}
-
-.main .about-me .contenedor .card2.animacion .text, .main .about-me .contenedor .card2.animation1 .text, .main .about-me .contenedor .animation1.card4 .text, .main .about-me .contenedor .animacion.card4 .text {
-  -webkit-animation-name: hidde, opp;
-          animation-name: hidde, opp;
-  -webkit-transition: 5s ease all;
-  transition: 5s ease all;
-  -webkit-animation-duration: 1.8s;
-          animation-duration: 1.8s;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
-}
-
-.main .about-me .contenedor .card2.animation1, .main .about-me .contenedor .animation1.card4 {
+.main .about-me .contenedor .card.animacion1 .greet {
   -webkit-animation-name: toptop;
           animation-name: toptop;
+  -webkit-transition: 5s ease all;
+  transition: 5s ease all;
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+}
+
+.main .about-me .contenedor .card.animacion1 .subtitulo {
+  -webkit-animation-name: toptop;
+          animation-name: toptop;
+  -webkit-transition: 5s ease all;
+  transition: 5s ease all;
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+}
+
+.main .about-me .contenedor .card.animacion1 .text {
+  -webkit-animation-name: toptop;
+          animation-name: toptop;
+  -webkit-transition: 5s ease all;
+  transition: 5s ease all;
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
 }
 
 @media screen and (min-width: 850px) {
@@ -1046,6 +984,100 @@ body .punto {
   .main .about-me .contenedor .card4 {
     position: relative;
     top: 20px;
+  }
+  .main .about-me .contenedor .card1.animacion, .main .about-me .contenedor .animacion.card3 {
+    opacity: 1;
+    -webkit-animation-name: hidde, opp;
+            animation-name: hidde, opp;
+    -webkit-animation-duration: 1.8s;
+            animation-duration: 1.8s;
+    -webkit-animation-iteration-count: initial;
+            animation-iteration-count: initial;
+  }
+  .main .about-me .contenedor .card1.animacion img, .main .about-me .contenedor .animacion.card3 img {
+    -webkit-animation-name: hidde;
+            animation-name: hidde;
+    -webkit-animation-duration: 1.8s;
+            animation-duration: 1.8s;
+    -webkit-animation-iteration-count: initial;
+            animation-iteration-count: initial;
+  }
+  .main .about-me .contenedor .card1.animacion .greet, .main .about-me .contenedor .animacion.card3 .greet {
+    -webkit-animation-name: hidde, opp;
+            animation-name: hidde, opp;
+    -webkit-transition: 5s ease all;
+    transition: 5s ease all;
+    -webkit-animation-duration: 1.8s;
+            animation-duration: 1.8s;
+    -webkit-animation-iteration-count: initial;
+            animation-iteration-count: initial;
+  }
+  .main .about-me .contenedor .card1.animacion .subtitulo, .main .about-me .contenedor .animacion.card3 .subtitulo {
+    -webkit-animation-name: hidde, opp;
+            animation-name: hidde, opp;
+    -webkit-transition: 5s ease all;
+    transition: 5s ease all;
+    -webkit-animation-duration: 1.8s;
+            animation-duration: 1.8s;
+    -webkit-animation-iteration-count: initial;
+            animation-iteration-count: initial;
+  }
+  .main .about-me .contenedor .card1.animacion .text, .main .about-me .contenedor .animacion.card3 .text {
+    -webkit-animation-name: ocultaright, opp;
+            animation-name: ocultaright, opp;
+    -webkit-transition: 5s ease all;
+    transition: 5s ease all;
+    -webkit-animation-duration: 1.8s;
+            animation-duration: 1.8s;
+    -webkit-animation-iteration-count: initial;
+            animation-iteration-count: initial;
+  }
+  .main .about-me .contenedor .card2.animacion, .main .about-me .contenedor .animacion.card4 {
+    opacity: 1;
+    -webkit-animation-name: ocultaright, opp;
+            animation-name: ocultaright, opp;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: initial;
+            animation-iteration-count: initial;
+  }
+  .main .about-me .contenedor .card2.animacion img, .main .about-me .contenedor .animacion.card4 img {
+    -webkit-animation-name: ocultaright;
+            animation-name: ocultaright;
+    -webkit-animation-duration: 1.8s;
+            animation-duration: 1.8s;
+    -webkit-animation-iteration-count: initial;
+            animation-iteration-count: initial;
+  }
+  .main .about-me .contenedor .card2.animacion .greet, .main .about-me .contenedor .animacion.card4 .greet {
+    -webkit-animation-name: ocultaright, opp;
+            animation-name: ocultaright, opp;
+    -webkit-transition: 5s ease all;
+    transition: 5s ease all;
+    -webkit-animation-duration: 1.8s;
+            animation-duration: 1.8s;
+    -webkit-animation-iteration-count: initial;
+            animation-iteration-count: initial;
+  }
+  .main .about-me .contenedor .card2.animacion .subtitulo, .main .about-me .contenedor .animacion.card4 .subtitulo {
+    -webkit-animation-name: ocultaright, opp;
+            animation-name: ocultaright, opp;
+    -webkit-transition: 5s ease all;
+    transition: 5s ease all;
+    -webkit-animation-duration: 1.8s;
+            animation-duration: 1.8s;
+    -webkit-animation-iteration-count: initial;
+            animation-iteration-count: initial;
+  }
+  .main .about-me .contenedor .card2.animacion .text, .main .about-me .contenedor .animacion.card4 .text {
+    -webkit-animation-name: hidde, opp;
+            animation-name: hidde, opp;
+    -webkit-transition: 5s ease all;
+    transition: 5s ease all;
+    -webkit-animation-duration: 1.8s;
+            animation-duration: 1.8s;
+    -webkit-animation-iteration-count: initial;
+            animation-iteration-count: initial;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -89,7 +89,7 @@ btnBars.addEventListener('click',()=>{
 })
 
 // agrego efectos para que aparezcan las cartas de presentacion
-if(window.screen.width >= 968){
+if(window.screen.width >= 850){
     window.onscroll = ()=>{
         let y = window. scrollY
      for(let i =0; i < cards.length;i++){
@@ -131,17 +131,49 @@ if(window.screen.width >= 968){
      }
  }
 }else{
-    for(let i =0; i < cards.length;i++){
-        cards[i].style.opacity='1';
-   
-    }
     window.onscroll = ()=>{
         let y = window. scrollY
-        for(let i =0; i < cards.length;i++){
-            cards[i].classList.add('animation1')
-       
-        }
-        
+     for(let i =0; i < cards.length;i++){
+         let altura = cards[i].offsetTop;
+         if(altura - 500 < y){
+             cards[i].classList.add('animacion1')
+             
+         }else if(altura -800 < y){
+             tituloDeveloper.classList.add('blue')
+             firstLetter.forEach(letter=>{
+
+                 letter.classList.add('blue') 
+             })
+           
+             navBarOptions.forEach(option=>{
+                 option.classList.add('blue')
+             })
+             
+         }
+         else{
+             tituloDeveloper.classList.remove('blue')
+             firstLetter.forEach(letter=>{
+                 letter.classList.remove('blue')
+                
+
+                 
+             })
+           
+
+             navBarOptions.forEach(option=>{
+                 option.classList.remove('blue')
+             })
+
+             
+
+             
+
+         }
+     }
  }
 }
+ 
+ 
+    
+
 
