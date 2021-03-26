@@ -131,12 +131,17 @@ if(window.screen.width >= 850){
      }
  }
 }else{
+    cards.forEach(card=>{
+        card.style.opacity ='1';
+        console.log('si')
+    })
     window.onscroll = ()=>{
         let y = window. scrollY
      for(let i =0; i < cards.length;i++){
          let altura = cards[i].offsetTop;
          if(altura - 500 < y){
              cards[i].classList.add('animacion1')
+             cards[1].classList.remove('animacion')
              
          }else if(altura -800 < y){
              tituloDeveloper.classList.add('blue')

@@ -4,14 +4,16 @@
     100%{opacity: 1;}
 }
 @keyframes ocultaright{
-    0%{transform: translate(150%);}
-    100%{transform: translate(0);}
+    0%{transform: translate(150%);opacity: 0;}
+    100%{transform: translate(0);opacity: 1;}
 
 }
 @keyframes toptop{
     0%{
         transform: translateY(20px);
-    }100%{transform: translateY(0);}
+        opacity: 0;
+    }100%{transform: translateY(0);
+       opacity: 1;}
 }
 .main{
     
@@ -76,7 +78,7 @@
                padding: 20px;
                overflow: visible;
                transition: 1.4s ease all;
-               opacity: 0;
+            //    opacity: 0;
 
               
             
