@@ -685,6 +685,28 @@ body .punto {
   }
 }
 
+@-webkit-keyframes ocultarleft {
+  0% {
+    -webkit-transform: translate(-150%);
+            transform: translate(-150%);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes ocultarleft {
+  0% {
+    -webkit-transform: translate(-150%);
+            transform: translate(-150%);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
 @-webkit-keyframes toptop {
   0% {
     -webkit-transform: translateY(20px);
@@ -926,8 +948,8 @@ body .punto {
 }
 
 .main .about-me .contenedor .card.animacion1 img {
-  -webkit-animation-name: ocultaright;
-          animation-name: ocultaright;
+  -webkit-animation-name: ocultarleft;
+          animation-name: ocultarleft;
   -webkit-animation-duration: 1.8s;
           animation-duration: 1.8s;
   -webkit-animation-iteration-count: initial;
@@ -935,8 +957,8 @@ body .punto {
 }
 
 .main .about-me .contenedor .card.animacion1 .greet {
-  -webkit-animation-name: ocultaright;
-          animation-name: ocultaright;
+  -webkit-animation-name: ocultarleft;
+          animation-name: ocultarleft;
   -webkit-transition: 5s ease all;
   transition: 5s ease all;
   -webkit-animation-duration: 1.8s;
