@@ -140,7 +140,7 @@ if(window.screen.width >= 850){
              cards[i].classList.add('animacion1')
              cards[1].classList.remove('animacion')
              
-         }else if(altura -800 < y){
+         }else if(altura -2000 <= y){
              tituloDeveloper.classList.add('blue')
              firstLetter.forEach(letter=>{
 
