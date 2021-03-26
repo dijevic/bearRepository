@@ -131,10 +131,7 @@ if(window.screen.width >= 850){
      }
  }
 }else{
-    cards.forEach(card=>{
-        card.style.opacity ='1';
-        console.log('si')
-    })
+
     window.onscroll = ()=>{
         let y = window. scrollY
      for(let i =0; i < cards.length;i++){
