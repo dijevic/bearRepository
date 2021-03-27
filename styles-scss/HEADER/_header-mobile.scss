@@ -10,18 +10,8 @@
     100%{opacity:1}
 
 }
-@keyframes hiddeback{
-    0%{transform: translate(0);}
-    100%{transform: translate(-100%0);}
-}
 
-@keyframes widthpositive {
-    25%{width:25px}
-    50%{width:50px}
-    75%{width:75px}
-    100%{width:100px}
 
-}
 @keyframes widthBars {
     25%{width: 20px;}
     25%{width: 20px;}
@@ -53,19 +43,15 @@
     z-index: 500;
     .logo{
         margin-left: 20px;
-        color:#fff;
-        font-size:16px;
-
-
-        .desarrollo-titulo{
-            color: #E29578;
-            font-family: 'Oswald';
-            display: block;
-            &.blue{
-                @extend .desarrollo-titulo;
-                color: #508991;
-            }
-        }
+        background: url('/assets/images/bear22.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 80px;
+        height: 60px;
+        border-radius: 70%;
+     
+       
     }
 
     .btn-bars{

@@ -58,9 +58,6 @@
               
                 &.animacion{
                     opacity: 1;
-                    animation-name: ocultaright, opp;
-                    animation-duration: 3s;
-                    animation-iteration-count: initial;
                     img{
                     animation-name: ocultaright;
                     animation-duration: 1.8s;
@@ -76,14 +73,14 @@
                    }
                    .subtitulo{
                   
-                        animation-name: ocultaright, opp;
+                        animation-name: ocultarleft, opp;
                         transition: 5s ease all;
                         animation-duration: 1.8s;
                         animation-iteration-count: initial;
                       
                    }
                    .text{
-                      animation-name: hidde, opp;
+                      animation-name: ocultarleft, opp;
                       transition: 5s ease all;
                       animation-duration: 1.8s;
                       animation-iteration-count: initial;

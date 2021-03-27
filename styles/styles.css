@@ -71,58 +71,6 @@ body .punto {
   }
 }
 
-@-webkit-keyframes hiddeback {
-  0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  100% {
-    -webkit-transform: translate(-100% 0);
-            transform: translate(-100% 0);
-  }
-}
-
-@keyframes hiddeback {
-  0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  100% {
-    -webkit-transform: translate(-100% 0);
-            transform: translate(-100% 0);
-  }
-}
-
-@-webkit-keyframes widthpositive {
-  25% {
-    width: 25px;
-  }
-  50% {
-    width: 50px;
-  }
-  75% {
-    width: 75px;
-  }
-  100% {
-    width: 100px;
-  }
-}
-
-@keyframes widthpositive {
-  25% {
-    width: 25px;
-  }
-  50% {
-    width: 50px;
-  }
-  75% {
-    width: 75px;
-  }
-  100% {
-    width: 100px;
-  }
-}
-
 @-webkit-keyframes widthBars {
   25% {
     width: 20px;
@@ -180,18 +128,13 @@ body .punto {
 
 .header .logo {
   margin-left: 20px;
-  color: #fff;
-  font-size: 16px;
-}
-
-.header .logo .desarrollo-titulo, .header .logo .desarrollo-titulo.blue {
-  color: #E29578;
-  font-family: 'Oswald';
-  display: block;
-}
-
-.header .logo .blue.desarrollo-titulo {
-  color: #508991;
+  background: url("/assets/images/bear22.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 80px;
+  height: 60px;
+  border-radius: 70%;
 }
 
 .header .btn-bars {
@@ -351,7 +294,7 @@ body .punto {
   .header .logo {
     font-size: 14px;
   }
-  .header .logo .desarrollo-titulo, .header .logo .desarrollo-titulo.blue {
+  .header .logo .desarrollo-titulo {
     font-size: 14px;
   }
 }
@@ -360,7 +303,7 @@ body .punto {
   .header .logo {
     font-size: 22px;
   }
-  .header .logo .desarrollo-titulo, .header .logo .desarrollo-titulo.blue {
+  .header .logo .desarrollo-titulo {
     display: inline;
     font-size: 24px;
   }
@@ -371,7 +314,7 @@ body .punto {
     font-size: 25px;
     margin-left: 50px;
   }
-  .header .logo .desarrollo-titulo, .header .logo .desarrollo-titulo.blue {
+  .header .logo .desarrollo-titulo {
     display: inline;
     font-size: 25px;
     -webkit-text-decoration: underline #fff 2px;
@@ -537,6 +480,23 @@ body .punto {
   margin-bottom: 20px;
 }
 
+.main .container-presentation .presentation .desarrollo-titulo {
+  color: #E29578;
+  font-family: 'Oswald';
+  display: block;
+  text-shadow: 5px 5px 5px #000;
+  font-size: 30px;
+  font-weight: 494;
+}
+
+.main .container-presentation .presentation .description {
+  color: #fff;
+  font-family: 'Oswald';
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-shadow: 5px 5px 5px #000;
+}
+
 .main .container-presentation .presentation .start-here {
   width: 120px;
   display: block;
@@ -560,88 +520,62 @@ body .punto {
   text-align: center;
 }
 
-.main .container-presentation .presentation .welcome-text {
+.main .container-presentation .presentation .Ymas {
+  padding: 5px;
+  width: 120px;
+  display: block;
+  border-radius: 10px;
   font-family: 'Oswald';
   font-weight: 494;
-  font-size: 50px;
-  line-height: 62px;
-  z-index: 6;
+  font-style: italic;
+  cursor: pointer;
+  background: #DEFFFC;
+  color: #004346;
+  -webkit-box-shadow: 5px 2px #000;
+          box-shadow: 5px 2px #000;
   -webkit-transition: 1s ease all;
   transition: 1s ease all;
-  text-align: left;
-  text-shadow: 1px 1px 2px black;
+  font-size: 16px;
+  border: 2px solid transparent;
+  border-top: 1px solid #172A3A;
+  border-left: 1px solid #172A3A;
+  text-align: center;
+  right: 25px;
+  bottom: 20px;
+  position: fixed;
+  height: 35px;
+  z-index: 10;
 }
 
-.main .container-presentation .presentation .welcome-text.efecto {
-  -webkit-animation-name: welcometext;
-          animation-name: welcometext;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
-}
-
-.main .container-presentation .presentation .message {
-  line-height: 32px;
-  font-family: 'Oswald';
-  font-weight: 494;
-  font-size: 25px;
-  color: #fff;
-  position: relative;
-  margin-top: 15px;
-  letter-spacing: 5px;
-  -webkit-transition: 2s;
-  transition: 2s;
-}
-
-.main .container-presentation .presentation .message.efecto {
-  -webkit-animation-name: messagetext;
-          animation-name: messagetext;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
-}
-
-.main .container-presentation .presentation .message .name, .main .container-presentation .presentation .message .about-me .contenedor .story .text .carrera, .main .about-me .contenedor .story .text .container-presentation .presentation .message .carrera, .main .container-presentation .presentation .message .about-me .contenedor .story2 .text .carrera, .main .about-me .contenedor .story2 .text .container-presentation .presentation .message .carrera {
-  position: absolute;
-  right: 0;
-  color: #000;
-  font-family: 'Truculenta';
-  font-weight: 500;
-}
-
-.main .container-presentation .presentation .message .quotation {
-  position: relative;
-  top: -10px;
-  left: -10px;
-  font-size: 42px;
-  font-style: italic;
-}
-
-.main .container-presentation .presentation .message .quotation1 {
-  position: relative;
-  top: -5px;
-  right: -10px;
-  font-size: 42px;
-  font-style: italic;
+.main .container-presentation .presentation .Ymas:hover {
+  width: 150px;
+  -webkit-transition: 0.6s ease all;
+  transition: 0.6s ease all;
+  -webkit-box-shadow: 5px 2px #000;
+          box-shadow: 5px 2px #000;
 }
 
 @media screen and (min-width: 968px) {
+  .main .container-presentation .presentation .desarrollo-titulo {
+    font-size: 42px;
+    line-height: 52px;
+  }
+  .main .container-presentation .presentation .description {
+    font-size: 22px;
+  }
   .main .container-presentation .presentation .start-here {
     padding: 5px;
   }
   .main .container-presentation .presentation .start-here:hover {
-    background: #000;
+    background: #004346;
     color: #fff;
     width: 150px;
     -webkit-transition: 0.6s ease all;
     transition: 0.6s ease all;
-    -webkit-box-shadow: 5px 2px #fff;
-            box-shadow: 5px 2px #fff;
-  }
-  .main .container-presentation .presentation .start-here:hover::first-letter {
-    color: #004346;
+    -webkit-box-shadow: 5px 2px #000;
+            box-shadow: 5px 2px #000;
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
   }
 }
 
@@ -734,7 +668,7 @@ body .punto {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding-bottom: 20px;
+  padding-bottom: 150px;
   margin-top: 35px;
   width: 100%;
 }
@@ -750,6 +684,11 @@ body .punto {
           animation-iteration-count: initial;
 }
 
+.main .about-me .contenedor-title {
+  position: relative;
+  top: 25px;
+}
+
 .main .about-me .titulo-about {
   text-align: left;
   margin: 0 auto;
@@ -758,11 +697,13 @@ body .punto {
   font-weight: 500;
   margin: 0 auto;
   display: inline;
-  background: #508991;
   padding: 0px 20px 0px 20px;
+  background: #172A3A;
   height: 120px;
   color: #fff;
   border-bottom: 1px solid #E29578;
+  text-shadow: 2px 2px 2px #000;
+  margin-top: 15px;
 }
 
 .main .about-me .titulo-about .letter {
@@ -1056,12 +997,6 @@ body .punto {
   }
   .main .about-me .contenedor .card2.animacion, .main .about-me .contenedor .animacion.card4 {
     opacity: 1;
-    -webkit-animation-name: ocultaright, opp;
-            animation-name: ocultaright, opp;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-    -webkit-animation-iteration-count: initial;
-            animation-iteration-count: initial;
   }
   .main .about-me .contenedor .card2.animacion img, .main .about-me .contenedor .animacion.card4 img {
     -webkit-animation-name: ocultaright;
@@ -1082,8 +1017,8 @@ body .punto {
             animation-iteration-count: initial;
   }
   .main .about-me .contenedor .card2.animacion .subtitulo, .main .about-me .contenedor .animacion.card4 .subtitulo {
-    -webkit-animation-name: ocultaright, opp;
-            animation-name: ocultaright, opp;
+    -webkit-animation-name: ocultarleft, opp;
+            animation-name: ocultarleft, opp;
     -webkit-transition: 5s ease all;
     transition: 5s ease all;
     -webkit-animation-duration: 1.8s;
@@ -1092,8 +1027,8 @@ body .punto {
             animation-iteration-count: initial;
   }
   .main .about-me .contenedor .card2.animacion .text, .main .about-me .contenedor .animacion.card4 .text {
-    -webkit-animation-name: hidde, opp;
-            animation-name: hidde, opp;
+    -webkit-animation-name: ocultarleft, opp;
+            animation-name: ocultarleft, opp;
     -webkit-transition: 5s ease all;
     transition: 5s ease all;
     -webkit-animation-duration: 1.8s;
@@ -1101,5 +1036,43 @@ body .punto {
     -webkit-animation-iteration-count: initial;
             animation-iteration-count: initial;
   }
+}
+
+.main .work {
+  margin-top: 35px;
+  background: url("/assets/images/05.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main .work .contenedor-title {
+  position: relative;
+  top: 25px;
+}
+
+.main .work .titulo-work {
+  text-align: left;
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 500;
+  margin: 0 auto;
+  display: inline;
+  background: #172A3A;
+  padding: 0px 20px 0px 20px;
+  height: 120px;
+  color: #fff;
+  border-bottom: 1px solid #E29578;
+  text-shadow: 2px 2px 2px #000;
+}
+
+.main .work .titulo-work .letter {
+  font-size: 75px;
+  color: #E29578;
+  line-height: 42px;
+  text-shadow: 4px 4px 4px #000;
 }
 /*# sourceMappingURL=styles.css.map */

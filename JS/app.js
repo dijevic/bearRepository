@@ -12,13 +12,13 @@ const cards             = document.querySelectorAll('.card');
 const btnAboutNav       = document.getElementById('btn-nav-about');
 const imgCard           = document.querySelectorAll('.img-card');
 const html              = document.querySelector('.html');
-const tituloDeveloper   = document.querySelector('.desarrollo-titulo');
 const firstLetter       =document.querySelectorAll('.fist-letter');
 const welcomeText       =document.querySelector('.welcome-text');
 const messageText       =document.querySelector('.message');
 const navBarOptions     =document.querySelectorAll('.navBarOptions');
 const main              =document.querySelector('.main');
-const header            =document.querySelector('.header')
+const header            =document.querySelector('.header');
+const BtnContact        =document.querySelector('.start-here');
 
 let num = 0;
 
@@ -88,94 +88,122 @@ btnBars.addEventListener('click',()=>{
     
 })
 
-// agrego efectos para que aparezcan las cartas de presentacion
-if(window.screen.width >= 850){
-    window.onscroll = ()=>{
-        let y = window. scrollY
-     for(let i =0; i < cards.length;i++){
-         let altura = cards[i].offsetTop;
-         if(altura - 500 < y){
-             cards[i].classList.add('animacion')
-             
-         }else if(altura -800 < y){
-             tituloDeveloper.classList.add('blue')
-             firstLetter.forEach(letter=>{
+// agrego efectos para que aparezcan las cartas de presentacion 
+// funcion que me permite agregar efecto a mis tarjetas de presentacion, 
+// tambien agrego y quito color a las letras de mi navegacion
+const scrollEfects = ()=>{
+    if(window.screen.width >= 850){
+        window.onscroll = ()=>{
+            let y = window.scrollY
+            // BOTON
+            if(y>0){
+                BtnContact.classList.add('Ymas');
+                BtnContact.classList.remove('start-here')
+               
+            }else{
+                BtnContact.classList.remove('Ymas')
+                BtnContact.classList.add('start-here');
 
-                 letter.classList.add('blue') 
-             })
-           
-             navBarOptions.forEach(option=>{
-                 option.classList.add('blue')
-             })
-             
-         }
-         else{
-             tituloDeveloper.classList.remove('blue')
-             firstLetter.forEach(letter=>{
-                 letter.classList.remove('blue')
-                
-
+            }
+         for(let i =0; i < cards.length;i++){
+             let altura = cards[i].offsetTop;
+             if(altura - 500 < y){
+                 cards[i].classList.add('animacion')
                  
-             })
-           
-
-             navBarOptions.forEach(option=>{
-                 option.classList.remove('blue')
-             })
-
-             
-
-             
-
-         }
-     }
- }
-}else{
-
-    window.onscroll = ()=>{
-        let y = window. scrollY
-     for(let i =0; i < cards.length;i++){
-         let altura = cards[i].offsetTop;
-         if(altura - 500 < y){
-             cards[i].classList.add('animacion1')
-             cards[1].classList.remove('animacion')
-             
-         }else if(altura -2000 <= y){
-             tituloDeveloper.classList.add('blue')
-             firstLetter.forEach(letter=>{
-
-                 letter.classList.add('blue') 
-             })
-           
-             navBarOptions.forEach(option=>{
-                 option.classList.add('blue')
-             })
-             
-         }
-         else{
-             tituloDeveloper.classList.remove('blue')
-             firstLetter.forEach(letter=>{
-                 letter.classList.remove('blue')
-                
-
-                 
-             })
-           
-
-             navBarOptions.forEach(option=>{
-                 option.classList.remove('blue')
-             })
-
-             
-
-             
-
-         }
-     }
- }
-}
- 
- 
+             }else if(altura -800 < y){
     
+                 firstLetter.forEach(letter=>{
+    
+                     letter.classList.add('blue') 
+                 })
+               
+                 navBarOptions.forEach(option=>{
+                     option.classList.add('blue')
+                 })
+                 
+             }
+             else{
+                
+                 firstLetter.forEach(letter=>{
+                     letter.classList.remove('blue')
+                    
+    
+                     
+                 })
+               
+    
+                 navBarOptions.forEach(option=>{
+                     option.classList.remove('blue')
+                 })
+    
+                 
+    
+                 
+    
+             }
+         }
+     }
+    }else{
+    
+        window.onscroll = ()=>{
+            let y = window. scrollY
+            
+            //BOTON CONTACTO
+
+            if(y>0){
+                BtnContact.classList.add('Ymas');
+                BtnContact.classList.remove('start-here')
+               
+            }else{
+                BtnContact.classList.remove('Ymas')
+                BtnContact.classList.add('start-here');
+
+            }
+         for(let i =0; i < cards.length;i++){
+             let altura = cards[i].offsetTop;
+             if(altura - 500 < y){
+                 cards[i].classList.add('animacion1')
+                 cards[1].classList.remove('animacion')
+                 
+             }else if(altura -2000 <= y){
+                //  tituloDeveloper.classList.add('blue')
+                 firstLetter.forEach(letter=>{
+    
+                     letter.classList.add('blue') 
+                 })
+               
+                 navBarOptions.forEach(option=>{
+                     option.classList.add('blue')
+                 })
+                 
+             }
+             else{
+                //  tituloDeveloper.classList.remove('blue')
+                 firstLetter.forEach(letter=>{
+                     letter.classList.remove('blue')
+                    
+    
+                     
+                 })
+               
+    
+                 navBarOptions.forEach(option=>{
+                     option.classList.remove('blue')
+                 })
+    
+                 
+    
+                 
+    
+             }
+         }
+     }
+    }
+}
+
+scrollEfects()
+ 
+
+
 
 
