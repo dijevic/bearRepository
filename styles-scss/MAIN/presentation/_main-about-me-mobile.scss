@@ -6,13 +6,13 @@
 
 }
 @keyframes welcometext{
-  0%{font-size: 100px;}
-  100%{font-size: 50px;}
+  0%{font-size: 60px;}
+  100%{font-size: 30px;}
 
 }
 @keyframes messagetext{
     0%{font-size: 0px;}
-    100%{font-size: 25px;}
+    100%{font-size: 18px;}
   
   }
 
@@ -33,6 +33,7 @@
        
         transition: 3s ease-in-out all;
         position: relative;
+        object-fit: cover;
         
 
 
@@ -53,6 +54,9 @@
                 text-shadow: 5px 5px 5px #000;
                 font-size: 30px;
                 font-weight: 494;
+                animation-name: welcometext;
+                animation-duration: 2s;
+                animation-iteration-count: initial;
                 
             }
             .description{
@@ -61,6 +65,9 @@
                 font-size: 18px;
                 letter-spacing: 1px;
                 text-shadow: 5px 5px 5px #000;
+                animation-name: messagetext;
+                animation-duration: 2s;
+                animation-iteration-count: initial;
 
 
             }
@@ -75,7 +82,7 @@
                 cursor: pointer;
                 position:relative;
                 top: 70px;
-                background: rgba($color: #000000, $alpha: 0.2);
+                background:#004346 ;
                 color: #fff;
                 box-shadow: 5px 2px #000;
                 transition: 1s ease all;
@@ -99,8 +106,8 @@
                 font-weight: 494;
                 font-style: italic;
                 cursor: pointer;
-                background:#DEFFFC;
-                color:  #004346;
+                background:#004346;
+                color: #DEFFFC ;
                 box-shadow: 5px 2px #000;
                 transition: 1s ease all;
                 font-size:16px;
@@ -115,11 +122,16 @@
                 z-index: 10;
                
                 &:hover{
+                  &:hover{
+                    color: #fff;
                     width: 150px;
                     transition: 0.6s ease all;
                     box-shadow: 5px 2px #000;
-                    
-                    
+                    transition: 0.7s;
+                    text-shadow: 3px 3px 3px #000; 
+
+                }
+              
 
                 }
 

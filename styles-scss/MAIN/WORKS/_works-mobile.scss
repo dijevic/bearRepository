@@ -39,5 +39,20 @@
 
             }
     }
+
+   .contenedor{
+       background:url('/assets/images/mountaineering-and-traveling-vector-illustration.jpg');
+       margin: auto;
+       width: 100%;
+       max-width: 750px;
+       height: 400px;
+       background-position: center;
+       background-size: cover;
+       transform: translateY(38%);
+       border-right:5px #E29578 solid;
+       border-left: 5px #E29578 solid;
+    
+
+   }
 } 
 }

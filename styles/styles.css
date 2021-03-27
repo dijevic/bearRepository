@@ -353,14 +353,16 @@ body .punto {
     font-size: 18px;
     margin-left: 10px;
     display: inline-block;
+    -webkit-transition: 0.8s ease all;
+    transition: 0.8s ease all;
   }
   .header .menu ul li .navBarOptions:hover {
     border-bottom: 1.5px solid #E29578;
+    font-size: 22px;
+    text-shadow: 2px 2px 2px #000;
   }
   .header .menu ul li .navBarOptions:hover .fist-letter {
-    color: #E29578;
-    -webkit-transition: 0.4s ease all;
-    transition: 0.4s ease all;
+    font-size: 22px;
   }
   .header .menu ul li .navBarOptions.blue:hover {
     border-bottom: 1.5px solid #508991;
@@ -369,7 +371,7 @@ body .punto {
     color: #508991;
   }
   .header .menu ul li .fist-letter {
-    color: #fff;
+    color: #E29578;
     display: inline-block;
   }
 }
@@ -410,19 +412,19 @@ body .punto {
 
 @-webkit-keyframes welcometext {
   0% {
-    font-size: 100px;
+    font-size: 60px;
   }
   100% {
-    font-size: 50px;
+    font-size: 30px;
   }
 }
 
 @keyframes welcometext {
   0% {
-    font-size: 100px;
+    font-size: 60px;
   }
   100% {
-    font-size: 50px;
+    font-size: 30px;
   }
 }
 
@@ -431,7 +433,7 @@ body .punto {
     font-size: 0px;
   }
   100% {
-    font-size: 25px;
+    font-size: 18px;
   }
 }
 
@@ -440,7 +442,7 @@ body .punto {
     font-size: 0px;
   }
   100% {
-    font-size: 25px;
+    font-size: 18px;
   }
 }
 
@@ -458,6 +460,8 @@ body .punto {
   -webkit-transition: 3s ease-in-out all;
   transition: 3s ease-in-out all;
   position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .main .container-presentation .presentation {
@@ -487,6 +491,12 @@ body .punto {
   text-shadow: 5px 5px 5px #000;
   font-size: 30px;
   font-weight: 494;
+  -webkit-animation-name: welcometext;
+          animation-name: welcometext;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
 }
 
 .main .container-presentation .presentation .description {
@@ -495,6 +505,12 @@ body .punto {
   font-size: 18px;
   letter-spacing: 1px;
   text-shadow: 5px 5px 5px #000;
+  -webkit-animation-name: messagetext;
+          animation-name: messagetext;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
 }
 
 .main .container-presentation .presentation .start-here {
@@ -507,7 +523,7 @@ body .punto {
   cursor: pointer;
   position: relative;
   top: 70px;
-  background: rgba(0, 0, 0, 0.2);
+  background: #004346;
   color: #fff;
   -webkit-box-shadow: 5px 2px #000;
           box-shadow: 5px 2px #000;
@@ -529,8 +545,8 @@ body .punto {
   font-weight: 494;
   font-style: italic;
   cursor: pointer;
-  background: #DEFFFC;
-  color: #004346;
+  background: #004346;
+  color: #DEFFFC;
   -webkit-box-shadow: 5px 2px #000;
           box-shadow: 5px 2px #000;
   -webkit-transition: 1s ease all;
@@ -547,35 +563,75 @@ body .punto {
   z-index: 10;
 }
 
-.main .container-presentation .presentation .Ymas:hover {
+.main .container-presentation .presentation .Ymas:hover:hover {
+  color: #fff;
   width: 150px;
   -webkit-transition: 0.6s ease all;
   transition: 0.6s ease all;
   -webkit-box-shadow: 5px 2px #000;
           box-shadow: 5px 2px #000;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  text-shadow: 3px 3px 3px #000;
 }
 
 @media screen and (min-width: 968px) {
+  @-webkit-keyframes welcometext2 {
+    0% {
+      font-size: 84px;
+    }
+    100% {
+      font-size: 42px;
+    }
+  }
+  @keyframes welcometext2 {
+    0% {
+      font-size: 84px;
+    }
+    100% {
+      font-size: 42px;
+    }
+  }
+  @-webkit-keyframes descripcion2 {
+    0% {
+      font-size: 0px;
+    }
+    100% {
+      font-size: 22px;
+    }
+  }
+  @keyframes descripcion2 {
+    0% {
+      font-size: 0px;
+    }
+    100% {
+      font-size: 22px;
+    }
+  }
   .main .container-presentation .presentation .desarrollo-titulo {
     font-size: 42px;
     line-height: 52px;
+    -webkit-animation-name: welcometext2;
+            animation-name: welcometext2;
   }
   .main .container-presentation .presentation .description {
     font-size: 22px;
+    -webkit-animation-name: descripcion2;
+            animation-name: descripcion2;
   }
   .main .container-presentation .presentation .start-here {
     padding: 5px;
   }
   .main .container-presentation .presentation .start-here:hover {
-    background: #004346;
     color: #fff;
     width: 150px;
     -webkit-transition: 0.6s ease all;
     transition: 0.6s ease all;
     -webkit-box-shadow: 5px 2px #000;
             box-shadow: 5px 2px #000;
-    -webkit-transition: 1.5s;
-    transition: 1.5s;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+    text-shadow: 3px 3px 3px #000;
   }
 }
 
@@ -1076,8 +1132,86 @@ body .punto {
   text-shadow: 4px 4px 4px #000;
 }
 
+.main .work .contenedor {
+  background: url("/assets/images/mountaineering-and-traveling-vector-illustration.jpg");
+  margin: auto;
+  width: 100%;
+  max-width: 750px;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  -webkit-transform: translateY(38%);
+          transform: translateY(38%);
+  border-right: 5px #E29578 solid;
+  border-left: 5px #E29578 solid;
+}
+
 .main .work .titulo-work {
   font-size: 34px;
   line-height: 46px;
+}
+
+.main .habilities {
+  margin-top: 35px;
+  width: 100%;
+  height: 100vh;
+  background: url("/assets/images/sunset-scene-vector.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.main .habilities .contenedor-title {
+  position: relative;
+  top: 25px;
+}
+
+.main .habilities .titulo-habilities {
+  text-align: left;
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 500;
+  margin: 0 auto;
+  display: inline;
+  background: #172A3A;
+  padding: 0px 20px 0px 20px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  text-shadow: 2px 2px 2px #000;
+}
+
+.main .habilities .titulo-habilities .letter {
+  font-size: 75px;
+  color: #E29578;
+  line-height: 42px;
+  text-shadow: 4px 4px 4px #000;
+}
+
+.main .contacto {
+  margin-top: 35px;
+  background: #508991;
+  width: 100%;
+  height: 100vh;
+}
+
+.main .contacto .contenedor-title {
+  position: relative;
+  top: 25px;
+  width: 100%;
+}
+
+.main .contacto .titulo-contact {
+  font-size: 35px;
+  line-height: 42px;
+  font-weight: 500;
+  padding: 0px 20px 0px 20px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  height: 55px;
+  margin: 0 auto;
+  text-align: center;
+  width: 50vh;
+  color: #fff;
+  font-family: 'Oswald';
+  font-weight: 494;
 }
 /*# sourceMappingURL=styles.css.map */

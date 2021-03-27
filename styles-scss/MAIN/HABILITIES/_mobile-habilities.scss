@@ -1,0 +1,35 @@
+.main{
+    .habilities{
+        margin-top: 35px;
+        width: 100%;
+        height: 100vh;
+        background: url('/assets/images/sunset-scene-vector.jpg');
+        background-size: cover;
+        background-position: center;
+        .contenedor-title{
+            position: relative;
+            top: 25px;
+        }
+        .titulo-habilities{
+            text-align: left;
+            font-size: 28px;
+            line-height: 42px;
+            font-weight: 500;
+            margin: 0 auto;
+            display: inline;
+            background:#172A3A;
+            padding: 0px 20px 0px 20px;
+            color: #fff;
+            border-bottom: 1px solid #fff;
+            text-shadow: 2px 2px 2px #000;
+
+                .letter{
+                    font-size: 75px;
+                    color: #E29578;
+                    line-height: 42px;
+                    text-shadow: 4px 4px 4px #000;
+    
+                }
+        }
+    }
+}

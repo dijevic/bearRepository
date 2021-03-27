@@ -23,7 +23,12 @@ const BtnContact        =document.querySelector('.start-here');
 let num = 0;
 
 
-
+navBarOptions.forEach(option=>{
+    option.addEventListener('mouseout',()=>{
+        option.style.transition='1s ease all';
+        console.log('ss')
+    })
+})
 
 
 

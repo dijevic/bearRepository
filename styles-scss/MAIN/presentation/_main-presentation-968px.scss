@@ -1,5 +1,12 @@
 @media screen and(min-width:968px){
-
+@keyframes welcometext2{
+    0%{font-size: 84px;}
+    100%{font-size: 42px;}
+}
+@keyframes descripcion2 {
+    0%{font-size:0px ;}
+    100%{font-size: 22px;}
+}
     .main{
         .container-presentation{
          
@@ -7,22 +14,23 @@
                 .desarrollo-titulo{
                     font-size: 42px;
                     line-height: 52px;
+                    animation-name: welcometext2;
                 }
                 .description{
                     font-size: 22px;
+                    animation-name: descripcion2;
+
                 }
                 .start-here{
                     padding: 5px;
+
                     &:hover{
-                        background: #004346;
                         color: #fff;
                         width: 150px;
                         transition: 0.6s ease all;
                         box-shadow: 5px 2px #000;
-                        transition: 1.5s;
-                  
-                        
-                        
+                        transition: 0.7s;
+                        text-shadow: 3px 3px 3px #000; 
  
                     }
                    
