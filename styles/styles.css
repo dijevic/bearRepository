@@ -725,7 +725,6 @@ body .punto {
   background-repeat: no-repeat;
   background-position: center;
   padding-bottom: 150px;
-  margin-top: 35px;
   width: 100%;
 }
 
@@ -1095,7 +1094,6 @@ body .punto {
 }
 
 .main .work {
-  margin-top: 35px;
   background: url("/assets/images/05.svg");
   background-size: cover;
   background-position: center;
@@ -1152,7 +1150,6 @@ body .punto {
 }
 
 .main .habilities {
-  margin-top: 35px;
   width: 100%;
   height: 100vh;
   background: url("/assets/images/sunset-scene-vector.jpg");
@@ -1187,7 +1184,6 @@ body .punto {
 }
 
 .main .contacto {
-  margin-top: 35px;
   background: #508991;
   width: 100%;
   height: 100vh;
