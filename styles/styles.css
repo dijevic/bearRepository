@@ -451,6 +451,7 @@ body .punto {
   width: 100%;
   background: #fff;
   background: url("/assets/images/T_4.svg");
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -557,7 +558,7 @@ body .punto {
   border-left: 1px solid #172A3A;
   text-align: center;
   right: 25px;
-  bottom: 20px;
+  bottom: 100px;
   position: fixed;
   height: 35px;
   z-index: 10;
@@ -720,6 +721,7 @@ body .punto {
 }
 
 .main .about-me {
+  background-attachment: fixed;
   background: #508991;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1098,9 +1100,9 @@ body .punto {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
 }
 
 .main .work .contenedor-title {
@@ -1130,23 +1132,241 @@ body .punto {
   text-shadow: 4px 4px 4px #000;
 }
 
-.main .work .contenedor {
-  background: url("/assets/images/mountaineering-and-traveling-vector-illustration.jpg");
+.main .work .kind-work {
+  position: relative;
+  top: 50px;
+  text-align: center;
+  background: #DEFFFC;
+  color: #172A3A;
+  font-size: 25px;
+  font-family: 'oswald';
+  font-weight: 400;
   margin: auto;
-  width: 100%;
-  max-width: 750px;
-  height: 400px;
-  background-position: center;
-  background-size: cover;
-  -webkit-transform: translateY(38%);
-          transform: translateY(38%);
-  border-right: 5px #E29578 solid;
-  border-left: 5px #E29578 solid;
+  max-width: 500px;
 }
 
-.main .work .titulo-work {
-  font-size: 34px;
-  line-height: 46px;
+.main .work .contenedor-slider {
+  position: relative;
+  top: 85px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.main .work .contenedor-slider .slider {
+  width: 80%;
+  margin: auto;
+  position: relative;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.main .work .contenedor-slider .slider #arrow-left {
+  position: absolute;
+  left: 5px;
+  top: 35%;
+  font-size: 40px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  color: #fff;
+  z-index: 200;
+}
+
+.main .work .contenedor-slider .slider #arrow-right {
+  position: absolute;
+  right: 5px;
+  top: 35%;
+  font-weight: bold;
+  font-size: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  color: #fff;
+  z-index: 200;
+}
+
+.main .work .contenedor-slider .contenedor-tarjeta, .main .work .contenedor-slider .contenedor-tarjeta2, .main .work .contenedor-slider .contenedor-tarjeta3 {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  min-width: 100%;
+  position: relative;
+}
+
+.main .work .contenedor-slider .contenedor-tarjeta::before, .main .work .contenedor-slider .contenedor-tarjeta2::before, .main .work .contenedor-slider .contenedor-tarjeta3::before {
+  content: '1/3';
+  position: absolute;
+  font-size: 22px;
+  top: 10px;
+  left: 10px;
+  display: block;
+  width: 50px;
+  background: #172A3A;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.main .work .contenedor-slider .contenedor-tarjeta .img, .main .work .contenedor-slider .contenedor-tarjeta2 .img, .main .work .contenedor-slider .contenedor-tarjeta3 .img {
+  background: url("/assets/images/trabajos/gifos.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 75%;
+  margin-top: 2px;
+  -webkit-box-shadow: 5px 5px 50px #000;
+          box-shadow: 5px 5px 50px #000;
+}
+
+.main .work .contenedor-slider .contenedor-tarjeta .name-project, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project {
+  color: #DEFFFC;
+  font-size: 22px;
+}
+
+.main .work .contenedor-slider .contenedor-tarjeta .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project .go-there {
+  color: #508991;
+  border-bottom: 1px solid #508991;
+  display: inline-block;
+  padding: 2px;
+}
+
+.main .work .contenedor-slider .contenedor-tarjeta .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta2 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta3 .tecnologies {
+  color: #E29578;
+  font-size: 18px;
+  text-shadow: 2px 2px 2px #000;
+}
+
+.main .work .contenedor-slider .contenedor-tarjeta2::before {
+  content: '2/3';
+  position: absolute;
+  font-size: 22px;
+  top: 10px;
+  left: 10px;
+  display: block;
+  width: 50px;
+  background: #172A3A;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.main .work .contenedor-slider .contenedor-tarjeta2 .img {
+  background: url("/assets/images/trabajos/poadcstchannel.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 75%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 2px;
+  -webkit-box-shadow: 5px 5px 50px #000;
+          box-shadow: 5px 5px 50px #000;
+}
+
+.main .work .contenedor-slider .contenedor-tarjeta2 .name-project {
+  color: #DEFFFC;
+  font-size: 22px;
+}
+
+.main .work .contenedor-slider .contenedor-tarjeta2 .name-project .go-there {
+  color: #508991;
+  border-bottom: 1px solid #508991;
+  display: inline-block;
+  padding: 2px;
+}
+
+.main .work .contenedor-slider .contenedor-tarjeta2 .tecnologies {
+  color: #E29578;
+  font-size: 18px;
+  text-shadow: 2px 2px 2px #000;
+}
+
+.main .work .contenedor-slider .contenedor-tarjeta3::before {
+  content: '3/3';
+  position: absolute;
+  font-size: 22px;
+  top: 10px;
+  left: 10px;
+  display: block;
+  width: 50px;
+  background: #172A3A;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.main .work .contenedor-slider .contenedor-tarjeta3 .img {
+  background: url("/assets/images/trabajos/viajes.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 75%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 2px;
+  -webkit-box-shadow: 5px 5px 50px #000;
+          box-shadow: 5px 5px 50px #000;
+}
+
+.main .work .contenedor-slider .contenedor-tarjeta3 .name-project {
+  color: #DEFFFC;
+  font-size: 22px;
+}
+
+.main .work .contenedor-slider .contenedor-tarjeta3 .name-project .go-there {
+  color: #508991;
+  border-bottom: 1px solid #508991;
+  display: inline-block;
+  padding: 2px;
+}
+
+.main .work .contenedor-slider .contenedor-tarjeta3 .tecnologies {
+  color: #E29578;
+  font-size: 18px;
+  text-shadow: 2px 2px 2px #000;
+}
+
+@media screen and (min-width: 968px) {
+  .main .work .titulo-work {
+    font-size: 34px;
+    line-height: 46px;
+  }
+  .main .work .kind-work {
+    font-size: 31px;
+  }
+  .main .work .contenedor-slider .contenedor-tarjeta .name-project, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project {
+    font-size: 28px;
+  }
+  .main .work .contenedor-slider .contenedor-tarjeta .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project .go-there {
+    -webkit-transition: 0.3s ease all;
+    transition: 0.3s ease all;
+  }
+  .main .work .contenedor-slider .contenedor-tarjeta .name-project .go-there:hover, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project .go-there:hover, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project .go-there:hover {
+    font-size: 32px;
+    text-shadow: 3px 3px 3px #000;
+  }
+  .main .work .contenedor-slider .contenedor-tarjeta .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta2 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta3 .tecnologies {
+    font-size: 24px;
+  }
+  .main .work .contenedor-slider .contenedor-tarjeta2 .name-project {
+    font-size: 28px;
+  }
+  .main .work .contenedor-slider .contenedor-tarjeta2 .tecnologies {
+    color: #E29578;
+    font-size: 24px;
+  }
+  .main .work .contenedor-slider .contenedor-tarjeta3 .name-project {
+    font-size: 28px;
+  }
+  .main .work .contenedor-slider .contenedor-tarjeta3 .tecnologies {
+    font-size: 24px;
+  }
 }
 
 .main .habilities {
@@ -1155,6 +1375,7 @@ body .punto {
   background: url("/assets/images/sunset-scene-vector.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 .main .habilities .contenedor-title {
@@ -1183,10 +1404,43 @@ body .punto {
   text-shadow: 4px 4px 4px #000;
 }
 
+.main .habilities .contenedor-habilidades {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  width: 90%;
+  position: relative;
+  top: 50px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.main .habilities .contenedor-habilidades .html, .main .habilities .contenedor-habilidades .js, .main .habilities .contenedor-habilidades .css {
+  font-size: 50px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 200px;
+  border: red 2px solid;
+}
+
+@media screen and (min-width: 968px) {
+  .main .habilities .titulo-habilities {
+    font-size: 34px;
+    line-height: 46px;
+  }
+}
+
 .main .contacto {
   background: #508991;
   width: 100%;
   height: 100vh;
+  background-attachment: fixed;
 }
 
 .main .contacto .contenedor-title {
@@ -1209,5 +1463,16 @@ body .punto {
   color: #fff;
   font-family: 'Oswald';
   font-weight: 494;
+}
+
+.footer {
+  text-align: center;
+  width: 100%;
+  height: 90px;
+}
+
+.footer p {
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
 }
 /*# sourceMappingURL=styles.css.map */

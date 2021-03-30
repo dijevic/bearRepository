@@ -19,16 +19,65 @@ const navBarOptions     =document.querySelectorAll('.navBarOptions');
 const main              =document.querySelector('.main');
 const header            =document.querySelector('.header');
 const BtnContact        =document.querySelector('.start-here');
+const slider            =document.getElementById('slider')
+const tarjetasWork      = document.querySelectorAll('.tarjeta-work');
+const btnRight          = document.querySelector('#arrow-right')
+const btnleft           = document.querySelector('#arrow-left');
+let padre               = tarjetasWork[0].parentElement;
+let ultimo  = tarjetasWork[tarjetasWork.length-1];
+
+
 
 let num = 0;
 
 
-navBarOptions.forEach(option=>{
-    option.addEventListener('mouseout',()=>{
-        option.style.transition='1s ease all';
-        console.log('ss')
-    })
+
+
+
+const next = ()=>{
+    let primero  =  document.querySelectorAll('.tarjeta-work')[0];
+ 
+    primero.style.marginLeft='-100%';
+    primero.style.transition='0.7s ease all';
+    setTimeout(() => {
+    
+    slider.insertAdjacentElement('beforeend',primero)
+    primero.style.marginLeft='0';
+    
+
+        
+    }, 700);
+   
+}
+const before = ()=>{
+    let lastOne  =  document.querySelectorAll('.tarjeta-work')[ document.querySelectorAll('.tarjeta-work').length - 1];
+    lastOne.style.marginLeft='-100%'
+    slider.insertAdjacentElement('afterbegin',lastOne)
+    setTimeout(() => {
+        lastOne.style.transition='0.7s ease all'
+        lastOne.style.marginLeft='0'
+    }, 100);
+    
+
+
+}
+btnRight.addEventListener('click',()=>{
+    setTimeout(() => {
+        next()
+    }, 100);
+    
 })
+btnleft.addEventListener('click',()=>{
+    
+        before()
+   
+})
+
+
+
+
+
+
 
 
 
@@ -116,7 +165,7 @@ const scrollEfects = ()=>{
                  cards[i].classList.add('animacion')
                  
              }else if(altura -800 < y){
-    
+                
                  firstLetter.forEach(letter=>{
     
                      letter.classList.add('blue') 
@@ -141,6 +190,7 @@ const scrollEfects = ()=>{
                      option.classList.remove('blue')
                  })
     
+                 cards[i].classList.remove('animacion')
                  
     
                  

@@ -15,8 +15,8 @@
 </head>
 <body>
 
-    <header class="header">
-        <div class="logo"></div>
+    <header class="header" id="main">
+        <a href="#presentation" class="logo"></a>
         <div class="btn-bars" id="btn-burguer">
             <span class="line-top" ></span>
             <span class="line-center"></span>
@@ -101,26 +101,54 @@
                
             </div>
             </section>
-
-            <section class="work" id="works">
+             <section class="work" id="works">
                 <div class="contenedor-title">
                     <p class="titulo-work"><span class="letter">W</span>ORKS</p>
                 </div>
 
-                <div class="contenedor">
-                    <div class="contenedor-slider">
-                        <div class="slider">
-                            <div class="slide"></div>
-                        </div>
+                    <div class="kind-work">
+                        <h2>Recent work.</h2>
                     </div>
-                    <div class="btn-right">></div>
-                    <div class="btn-left"> left </div>
-                </div>
-            </section>
+                    <div class="contenedor-slider">
+                        <div class="slider" id="slider">
+                            <div class="contenedor-tarjeta tarjeta-work">
+                                <div class="img"></div> 
+                                <p class="name-project">Gifos <a class="go-there" href="https://gifosbydiginho.netlify.app/">GO THERE !!</a></p>
+                                <p class="tecnologies">HTML5,JAVASCRIPT & CSS3 + SASS</p>
+                                </div>
+                                <div class="contenedor-tarjeta2 tarjeta-work">
+                                <div class="img"></div> 
+                                <p class="name-project">podcast channel <a class="go-there" href="podcastbydiginho.netlify.app/">GO THERE !!</a></p>
+                                <p class="tecnologies">HTML5 & CSS3 + SASS</p>
+                                </div>
+                                <div class="contenedor-tarjeta3 tarjeta-work">
+                                <div class="img"></div> 
+                                <p class="name-project">SELECTUM <a class="go-there" href="https://gifosbydiginho.netlify.app/">GO THERE !!</a></p>
+                                <p class="tecnologies">HTML5,JAVASCRIPT,CSS3 + SASS & PHP & MYSQL</p>
+                               
+                             </div>
+
+                             <i class="fas fa-long-arrow-alt-left"  id="arrow-left"></i>
+                                <i class="fas fa-long-arrow-alt-right" id="arrow-right"></i>
+                        </div>
+                    
+                    </div>
+              
+              
+            </section> 
 
             <section class="habilities" id="habilities">
                 <div class="contenedor-title">
                     <p class="titulo-habilities"><span class="letter">H</span>ABILITIES</p>
+
+
+                   
+                </div>
+                <div class="contenedor-habilidades">
+                    <div class="html"><i class="fab fa-html5"></i></div>
+                    <div class="js"><i class="fab fa-js"></i></div>
+                    <div class="css"><i class="fab fa-css3"></i></div>
+                    
                 </div>
             </section>
             <section class="contacto" id="contact">
@@ -128,9 +156,12 @@
                     <p class="titulo-contact">CONTACT US</p>
                 </div>
             </section>
-            <footer>ALL RIGHTS RESERVED 2021</footer>
 
     </main>
+    <footer class="footer">
+        <p>ALL RIGHTS RESERVED 2021</p>
+    </footer>
+
 
     <script src="./JS/app.js"></script>
     

@@ -24,6 +24,8 @@
         width: 100%;
         background:#fff;
         background:url('/assets/images/T_4.svg');
+       background-attachment: fixed;
+
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -116,7 +118,7 @@
                 border-left: 1px solid #172A3A;
                 text-align: center;
                 right: 25px;
-                bottom: 20px;
+                bottom: 100px;
                 position: fixed;
                 height: 35px;
                 z-index: 10;

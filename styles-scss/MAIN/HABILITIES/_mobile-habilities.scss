@@ -5,6 +5,8 @@
         background: url('/assets/images/sunset-scene-vector.jpg');
         background-size: cover;
         background-position: center;
+       background-attachment: fixed;
+
         .contenedor-title{
             position: relative;
             top: 25px;
@@ -29,6 +31,24 @@
                     text-shadow: 4px 4px 4px #000;
     
                 }
+        }
+        .contenedor-habilidades{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 90%;
+            position: relative;
+            top: 50px;
+            margin: 0 auto;
+            justify-items: center;
+            .html,.js , .css{
+                font-size: 50px;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                height: 200px;
+                border:red 2px solid;
+            }
+          
         }
     }
 }

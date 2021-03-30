@@ -1,8 +1,58 @@
-.main{
-    .work{
-        .titulo-work{
-            font-size: 34px;
-            line-height: 46px;
+@media screen and(min-width:968px){
+    .main{
+        .work{
+            .titulo-work{
+                font-size: 34px;
+                line-height: 46px;
+            }
+            .kind-work{
+                font-size: 31px;
+
+            }
+            .contenedor-slider{
+          
+                .contenedor-tarjeta{
+               
+          
+                    .name-project{
+                        font-size: 28px;
+                        .go-there{
+                            transition: 0.3s ease all;
+                            &:hover{
+                                font-size: 32px;
+                                text-shadow: 3px 3px 3px #000;
+                            }
+                          } 
+                    }
+                    .tecnologies{
+                        font-size: 24px;
+                        
+                    }
+                  
+                  
+        
+                    }
+                    
+                    .contenedor-tarjeta2{
+                        .name-project{
+                            font-size: 28px;
+                          
+                        }
+                        .tecnologies{
+                            color: #E29578;
+                            font-size: 24px;
+                        }
+                    }
+                    .contenedor-tarjeta3{
+                        .name-project{
+                            font-size: 28px;
+                        }
+                        .tecnologies{
+                            font-size: 24px;
+                            
+                        }
+                    }
+                }
         }
     }
 }
