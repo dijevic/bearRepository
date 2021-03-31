@@ -33,7 +33,7 @@ let num = 0;
 
 
 
-
+// funcion que me permite usar el slider 
 const next = ()=>{
     let primero  =  document.querySelectorAll('.tarjeta-work')[0];
  
@@ -49,6 +49,7 @@ const next = ()=>{
     }, 700);
    
 }
+// funcion que me permite usar el slider 
 const before = ()=>{
     let lastOne  =  document.querySelectorAll('.tarjeta-work')[ document.querySelectorAll('.tarjeta-work').length - 1];
     lastOne.style.marginLeft='-100%'
@@ -61,6 +62,8 @@ const before = ()=>{
 
 
 }
+
+// EVENTOS PARA EL SLIDER //
 btnRight.addEventListener('click',()=>{
     setTimeout(() => {
         next()
@@ -145,6 +148,7 @@ btnBars.addEventListener('click',()=>{
 // agrego efectos para que aparezcan las cartas de presentacion 
 // funcion que me permite agregar efecto a mis tarjetas de presentacion, 
 // tambien agrego y quito color a las letras de mi navegacion
+// ABOUT-HEADER 
 const scrollEfects = ()=>{
     if(window.screen.width >= 850){
         window.onscroll = ()=>{
@@ -254,6 +258,10 @@ const scrollEfects = ()=>{
          }
      }
     }
+}
+
+const efectoAnimacion = ()=>{
+    
 }
 
 scrollEfects()

@@ -1188,7 +1188,7 @@ body .punto {
   z-index: 200;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta, .main .work .contenedor-slider .contenedor-tarjeta2, .main .work .contenedor-slider .contenedor-tarjeta3 {
+.main .work .contenedor-slider .contenedor-tarjeta, .main .work .contenedor-slider .contenedor-tarjeta2, .main .work .contenedor-slider .contenedor-tarjeta3, .main .work .contenedor-slider .contenedor-tarjeta4 {
   width: 100%;
   height: 100%;
   z-index: 100;
@@ -1196,8 +1196,8 @@ body .punto {
   position: relative;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta::before, .main .work .contenedor-slider .contenedor-tarjeta2::before, .main .work .contenedor-slider .contenedor-tarjeta3::before {
-  content: '1/3';
+.main .work .contenedor-slider .contenedor-tarjeta::before, .main .work .contenedor-slider .contenedor-tarjeta2::before, .main .work .contenedor-slider .contenedor-tarjeta3::before, .main .work .contenedor-slider .contenedor-tarjeta4::before {
+  content: '1/4';
   position: absolute;
   font-size: 22px;
   top: 10px;
@@ -1210,7 +1210,7 @@ body .punto {
   text-align: center;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta .img, .main .work .contenedor-slider .contenedor-tarjeta2 .img, .main .work .contenedor-slider .contenedor-tarjeta3 .img {
+.main .work .contenedor-slider .contenedor-tarjeta .img, .main .work .contenedor-slider .contenedor-tarjeta2 .img, .main .work .contenedor-slider .contenedor-tarjeta3 .img, .main .work .contenedor-slider .contenedor-tarjeta4 .img {
   background: url("/assets/images/trabajos/gifos.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -1222,26 +1222,26 @@ body .punto {
           box-shadow: 5px 5px 50px #000;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta .name-project, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project {
+.main .work .contenedor-slider .contenedor-tarjeta .name-project, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project {
   color: #DEFFFC;
   font-size: 22px;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project .go-there {
+.main .work .contenedor-slider .contenedor-tarjeta .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project .go-there {
   color: #508991;
   border-bottom: 1px solid #508991;
   display: inline-block;
   padding: 2px;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta2 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta3 .tecnologies {
+.main .work .contenedor-slider .contenedor-tarjeta .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta2 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta3 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta4 .tecnologies {
   color: #E29578;
   font-size: 18px;
   text-shadow: 2px 2px 2px #000;
 }
 
 .main .work .contenedor-slider .contenedor-tarjeta2::before {
-  content: '2/3';
+  content: '2/4';
   position: absolute;
   font-size: 22px;
   top: 10px;
@@ -1258,7 +1258,7 @@ body .punto {
   background: url("/assets/images/trabajos/poadcstchannel.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
   width: 100%;
   height: 75%;
   -o-object-fit: cover;
@@ -1286,8 +1286,8 @@ body .punto {
   text-shadow: 2px 2px 2px #000;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta3::before {
-  content: '3/3';
+.main .work .contenedor-slider .contenedor-tarjeta3::before, .main .work .contenedor-slider .contenedor-tarjeta4::before {
+  content: '3/4';
   position: absolute;
   font-size: 22px;
   top: 10px;
@@ -1300,7 +1300,7 @@ body .punto {
   text-align: center;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta3 .img {
+.main .work .contenedor-slider .contenedor-tarjeta3 .img, .main .work .contenedor-slider .contenedor-tarjeta4 .img {
   background: url("/assets/images/trabajos/viajes.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -1314,22 +1314,51 @@ body .punto {
           box-shadow: 5px 5px 50px #000;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta3 .name-project {
+.main .work .contenedor-slider .contenedor-tarjeta3 .name-project, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project {
   color: #DEFFFC;
   font-size: 22px;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta3 .name-project .go-there {
+.main .work .contenedor-slider .contenedor-tarjeta3 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project .go-there {
   color: #508991;
   border-bottom: 1px solid #508991;
   display: inline-block;
   padding: 2px;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta3 .tecnologies {
+.main .work .contenedor-slider .contenedor-tarjeta3 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta4 .tecnologies {
   color: #E29578;
   font-size: 18px;
   text-shadow: 2px 2px 2px #000;
+}
+
+.main .work .contenedor-slider .contenedor-tarjeta4::before {
+  content: '4/4';
+  position: absolute;
+  font-size: 22px;
+  top: 10px;
+  left: 10px;
+  display: block;
+  width: 50px;
+  background: #172A3A;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.main .work .contenedor-slider .contenedor-tarjeta4 .img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: url("/assets/images/trabajos/bearPoject.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  margin-top: 2px;
+  -webkit-box-shadow: 5px 5px 50px #000;
+          box-shadow: 5px 5px 50px #000;
 }
 
 @media screen and (min-width: 968px) {
@@ -1340,18 +1369,24 @@ body .punto {
   .main .work .kind-work {
     font-size: 31px;
   }
-  .main .work .contenedor-slider .contenedor-tarjeta .name-project, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project {
+  .main .work .contenedor-slider .slider {
+    height: 500px;
+  }
+  .main .work .contenedor-slider .tajeta-work {
+    background-position: bottom;
+  }
+  .main .work .contenedor-slider .contenedor-tarjeta .name-project, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project {
     font-size: 28px;
   }
-  .main .work .contenedor-slider .contenedor-tarjeta .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project .go-there {
+  .main .work .contenedor-slider .contenedor-tarjeta .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project .go-there {
     -webkit-transition: 0.3s ease all;
     transition: 0.3s ease all;
   }
-  .main .work .contenedor-slider .contenedor-tarjeta .name-project .go-there:hover, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project .go-there:hover, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project .go-there:hover {
+  .main .work .contenedor-slider .contenedor-tarjeta .name-project .go-there:hover, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project .go-there:hover, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project .go-there:hover, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project .go-there:hover {
     font-size: 32px;
     text-shadow: 3px 3px 3px #000;
   }
-  .main .work .contenedor-slider .contenedor-tarjeta .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta2 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta3 .tecnologies {
+  .main .work .contenedor-slider .contenedor-tarjeta .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta2 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta3 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta4 .tecnologies {
     font-size: 24px;
   }
   .main .work .contenedor-slider .contenedor-tarjeta2 .name-project {
@@ -1361,10 +1396,10 @@ body .punto {
     color: #E29578;
     font-size: 24px;
   }
-  .main .work .contenedor-slider .contenedor-tarjeta3 .name-project {
+  .main .work .contenedor-slider .contenedor-tarjeta3 .name-project, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project {
     font-size: 28px;
   }
-  .main .work .contenedor-slider .contenedor-tarjeta3 .tecnologies {
+  .main .work .contenedor-slider .contenedor-tarjeta3 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta4 .tecnologies {
     font-size: 24px;
   }
 }
@@ -1407,26 +1442,277 @@ body .punto {
 .main .habilities .contenedor-habilidades {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  width: 90%;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  width: 80%;
   position: relative;
   top: 50px;
   margin: 0 auto;
-  justify-items: center;
-}
-
-.main .habilities .contenedor-habilidades .html, .main .habilities .contenedor-habilidades .js, .main .habilities .contenedor-habilidades .css {
-  font-size: 50px;
-  border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-width: 800px;
+}
+
+.main .habilities .contenedor-habilidades .icon {
+  width: 100%;
   height: 200px;
-  border: red 2px solid;
+  min-width: 33%;
+  background-size: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 80px;
+  max-height: 100px;
+  color: #fff;
+  font: 22px;
+  position: relative;
+  top: 40px;
+}
+
+.main .habilities .contenedor-habilidades .contenedor-icon {
+  width: 100%;
+  height: 200px;
+  min-width: 33%;
+  background-size: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 150px;
+  max-height: 100px;
+  position: relative;
+}
+
+.main .habilities .contenedor-habilidades .html {
+  background: url("/assets/images/habilidades/icons8-html-5.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main .habilities .contenedor-habilidades .html::before {
+  content: 'HTML';
+  display: block;
+  position: absolute;
+  top: 80%;
+  width: 100px;
+  left: 30%;
+}
+
+.main .habilities .contenedor-habilidades .js {
+  background: url("/assets/images/habilidades/icons8-js-squared.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main .habilities .contenedor-habilidades .js::before {
+  content: 'JAVASCRIPT';
+  display: block;
+  position: absolute;
+  top: 80%;
+  width: 100px;
+  left: 10%;
+}
+
+.main .habilities .contenedor-habilidades .css {
+  background: url("/assets/images/habilidades/icons8-css3.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main .habilities .contenedor-habilidades .css::before {
+  content: 'CSS3';
+  display: block;
+  position: absolute;
+  top: 80%;
+  width: 100px;
+  left: 30%;
+}
+
+.main .habilities .contenedor-habilidades .mongo {
+  background: url("/assets/images/habilidades/icons8-mongodb.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main .habilities .contenedor-habilidades .mongo::before {
+  content: 'MONGO DB';
+  display: block;
+  position: absolute;
+  top: 80%;
+  width: 100px;
+  left: 10%;
+}
+
+.main .habilities .contenedor-habilidades .node {
+  background: url("/assets/images/habilidades/icons8-node-js.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main .habilities .contenedor-habilidades .node::before {
+  content: 'NODE JS';
+  display: block;
+  position: absolute;
+  top: 80%;
+  width: 100px;
+  left: 20%;
+}
+
+.main .habilities .contenedor-habilidades .express {
+  background: url("/assets/images/habilidades/expressjs-ar21.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.main .habilities .contenedor-habilidades .express::before {
+  content: 'EXPRESS JS';
+  display: block;
+  position: absolute;
+  top: 80%;
+  width: 100px;
+  left: 10%;
+}
+
+.main .habilities .contenedor-habilidades .npm {
+  background: url("/assets/images/habilidades/icons8-ngp-48.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main .habilities .contenedor-habilidades .npm::before {
+  content: 'NPM';
+  display: block;
+  position: absolute;
+  top: 80%;
+  width: 100px;
+  left: 30%;
+}
+
+.main .habilities .contenedor-habilidades .jquery {
+  background: url("/assets/images/habilidades/icons8-jquery.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main .habilities .contenedor-habilidades .jquery::before {
+  content: 'JQUERY';
+  display: block;
+  position: absolute;
+  top: 80%;
+  width: 100px;
+  left: 30%;
+}
+
+.main .habilities .contenedor-habilidades .sass {
+  background: url("/assets/images/habilidades/icons8-sass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main .habilities .contenedor-habilidades .sass::before {
+  content: 'SASS';
+  display: block;
+  position: absolute;
+  top: 80%;
+  width: 100px;
+  left: 30%;
+}
+
+.main .habilities .contenedor-habilidades .webpack {
+  background: url("/assets/images/habilidades/webpack_icon_131877.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  background-position: center;
+  margin-top: 25px;
+}
+
+.main .habilities .contenedor-habilidades .webpack::before {
+  content: 'WEBPACK';
+  display: block;
+  position: absolute;
+  top: 110%;
+  width: 100px;
+}
+
+.main .habilities .contenedor-habilidades .react {
+  background: url("/assets/images/habilidades/icons8-reaccionar-nativo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main .habilities .contenedor-habilidades .react::before {
+  content: 'REACT JS';
+  display: block;
+  position: absolute;
+  top: 80%;
+  width: 100px;
+  left: 20%;
+}
+
+.main .habilities .contenedor-habilidades .wordpress {
+  background: url("/assets/images/habilidades/icons8-wordpress.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main .habilities .contenedor-habilidades .wordpress::before {
+  content: 'WORDPRESS';
+  display: block;
+  position: absolute;
+  top: 80%;
+  width: 100px;
+  left: 10%;
+}
+
+.main .habilities .contenedor-habilidades .bootstrap {
+  background: url("/assets/images/habilidades/icons8-oreja.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main .habilities .contenedor-habilidades .bootstrap::before {
+  content: 'BOOTSTRAP';
+  display: block;
+  position: absolute;
+  top: 80%;
+  width: 100px;
+  left: 10%;
+}
+
+.main .habilities .contenedor-habilidades .mysql {
+  background: url("/assets/images/habilidades/icons8-logo-de-mysql.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main .habilities .contenedor-habilidades .mysql::before {
+  content: 'MYSQL';
+  display: block;
+  position: absolute;
+  top: 80%;
+  width: 100px;
+  left: 30%;
+}
+
+.main .habilities .contenedor-habilidades .firebase {
+  background: url("/assets/images/habilidades/icons8-consola-de-google-firebase.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main .habilities .contenedor-habilidades .firebase::before {
+  content: 'FIREBASE';
+  display: block;
+  position: absolute;
+  top: 80%;
+  width: 100px;
+  left: 10%;
 }
 
 @media screen and (min-width: 968px) {
@@ -1440,7 +1726,6 @@ body .punto {
   background: #508991;
   width: 100%;
   height: 100vh;
-  background-attachment: fixed;
 }
 
 .main .contacto .contenedor-title {
