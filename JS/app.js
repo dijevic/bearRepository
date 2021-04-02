@@ -23,9 +23,17 @@ const slider            =document.getElementById('slider')
 const tarjetasWork      = document.querySelectorAll('.tarjeta-work');
 const btnRight          = document.querySelector('#arrow-right')
 const btnleft           = document.querySelector('#arrow-left');
-let padre               = tarjetasWork[0].parentElement;
-let ultimo  = tarjetasWork[tarjetasWork.length-1];
+let   padre               = tarjetasWork[0].parentElement;
+const emailText         = document.querySelector('.my-email')
+const tituloAbout       = document.querySelector('.titulo-about')
+let   ultimo              = tarjetasWork[tarjetasWork.length-1];
+const descripcionPresentacion = document.getElementById('descripcion-presentacion') 
+descripcionPresentacion.style.transition='5s ease all';
+descripcionPresentacion.style.overflow='hidden'
+setTimeout(()=>{
+descripcionPresentacion.style.width='10%';
 
+},2000)
 
 
 let num = 0;
@@ -44,8 +52,8 @@ const next = ()=>{
     slider.insertAdjacentElement('beforeend',primero)
     primero.style.marginLeft='0';
     
-
-        
+    
+    
     }, 700);
    
 }
@@ -76,7 +84,7 @@ btnleft.addEventListener('click',()=>{
    
 })
 
-
+// evento slider final //
 
 
 
@@ -149,11 +157,12 @@ btnBars.addEventListener('click',()=>{
 // funcion que me permite agregar efecto a mis tarjetas de presentacion, 
 // tambien agrego y quito color a las letras de mi navegacion
 // ABOUT-HEADER 
+
 const scrollEfects = ()=>{
     if(window.screen.width >= 850){
         window.onscroll = ()=>{
             let y = window.scrollY
-            // BOTON
+            // BOTON contacto
             if(y>0){
                 BtnContact.classList.add('Ymas');
                 BtnContact.classList.remove('start-here')
@@ -163,6 +172,9 @@ const scrollEfects = ()=>{
                 BtnContact.classList.add('start-here');
 
             }
+            // BOTON contacto final
+
+
          for(let i =0; i < cards.length;i++){
              let altura = cards[i].offsetTop;
              if(altura - 500 < y){
@@ -178,6 +190,8 @@ const scrollEfects = ()=>{
                  navBarOptions.forEach(option=>{
                      option.classList.add('blue')
                  })
+                 tituloAbout.classList.add('animacion')
+
                  
              }
              else{
@@ -260,13 +274,25 @@ const scrollEfects = ()=>{
     }
 }
 
-const efectoAnimacion = ()=>{
-    
-}
+
 
 scrollEfects()
  
 
+emailText.addEventListener('click',(event)=>{
+    let aux = document.createElement("input");
+    aux.value = emailText.textContent;
+    document.body.appendChild(aux);
+    aux.select();
+    document.execCommand("copy");
+    document.body.removeChild(aux);
+    emailText.textContent = 'Copiado al portapapeles !'
+    emailText.style.transition='0.5s ease all'
+    setTimeout(()=>{
+      emailText.innerHTML = '<i class="far fa-copy"></i>developer_projects@gmai.com'
 
+    },1500)
+   
+})
 
 

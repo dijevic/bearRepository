@@ -447,7 +447,8 @@ body .punto {
 }
 
 .main .container-presentation {
-  height: 100vh;
+  min-height: 100vh;
+  height: 1000px;
   width: 100%;
   background: #fff;
   background: url("/assets/images/T_4.svg");
@@ -721,7 +722,6 @@ body .punto {
 }
 
 .main .about-me {
-  background-attachment: fixed;
   background: #508991;
   background-size: cover;
   background-repeat: no-repeat;
@@ -761,6 +761,18 @@ body .punto {
   border-bottom: 1px solid #E29578;
   text-shadow: 2px 2px 2px #000;
   margin-top: 15px;
+  height: 49px;
+}
+
+.main .about-me .titulo-about.animacion {
+  height: 49px;
+  display: inline-block;
+  -webkit-animation-name: ocultarleft;
+          animation-name: ocultarleft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
 }
 
 .main .about-me .titulo-about .letter {
@@ -1102,7 +1114,8 @@ body .punto {
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: 700px;
 }
 
 .main .work .contenedor-title {
@@ -1406,7 +1419,8 @@ body .punto {
 
 .main .habilities {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: 1000px;
   background: url("/assets/images/sunset-scene-vector.jpg");
   background-size: cover;
   background-position: center;
@@ -1454,6 +1468,7 @@ body .punto {
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 800px;
+  justify-items: center;
 }
 
 .main .habilities .contenedor-habilidades .icon {
@@ -1722,10 +1737,61 @@ body .punto {
   }
 }
 
+@-webkit-keyframes stepForm {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(25px);
+            transform: translateX(25px);
+  }
+}
+
+@keyframes stepForm {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(25px);
+            transform: translateX(25px);
+  }
+}
+
+@-webkit-keyframes stepFormDown {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+}
+
+@keyframes stepFormDown {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+}
+
 .main .contacto {
-  background: #508991;
+  background: #004346;
   width: 100%;
-  height: 100vh;
+  height: 1000px;
+  max-height: 850px;
+  min-height: 100vh;
+}
+
+.main .contacto .contenedor {
+  background: #fff;
+  height: 52%;
 }
 
 .main .contacto .contenedor-title {
@@ -1735,25 +1801,255 @@ body .punto {
 }
 
 .main .contacto .titulo-contact {
-  font-size: 35px;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 28px;
   line-height: 42px;
   font-weight: 500;
-  padding: 0px 20px 0px 20px;
-  color: #fff;
-  border-bottom: 1px solid #fff;
-  height: 55px;
   margin: 0 auto;
-  text-align: center;
-  width: 50vh;
+  display: inline;
+  padding: 0px 20px 0px 20px;
+  background: #004346;
+  height: 120px;
   color: #fff;
-  font-family: 'Oswald';
-  font-weight: 494;
+  border-bottom: 1px solid #004346;
+  margin-top: 15px;
+  -webkit-box-shadow: 2px 2px 5px #000;
+          box-shadow: 2px 2px 5px #000;
+}
+
+.main .contacto .titulo-contact .letter {
+  font-size: 75px;
+  color: #fff;
+  line-height: 42px;
+  text-shadow: 4px 4px 4px #000;
+}
+
+.main .contacto .contact-options {
+  position: relative;
+  top: 60px;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  max-width: 600px;
+  -webkit-box-shadow: 5px 5px 50px #000;
+          box-shadow: 5px 5px 50px #000;
+}
+
+.main .contacto .contact-options .ubication {
+  color: #fff;
+  background: #004346;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.main .contacto .contact-options .email-text, .main .contacto .contact-options .direct-ways, .main .contacto .contact-options .last-option {
+  margin-top: 10px;
+  font-size: 18px;
+  font-family: 'oswald';
+  line-height: 25px;
+  color: #172A3A;
+}
+
+.main .contacto .contact-options .direct-ways .direct-option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .contacto .contact-options .last-option {
+  color: #172A3A;
+  text-align: center;
+}
+
+.main .contacto .contact-options .last-option .fa-arrow-down {
+  margin-left: 20px;
+  -webkit-animation-name: stepFormDown;
+          animation-name: stepFormDown;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.main .contacto .contact-options .last-option .fa-arrow-right {
+  margin-left: 10px;
+  -webkit-animation-name: stepForm;
+          animation-name: stepForm;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  display: none;
+}
+
+.main .contacto .contact-options .my-email {
+  width: 250px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.main .contacto .contact-options .my-email .fa-copy {
+  color: #172A3A;
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.main .contacto .contact-options .whatsapp, .main .contacto .contact-options .linke, .main .contacto .contact-options .github {
+  font-size: 30px;
+  color: #25d366;
+}
+
+.main .contacto .contact-options .linke {
+  color: #0077b5;
+}
+
+.main .contacto .contact-options .github {
+  color: #000;
+}
+
+.main .contacto .formulario {
+  width: 90%;
+  max-width: 500px;
+  background: #004346;
+  height: 450px;
+  position: relative;
+  top: 100px;
+  margin: auto;
+  padding: 20px;
+  -webkit-box-shadow: 5px 5px 50px #000;
+          box-shadow: 5px 5px 50px #000;
+}
+
+.main .contacto .formulario form {
+  width: 100%;
+  height: 100%;
+}
+
+.main .contacto .formulario form #name, .main .contacto .formulario form #email {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+.main .contacto .formulario form #email {
+  margin-top: 20px;
+}
+
+.main .contacto .formulario form #mesagge {
+  width: 100%;
+  height: 100%;
+  max-height: 200px;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+.main .contacto .formulario form #submit-buttom {
+  text-align: center;
+  display: block;
+  margin: auto;
+  margin-top: 35px;
+  width: 80px;
+  height: 30px;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 968px) {
+  .main .contacto .contenedor-title .titulo-contact {
+    font-size: 34px;
+    line-height: 46px;
+  }
+  .main .contacto .contenedor {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main .contacto .contenedor .contact-options {
+    height: 445px;
+    margin: 0 auto;
+    top: 100px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .main .contacto .contenedor .contact-options .email-text, .main .contacto .contenedor .contact-options .direct-ways, .main .contacto .contenedor .contact-options .last-option {
+    font-size: 22px;
+    line-height: 28px;
+    margin-top: 20px;
+  }
+  .main .contacto .contenedor .contact-options .my-email {
+    font-size: 18px;
+  }
+  .main .contacto .contenedor .contact-options .last-option .fa-arrow-down {
+    display: none;
+  }
+  .main .contacto .contenedor .contact-options .last-option .fa-arrow-right {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 26px;
+  }
+  .main .contacto .contenedor .contact-options .ubication {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background: #004346;
+    width: 100%;
+    text-align: center;
+  }
+  .main .contacto .contenedor .formulario {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .main .contacto .contenedor .formulario #submit-buttom {
+    width: 140px;
+  }
+  .main .contacto .contenedor .formulario #submit-buttom:hover {
+    background: rgba(255, 255, 255, 0.7);
+  }
 }
 
 .footer {
   text-align: center;
   width: 100%;
-  height: 90px;
+  height: 50px;
 }
 
 .footer p {

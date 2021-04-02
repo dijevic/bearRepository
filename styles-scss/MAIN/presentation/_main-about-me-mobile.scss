@@ -20,7 +20,8 @@
 
 .main{
     .container-presentation{
-        height:100vh;
+        min-height:100vh;
+        height: 1000px;
         width: 100%;
         background:#fff;
         background:url('/assets/images/T_4.svg');

@@ -1,7 +1,8 @@
 .main{
     .habilities{
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
+        height: 1000px;
         background: url('/assets/images/sunset-scene-vector.jpg');
         background-size: cover;
         background-position: center;
@@ -42,6 +43,7 @@
             flex-wrap: nowrap;
             justify-content: center;
             max-width: 800px;
+            justify-items: center;
             
             .icon{
                 width: 100%;

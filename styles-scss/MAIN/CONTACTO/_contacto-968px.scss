@@ -1,0 +1,65 @@
+@media screen and(min-width:968px){
+    .main{
+        .contacto{
+           .contenedor-title{
+            .titulo-contact{
+                font-size: 34px;
+                line-height: 46px;
+            }
+           }
+          .contenedor{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              
+              .contact-options{
+                height: 445px;
+                margin: 0 auto;
+                top: 100px;
+                align-items: center;
+                justify-content: center;
+                margin-left: 20px;
+                margin-right: 20px;
+                  .email-text , .direct-ways , .last-option{
+                      font-size: 22px;
+                      line-height: 28px;
+                      margin-top: 20px;
+                  }
+                  .my-email{
+                      font-size: 18px;
+                  }
+                  .last-option{
+                      .fa-arrow-down{
+                          display: none;
+
+                      }
+                      .fa-arrow-right{
+                          display: block;
+                          text-align: center;
+                          margin-top: 10px;
+                          font-size: 26px;
+                      }
+                  }
+                  .ubication{
+                      position: absolute;
+                      bottom: 0;
+                      color: #fff;
+                      background: #004346;
+                      width: 100%;
+                      text-align: center;
+                  }
+              }
+              .formulario{
+                margin-left: 20px;
+                margin-right: 20px;
+                #submit-buttom{
+                    width:140px;
+                    &:hover{
+                        background: rgba($color: #fff, $alpha: 0.7);
+                    }
+                }
+              }
+          }
+        }
+    }
+}

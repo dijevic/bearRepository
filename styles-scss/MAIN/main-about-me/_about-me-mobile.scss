@@ -20,7 +20,6 @@
 .main{
     
     .about-me{
-       background-attachment: fixed;
 
        background:#508991;
        background-size: cover;
@@ -54,6 +53,15 @@
             border-bottom: 1px solid #E29578;
             text-shadow: 2px 2px 2px #000;
             margin-top: 15px;
+            height: 49px;
+            &.animacion{
+            height: 49px;
+
+                display: inline-block;
+                animation-name: ocultarleft;
+                animation-duration: 1s;
+                animation-iteration-count: initial;
+            }
 
            
     
