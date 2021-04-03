@@ -23,6 +23,8 @@
             background:none;
             z-index: -1;
             border-top: none;
+            border-radius: 0;
+            border: none;
             
             &::after{
                 display: none;
@@ -64,12 +66,26 @@
 
                             }
                         }
+                        &.green{
+                            color: #004346;
+                            text-shadow: none;
+
+                            &:hover{
+                            border-bottom: 1.5px solid #004346;
+                            color: #004346;
+
+                           
+                            }
+                        }
+                      
                     }
                     .fist-letter{
                         color: #E29578;
                         display: inline-block;
                        
-
+                        &.green{
+                            color: #004346;
+                        }
                     }
                 }
 

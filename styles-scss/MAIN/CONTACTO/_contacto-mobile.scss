@@ -69,6 +69,8 @@
             opacity: 0;
             transform: translateY(50px);
             transition: 0.8s ease all;
+            border-radius: 10px;
+
 
 
             &.animation{
@@ -164,7 +166,7 @@
             opacity: 0;
             transform: translateY(50px);
             transition: 0.8s ease all;
-
+            border-radius: 10px;
 
             &.animation{
             opacity: 1;

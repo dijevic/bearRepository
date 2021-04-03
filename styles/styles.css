@@ -150,9 +150,6 @@ body .punto {
 }
 
 .header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
   width: 100%;
   height: 80px;
   background: #ffff;
@@ -169,9 +166,15 @@ body .punto {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 500;
+}
+
+.header.green {
+  background: #fff;
+  border-bottom: 10px solid #004346;
 }
 
 .header .contenedor-logo {
@@ -351,6 +354,10 @@ body .punto {
           transform: translate(-100%);
 }
 
+.header .menu ul li a.green {
+  color: #004346;
+}
+
 .header .menu ul li .fist-letter {
   color: #E29578;
   font-family: 'Oswald';
@@ -363,6 +370,10 @@ body .punto {
   font-weight: 494;
   font-size: 26px;
   color: #508991;
+}
+
+.header .menu ul li .fist-letter .pink {
+  color: #E29578;
 }
 
 @media screen and (max-width: 320px) {
@@ -406,6 +417,8 @@ body .punto {
     background: none;
     z-index: -1;
     border-top: none;
+    border-radius: 0;
+    border: none;
   }
   .header .menu::after {
     display: none;
@@ -448,9 +461,20 @@ body .punto {
   .header .menu ul li .navBarOptions.blue:hover .fist-letter {
     color: #508991;
   }
+  .header .menu ul li .navBarOptions.green {
+    color: #004346;
+    text-shadow: none;
+  }
+  .header .menu ul li .navBarOptions.green:hover {
+    border-bottom: 1.5px solid #004346;
+    color: #004346;
+  }
   .header .menu ul li .fist-letter {
     color: #E29578;
     display: inline-block;
+  }
+  .header .menu ul li .fist-letter.green {
+    color: #004346;
   }
 }
 
@@ -632,44 +656,6 @@ body .punto {
     margin-left: 0;
     font-size: 22px;
     line-height: 34px;
-  }
-  .main .container-presentation .presentation .Ymas {
-    padding: 5px;
-    width: 120px;
-    display: block;
-    border-radius: 10px;
-    font-family: 'Oswald';
-    font-weight: 494;
-    font-style: italic;
-    cursor: pointer;
-    background: #004346;
-    color: #DEFFFC;
-    -webkit-box-shadow: 5px 2px #000;
-            box-shadow: 5px 2px #000;
-    -webkit-transition: 1s ease all;
-    transition: 1s ease all;
-    font-size: 16px;
-    border: 2px solid transparent;
-    border-top: 1px solid #172A3A;
-    border-left: 1px solid #172A3A;
-    text-align: center;
-    right: -90px;
-    bottom: 100px;
-    position: fixed;
-    height: 35px;
-    z-index: 10;
-  }
-  .main .container-presentation .presentation .Ymas:hover {
-    color: #fff;
-    width: 150px;
-    -webkit-transition: 0.6s ease all;
-    transition: 0.6s ease all;
-    -webkit-box-shadow: 5px 2px #000;
-            box-shadow: 5px 2px #000;
-    -webkit-transition: 0.7s;
-    transition: 0.7s;
-    text-shadow: 3px 3px 3px #000;
-    right: 25px;
   }
 }
 
@@ -1209,7 +1195,7 @@ body .punto {
   background-attachment: fixed;
   width: 100%;
   min-height: 100vh;
-  height: 700px;
+  height: 1000px;
 }
 
 .main .work .contenedor-title {
@@ -1228,7 +1214,7 @@ body .punto {
   padding: 0px 20px 0px 20px;
   height: 120px;
   color: #fff;
-  border-bottom: 1px solid #E29578;
+  border-bottom: 1px solid #fff;
   text-shadow: 2px 2px 2px #000;
   margin-left: -100%;
   -webkit-transition: 0.6s ease all;
@@ -1246,8 +1232,8 @@ body .punto {
   position: relative;
   top: 50px;
   text-align: center;
-  background: #DEFFFC;
-  color: #172A3A;
+  background: #fff;
+  color: #000;
   font-size: 25px;
   font-family: 'oswald';
   font-weight: 400;
@@ -1264,6 +1250,11 @@ body .punto {
   width: 100%;
   margin: 0 auto;
   max-width: 900px;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  opacity: 0;
+  -webkit-transition: 0.6s ease all;
+  transition: 0.6s ease all;
 }
 
 .main .work .contenedor-slider .slider {
@@ -1474,6 +1465,22 @@ body .punto {
           box-shadow: 5px 5px 50px #000;
 }
 
+.main .see-more, .main .link-github {
+  width: 100%;
+  font-size: 22px;
+  color: #fff;
+  line-height: 28px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.main .link-github {
+  margin-top: 50px;
+  font-size: 60px;
+  display: block;
+  color: #000;
+}
+
 @media screen and (min-width: 968px) {
   .main .work .titulo-work {
     font-size: 34px;
@@ -1481,6 +1488,15 @@ body .punto {
   }
   .main .work .kind-work {
     font-size: 31px;
+  }
+  .main .work .link-github:hover {
+    color: #fff;
+    -webkit-transition: 0.6s ease all;
+    transition: 0.6s ease all;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation: none;
+            animation: none;
   }
   .main .work .contenedor-slider .slider {
     height: 500px;
@@ -1574,13 +1590,15 @@ body .punto {
   justify-items: center;
   -webkit-transition: 1s ease all;
   transition: 1s ease all;
-  -webkit-transform: translateX(-150%);
-          transform: translateX(-150%);
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  opacity: 0;
 }
 
 .main .habilities .contenedor-habilidades.animate {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .main .habilities .contenedor-habilidades .icon {
@@ -1964,6 +1982,7 @@ body .punto {
           transform: translateY(50px);
   -webkit-transition: 0.8s ease all;
   transition: 0.8s ease all;
+  border-radius: 10px;
 }
 
 .main .contacto .contact-options.animation {
@@ -2069,6 +2088,7 @@ body .punto {
           transform: translateY(50px);
   -webkit-transition: 0.8s ease all;
   transition: 0.8s ease all;
+  border-radius: 10px;
 }
 
 .main .contacto .formulario.animation {

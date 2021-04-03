@@ -17,8 +17,6 @@ const welcomeText             = document.querySelector('.welcome-text');
 const messageText             = document.querySelector('.message');
 const navBarOptions           = document.querySelectorAll('.navBarOptions');
 const main                    = document.querySelector('.main');
-const header                  = document.querySelector('.header');
-const BtnContact              = document.querySelector('.start-here');
 const slider                  = document.getElementById('slider')
 const tarjetasWork            = document.querySelectorAll('.tarjeta-work');
 const btnRight                = document.querySelector('#arrow-right')
@@ -38,7 +36,9 @@ const kindWork                = document.getElementById('kind-work');
 const contenedorHabilidades   =document.getElementById('contenedor-habilidades');
 const tituloContact           = document.getElementById('titulo-contact');
 const contactOptions          = document.getElementById('contact-options');
-const form                    = document.getElementById('form')
+const form                    = document.getElementById('form');
+const sliderContenedor        =document.getElementById('slider-contenedor');
+const header                  = document.getElementById('header')
 let num = 0;
 
 
@@ -86,7 +86,8 @@ window.addEventListener('scroll',()=>{
     
 if(y>250){
     navBarOptions.forEach(option=>{
-        option.style.transform='1';
+        option.style.transform='translateY(0)';
+       option.style.opacity='1'
         option.style.transition='0.3s ease all'
 
 
@@ -248,17 +249,6 @@ const scrollEfectsHeader = ()=>{
     if(window.screen.width >= 850){
         window.onscroll = ()=>{
             let y = window.scrollY
-            // BOTON contacto
-            if(y>600){
-                BtnContact.classList.add('Ymas');
-                BtnContact.classList.remove('start-here')
-               
-            }else{
-                BtnContact.classList.remove('Ymas')
-                BtnContact.classList.add('start-here');
-
-            }
-            // BOTON contacto final
 
 
          for(let i =0; i < cards.length;i++){
@@ -314,17 +304,6 @@ const scrollEfectsHeader = ()=>{
         window.onscroll = ()=>{
             let y = window. scrollY
             
-            //BOTON CONTACTO
-
-            if(y>450){
-                BtnContact.classList.add('Ymas');
-                BtnContact.classList.remove('start-here')
-               
-            }else{
-                BtnContact.classList.remove('Ymas')
-                BtnContact.classList.add('start-here');
-
-            }
          for(let i =0; i < cards.length;i++){
              let altura = cards[i].offsetTop;
              if(altura - 500 < y){
@@ -332,37 +311,8 @@ const scrollEfectsHeader = ()=>{
                  cards[i].classList.add('animacion1')
                  cards[1].classList.remove('animacion')
                  
-             }else if(altura -2000 <= y){
-                //  tituloDeveloper.classList.add('blue')
-                 firstLetter.forEach(letter=>{
-    
-                     letter.classList.add('blue') 
-                 })
-               
-                 navBarOptions.forEach(option=>{
-                     option.classList.add('blue')
-                 })
-                 
              }
-             else{
-                //  tituloDeveloper.classList.remove('blue')
-                 firstLetter.forEach(letter=>{
-                     letter.classList.remove('blue')
-                    
-    
-                     
-                 })
-               
-    
-                 navBarOptions.forEach(option=>{
-                     option.classList.remove('blue')
-                 })
-    
-                 
-    
-                 
-    
-             }
+            
          }
      }
     }
@@ -378,8 +328,12 @@ const scrollEfectsWork = ()=>{
                 setTimeout(() => {
                     kindWork.style.marginLeft='0'
                     kindWork.style.transform='translateX(100%)'
-                        
+                  
                     }, 800);
+                    setTimeout(()=>{
+                        sliderContenedor.style.transform='translateY(0)'
+                        sliderContenedor.style.opacity='1'
+                    },1400)
             }
         })
     }else{
@@ -394,6 +348,10 @@ const scrollEfectsWork = ()=>{
                 kindWork.style.margin='0'
                     
                 }, 900);
+                setTimeout(()=>{
+                    sliderContenedor.style.transform='translateY(0)'
+                    sliderContenedor.style.opacity='1'
+                },1400)
             }
         }) 
     }
@@ -406,12 +364,11 @@ const scrollEfectsHabilities = ()=>{
         window.addEventListener('scroll',()=>{
             let y = window.scrollY
             let altura = tituloHabilidades.offsetTop;
-           
-            if(altura +2500 <= y){
+        
+            if(altura +2785 <= y){
                 tituloHabilidades.style.marginLeft='0'
                 setTimeout(() => {
                     contenedorHabilidades.classList.add('animate')
-                        
                     }, 1000);
             
                 
@@ -440,10 +397,25 @@ const scrollEfectsContact = ()=>{
         window.addEventListener('scroll',()=>{
             let y = window.scrollY
             let altura = tituloContact.offsetTop;
+            console.log(altura)
+            console.log(y)
 
-            if(altura + 3569 <= y){
+            if(altura + 3869 <= y){
                 tituloContact.style.marginLeft='0';
                 btnContact.style.display='none';
+                header.classList.add('green')
+                firstLetter.forEach(op=>{
+                    op.classList.add('pink')
+                    op.classList.remove('blue')
+
+                })
+                navBarOptions.forEach(op=>{
+                   
+                    op.classList.add('green')
+                    op.classList.remove('blue')
+
+                })
+
                 setTimeout(() => {
                     contactOptions.classList.add('animation');
                 }, 800);
@@ -454,7 +426,14 @@ const scrollEfectsContact = ()=>{
                 
             }else{
                 btnContact.style.display='block';
+                header.classList.remove('green')
+                firstLetter.forEach(op=>{
+                    op.classList.remove('pink')
 
+                })
+                navBarOptions.forEach(op=>{
+                    op.classList.remove('green')
+                })
             }
         })
     }else{

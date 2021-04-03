@@ -8,7 +8,7 @@
        background-attachment: fixed;
        width: 100%;
        min-height: 100vh;
-       height: 700px;
+       height: 1000px;
     .contenedor-title{
         position: relative;
         top: 25px;
@@ -24,7 +24,7 @@
         padding: 0px 20px 0px 20px;
         height: 120px;
         color: #fff;
-        border-bottom: 1px solid #E29578;
+        border-bottom: 1px solid #fff;
         text-shadow: 2px 2px 2px #000;
         margin-left: -100%;
         transition: 0.6s ease all;
@@ -47,8 +47,8 @@
         position: relative;
         top: 50px;
         text-align: center;
-        background:#DEFFFC ;
-        color: #172A3A;
+        background:#fff ;
+        color: #000;
         font-size: 25px;
         font-family: 'oswald';
         font-weight: 400;
@@ -56,6 +56,7 @@
         max-width: 500px;
         transition: 0.6s ease all;
         margin-left: -200%;
+        
      
     }
     .contenedor-slider{
@@ -64,6 +65,9 @@
         width: 100%;
         margin: 0 auto;
         max-width: 900px;
+        transform: translateY(50px);
+        opacity: 0;
+        transition: 0.6s ease all;
         .slider{
             width: 80%;
             margin: auto;
@@ -269,5 +273,22 @@
             }
         }
     }
+    .see-more{
+        width: 100%;
+        font-size: 22px;
+        color: #fff;
+        line-height: 28px;
+        text-align: center;
+        margin-top: 100px;
+    }
+    .link-github{
+        @extend .see-more;
+        margin-top: 50px;
+        font-size: 60px;
+        display: block;
+      
+        color: #000;
+    }
 
    }
+  
