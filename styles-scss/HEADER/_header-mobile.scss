@@ -19,6 +19,14 @@
     25%{width: 20px;}
 
 }
+@keyframes trasladarY{
+    0%{transform: translateY(200px);}
+    100%{transform: translateY(0px);}
+}
+@keyframes welcomeTopText{
+    0%{transform: translateX(-103px);opacity: 0.5;}
+    100%{transform: translateX(0px);opacity: 1;}
+}
 
 
 
@@ -41,7 +49,11 @@
     position: sticky;
     top: 0;
     z-index: 500;
-    .logo{
+.contenedor-logo{
+    display: flex;
+    align-items: center;
+
+        .logo{
         margin-left: 20px;
         background: url('/assets/images/bear22.svg');
         background-repeat: no-repeat;
@@ -50,10 +62,27 @@
         width: 80px;
         height: 60px;
         border-radius: 70%;
+        animation-name:trasladarY ;
+        animation-duration: 0.5s;
+        animation-iteration-count: initial;
+        display: block;
+        z-index: 100;
+        
+
      
        
     }
+    .animate-welcome{
+        margin-left: 25px;
+        font-size: 25px;
+        color: #fff;
+        font-weight: 500;
+        transform: translateX(-113px);
+        opacity: 0;
+       
+    }
 
+}
     .btn-bars{
         width: 30px;
         height: 30px;

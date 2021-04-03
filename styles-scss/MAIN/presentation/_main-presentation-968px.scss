@@ -10,20 +10,22 @@
 
     .main{
         .container-presentation{
+            height: 1000px;
          
             .presentation{
+                padding-left: 20px;
                 .desarrollo-titulo{
-                    font-size: 42px;
-                    line-height: 52px;
-                    animation-name: welcometext2;
+                    font-size: 52px;
+                    line-height: 72px;
                 }
                 .description{
-                    font-size: 22px;
-                    animation-name: descripcion2;
+                    font-size: 32px;
+                    line-height: 42px;
 
                 }
                 .start-here{
                     padding: 5px;
+                    margin-left: 0;
 
                     &:hover{
                         color: #fff;

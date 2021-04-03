@@ -20,6 +20,13 @@
                 justify-content: center;
                 margin-left: 20px;
                 margin-right: 20px;
+                transition: 0.8s ease all;
+                transform: translateY(50px);
+                opacity: 0;
+                &.animation{
+                    transform: translateY(0);
+                    opacity: 1;
+                }
                   .email-text , .direct-ways , .last-option{
                       font-size: 22px;
                       line-height: 28px;
@@ -52,6 +59,16 @@
               .formulario{
                 margin-left: 20px;
                 margin-right: 20px;
+                opacity: 0;
+                transform: translateY(50px);
+                transition: 0.8s ease all;
+
+
+                &.animation{
+                opacity: 1;
+                transform: translateY(0px);
+
+                }
                 #submit-buttom{
                     width:140px;
                     &:hover{

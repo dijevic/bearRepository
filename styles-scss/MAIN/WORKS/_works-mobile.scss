@@ -26,6 +26,9 @@
         color: #fff;
         border-bottom: 1px solid #E29578;
         text-shadow: 2px 2px 2px #000;
+        margin-left: -100%;
+        transition: 0.6s ease all;
+
 
 
            
@@ -51,6 +54,8 @@
         font-weight: 400;
         margin: auto;
         max-width: 500px;
+        transition: 0.6s ease all;
+        margin-left: -200%;
      
     }
     .contenedor-slider{

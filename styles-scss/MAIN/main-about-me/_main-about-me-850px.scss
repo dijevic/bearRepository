@@ -22,18 +22,18 @@
                 &.animacion{
                     opacity: 1;
                      animation-name: hidde, opp;
-                     animation-duration: 1.8s;
+                     animation-duration: 0.8s;
                      animation-iteration-count: initial;
                      img{
                         animation-name: hidde ;
-                        animation-duration: 1.8s;
+                        animation-duration: 0.8s;
                         animation-iteration-count: initial;
                      }
                      .greet{
 
                           animation-name: hidde, opp;
                           transition: 5s ease all;
-                          animation-duration: 1.8s;
+                          animation-duration: 0.8s;
                           animation-iteration-count: initial;
                         
                      }
@@ -41,14 +41,14 @@
                     
                           animation-name: hidde, opp;
                           transition: 5s ease all;
-                          animation-duration: 1.8s;
+                          animation-duration: 0.8s;
                           animation-iteration-count: initial;
                         
                      }
                      .text{
                         animation-name: ocultaright, opp;
                         transition: 5s ease all;
-                        animation-duration: 1.8s;
+                        animation-duration: 0.8s;
                         animation-iteration-count: initial;
                      }
                     }
@@ -60,14 +60,14 @@
                     opacity: 1;
                     img{
                     animation-name: ocultaright;
-                    animation-duration: 1.8s;
+                    animation-duration: 0.8s;
                     animation-iteration-count: initial;
                     }
                     .greet{
 
                         animation-name: ocultaright, opp;
                         transition: 5s ease all;
-                        animation-duration: 1.8s;
+                        animation-duration: 0.8s;
                         animation-iteration-count: initial;
                       
                    }
@@ -75,14 +75,14 @@
                   
                         animation-name: ocultarleft, opp;
                         transition: 5s ease all;
-                        animation-duration: 1.8s;
+                        animation-duration: 0.8s;
                         animation-iteration-count: initial;
                       
                    }
                    .text{
                       animation-name: ocultarleft, opp;
                       transition: 5s ease all;
-                      animation-duration: 1.8s;
+                      animation-duration: 0.8s;
                       animation-iteration-count: initial;
                    }
                     

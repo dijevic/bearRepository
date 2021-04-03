@@ -24,6 +24,8 @@
             color: #fff;
             border-bottom: 1px solid #fff;
             text-shadow: 2px 2px 2px #000;
+            margin-left: -100%;
+            transition: 0.6s ease all;
 
                 .letter{
                     font-size: 75px;
@@ -44,6 +46,12 @@
             justify-content: center;
             max-width: 800px;
             justify-items: center;
+            transition:1s ease all;
+            transform: translateX(-150%);
+
+            &.animate{
+                transform: translateX(0);
+            }
             
             .icon{
                 width: 100%;
