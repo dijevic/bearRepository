@@ -39,6 +39,7 @@ const contactOptions          = document.getElementById('contact-options');
 const form                    = document.getElementById('form');
 const sliderContenedor        =document.getElementById('slider-contenedor');
 const header                  = document.getElementById('header')
+
 let num = 0;
 
 
