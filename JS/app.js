@@ -398,8 +398,6 @@ const scrollEfectsContact = ()=>{
         window.addEventListener('scroll',()=>{
             let y = window.scrollY
             let altura = tituloContact.offsetTop;
-            console.log(altura)
-            console.log(y)
 
             if(altura + 3869 <= y){
                 tituloContact.style.marginLeft='0';
