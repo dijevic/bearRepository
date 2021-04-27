@@ -38,7 +38,12 @@ const tituloContact           = document.getElementById('titulo-contact');
 const contactOptions          = document.getElementById('contact-options');
 const form                    = document.getElementById('form');
 const sliderContenedor        =document.getElementById('slider-contenedor');
-const header                  = document.getElementById('header')
+const header                  = document.getElementById('header');
+const front                   = document.getElementById('front');
+const back                    = document.getElementById('back');
+const line                    = document.querySelector('.line');
+const line2                    = document.querySelector('.line2');
+
 
 let num = 0;
 
@@ -53,6 +58,7 @@ setTimeout(()=>{
     animateWelcome.style.transition='0.8s ease all';
     animateWelcome.style.opacity='1'
     animateWelcome.style.transform ='translateX(0px)'
+   
 },600)
 setTimeout(()=>{
     animateWelcome.style.transition='0.8s ease all';
@@ -67,64 +73,144 @@ setTimeout(()=>{
 
 
 // efectos y animaciones del titulo(section presentacion)
-setTimeout(() => {
-    desarrolloTitulo.style.transform= 'translateX(0)';
-}, 1200);
-setTimeout(() => {
-    descripcionPresentacion.style.transform= 'translateX(0)'
-}, 1900);
-setTimeout(() => {
-    btnContact.style.opacity='1';
-    btnContact.style.transform='translateY(0)'
 
-}, 2400);
-
-// efecto en nav bar options
-
-// funcion con la que dtecto si la altura es la mayor a la conveniente para pcultar navbar options
-window.addEventListener('scroll',()=>{
-    let y = window.scrollY
+if(window.screen.width >= 968){
+    setTimeout(() => {
+        desarrolloTitulo.classList.add('actived');
+        setTimeout(()=>{
+          
+            setTimeout(() => {
+                if(window.screen.width >= 968){
+                    let time = 0
+                    optionsMenu.forEach(option=>{
+                        time += 100
+                        if(option.classList.contains('nonactived')){
+                            setTimeout(() => {
+                                option.classList.remove('nonactived');
+                          
+            
+                            },time)
+                        }
+                    })
+                }
+                setTimeout(()=>{
+                      back.style.fontSize='52px'
+                  front.style.fontSize='52px'
+                },1000)
+            },400)
+            
+            setTimeout(() => {
+                back.style.transform ='translateX(-150px)'
+                front.style.transform ='translateX(150px)' 
+            },1400)
+          setTimeout(() => {
+            desarrolloTitulo.classList.add('remove');
     
-if(y>250){
-    navBarOptions.forEach(option=>{
-        option.style.transform='translateY(0)';
-       option.style.opacity='1'
-        option.style.transition='0.3s ease all'
+                setTimeout(() => {
+                    back.style.transform ='translateY(-190px)'
+                    front.style.transform ='translateY(-150px)'  
+                    
+                        setTimeout(() => {
+                            front.style.fontSize='0'
+                           
+                            descripcionPresentacion.style.display='block';
+                            setTimeout(() => {
+                                 desarrolloTitulo.classList.remove('remove')
+                            desarrolloTitulo.style.color='#fff'
+                            })
+    
+                         setTimeout(() =>{
+                            back.style.fontSize='0'
+                           
+                            btnContact.style.opacity='1';
+    
+                              setTimeout(() =>{
+                                  back.style.display='none'
+                                  front.style.display='none'
+                                  desarrolloTitulo.style.margin='0px auto'
+                            desarrolloTitulo.style.transform=' translateY(-190px)'
+                                // descripcionPresentacion.style.fontSize='32px'
+                                 setTimeout(() => {
+                                    line.style.display='block'
+                                    line2.style.display='block'
+                                descripcionPresentacion.style.opacity='1';
+                                setTimeout(() => {
+                                    descripcionPresentacion.style.borderBottom='1px solid #fff'
+                                },800)
+    
+                                 },700)
+                              },200)
+    
+                         
+    
+                    
+        
+                         },500)
+                        
+    
+                        },700)
+                        
+                
+                 
+                },500)
+    
+          },2200)
+    
+        },500)
+        
+    
+    }, 1200);
+}else{
+    setTimeout(()=>{
+        desarrolloTitulo.classList.add('actived');
 
 
-    })
+        setTimeout(()=>{
+            front.style.fontSize='28px'
+            back.style.fontSize='28px'
+
+            setTimeout(()=>{
+                desarrolloTitulo.classList.add('font0')
+                setTimeout(()=>{
+                    front.style.transform = 'translateX(140px)'
+                    back.style.transform = 'translateX(70px)'
+                    
+                    setTimeout(()=>{
+                        setTimeout(()=>{
+                            
+                                        front.style.opacity='0';
+                                        
+                                        back.style.opacity='0';
+                                        setTimeout(() => {
+                                            front.style.display='none';
+                                            back.style.display='none';
+                                            desarrolloTitulo.classList.remove('font0')
+
+                                            desarrolloTitulo.classList.add('font768')
+                                            setTimeout(() => {
+                                                descripcionPresentacion.style.transform='translateX(0)'
+                                                desarrolloTitulo.style.color='#fff'
+                                                desarrolloTitulo.style.overflow='hidden'
+                                                line.style.display='block'
+                                                setTimeout(() => {
+                                                line2.style.display='block'
+                                                    
+                                                },500)
+                                            },800)
+                                        },800)
+
+                                    
+                            
+                        },500)
+                    },500)
+                })
+                
+            },800)
+        },800)
+    },1200)
 }
-})
-setTimeout(() => {
-    navBarOptions[0].style.opacity='1';
-    navBarOptions[0].style.transform ='translateX(0)';
 
-//    navBarOptions.forEach(option=>{
-//        option.style.transition='0.3s ease all'
-//    })
-}, 3000);
-setTimeout(() => {
-    navBarOptions[1].style.opacity='1';
-    
-    navBarOptions[1].style.transform ='translateX(0)';
 
-   
-}, 3400);
-setTimeout(() => {
-    navBarOptions[2].style.opacity='1';
-    
-    navBarOptions[2].style.transform ='translateX(0)';
-
-   
-}, 3800);
-setTimeout(() => {
-    navBarOptions[3].style.opacity='1';
-    
-    navBarOptions[3].style.transform ='translateX(0)';
-  
-}, 4200);
-// fin efecto del navbar
-// fin de los efectos a header y presentacion
 
 
 // slider *INICIO*
@@ -182,6 +268,8 @@ btnleft.addEventListener('click',()=>{
 
 
 
+
+
 // ##### EFECTOS Y ANIMACIONES #################
 
 // evento para mi boton hamburguesa !
@@ -202,13 +290,14 @@ btnBars.addEventListener('click',()=>{
         menu.classList.toggle('actived');
         
         // agg efecto a mi menu;
-
+        let time = 0
         optionsMenu.forEach(option=>{
-            option.classList.add('actived')
-            setTimeout(()=>{
-                option.classList.remove('actived')
-            },1000)
+            time += 75
+            setTimeout(() => {
+                option.classList.remove('nonactived')
+                option.classList.add('actived')
 
+            },time)
         })
         
     }else{
@@ -222,19 +311,23 @@ btnBars.addEventListener('click',()=>{
 
         
         
-        // remuevo el efecto a mis opcione-menu
+        // oculto mis opciones del  menu una por una
+        let time = 100
+    for(let i = 0; i < optionsMenu.length; i++){
+        time += 100;
+        optionsMenu[i].classList.remove('actived')
+
+       setTimeout(() => {
+           optionsMenu[i].style.transition ='0.5s ease all'
+           optionsMenu[i].classList.add('nonactived')
+
         
-        optionsMenu.forEach(option=>{
-            option.classList.add('nonactived')
-            setTimeout(()=>{
-                option.classList.remove('nonactived')
-            },1000)
-            
-        })
+       },time)
+    }
         setTimeout(() => {
             // remuevo la clase actived a el menu para crear un efecto con delay
             menu.classList.remove('actived');
-        },500);
+        },800);
         
     }
     

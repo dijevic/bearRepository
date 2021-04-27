@@ -7,6 +7,10 @@
                 .desarrollo-titulo{
                     font-size: 40px;
                     line-height: 52px;
+                    &.font768{
+                        font-size: 40px;
+                       line-height: 52px;
+                    }
                 }
                 .description{
                     margin-left: 0;

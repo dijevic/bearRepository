@@ -199,18 +199,19 @@
                     padding: 20px;
                     position: relative;
                     text-transform: uppercase;
+
+
                     &.actived{
-                        animation-name: hidde , opacidad;
-                        animation-duration:1s;
-                        animation-iteration-count: initial;
+                       transition: 0.5s ease-in-out all;
+                       transform: translatex(0);
                     }
                     &.nonactived{
-                    transition: 0.5s ease-in-out all;
-                     transform:translate(0px);
-                     transform:translate(-100%);
+                     transform:translate(-100%) ;
+                     opacity: 0;
 
 
                     }
+                 
                     &.green{
                         color: #004346;
                     }
@@ -218,6 +219,8 @@
                     
                     
                 }
+             
+                
                 .fist-letter{
                     color: #E29578;
                     font-family: 'Oswald';

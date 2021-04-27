@@ -16,6 +16,20 @@
   
   }
 
+@keyframes maquina {
+  0%{width: 100%;}
+  100%{width:0}
+}
+
+@keyframes afterall{
+  0%{margin-left:100%};
+  100%{margin-left:-100%}
+}
+@keyframes afterall2{
+  0%{margin-left:-120%};
+  100%{margin-left:120%;}
+}
+
 
 
 .main{
@@ -56,8 +70,57 @@
                 font-weight: 494;
                 font-size: 28px;
                 transition: 0.8s ease all;
-                transform: translateX(-150%);
+                transform: translateX(-150%) translateY(0);
+               
+                &.actived{
+                transform: translateX(0);
+                padding-bottom: 10px;
+
+                }
+                &.font0{
+                  font-size: 0px;
+                }
+                .font768{
+                  font-size: 28px;
+                }
+                .line{
+                  content:'';
+                  color:#fff;
+                  background: #fff;
+                  width: 50px;
+                  display: block;
+                  position: absolute;
+                  bottom: 0;
+                  height:10px;
+                  animation: afterall 3.5s infinite alternate steps(36);
+                  display: none;
+                 
+              }
                 
+            }
+           
+            .front,.back{
+              transition: 0.8s;
+              display: block;
+              color: #fff;
+              font-size:0px;
+              transform: translateX(100px);
+              &.surprise{
+                border-bottom: 2px solid #fff;
+                width: 110px;
+                border-bottom-left-radius: 40%;
+                border-bottom-right-radius: 40%;
+                padding-bottom: 70px;
+                &::before{
+                  content:'HI !!';
+                  display: block;
+                  font-size: 35px;
+                  padding:20px ;
+                  position: absolute;
+                  right:-70%;
+                }
+              }
+             
             }
             .description{
                 color: #fff;
@@ -67,6 +130,25 @@
                 text-shadow: 5px 5px 5px #000;
                 transition: 0.8s ease all;
                 transform: translateX(-150%);
+                position: relative;
+                overflow: hidden;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #fff;
+                .line2{
+                  color:#fff;
+                  background: #fff;
+                  width: 50px;
+                  display: block;
+                  position: absolute;
+                  bottom: 0;
+                  height:10px;
+                  animation: afterall2 3.5s infinite alternate steps(36);
+                  display: none;
+                  margin-top: 0px;
+              }
+                
+
+            
 
 
 

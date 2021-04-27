@@ -45,9 +45,7 @@
                         font-size: 18px;
                         margin-left: 10px;
                         display: inline-block;
-                        transition: 0.3s ease all;
-                        transform: translateY(25px);
-                        opacity: 0;
+                        transition: 1s ease all;
                         &:hover{
                           border-bottom: 1.5px solid #E29578;
                           font-size: 22px;
@@ -94,3 +92,8 @@
     }
 }
 
+
+@keyframes menu968 {
+    0%{opacity: 0;transform:translateX(-50px)};
+    100%{opacity: 1;transform:translateX(0)}
+}
