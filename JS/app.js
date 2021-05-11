@@ -43,6 +43,7 @@ const front                   = document.getElementById('front');
 const back                    = document.getElementById('back');
 const line                    = document.querySelector('.line');
 const line2                    = document.querySelector('.line2');
+const borderP                 = document.getElementById('border-p')
 
 
 let num = 0;
@@ -50,10 +51,7 @@ let num = 0;
 
 
 
-
 // codigo que me permite agregar un efecto con el mensaje 'welcome en la parte del header *INICIO*
-
-
 setTimeout(()=>{
     animateWelcome.style.transition='0.8s ease all';
     animateWelcome.style.opacity='1'
@@ -66,149 +64,39 @@ setTimeout(()=>{
     animateWelcome.style.transform ='translateY(-200px)'
 },4200)
 
-// *fin*
 
 
-
-
-
-// efectos y animaciones del titulo(section presentacion)
-
-if(window.screen.width >= 968){
-    setTimeout(() => {
-        desarrolloTitulo.classList.add('actived');
+const presentationAnimation = ()=>{
+    if(window.screen.width < 968){
+        setTimeout(()=>{
+            setTimeout(()=>{
+                line.style.display='block'
+                setTimeout(() => {
+                line2.style.display='block'
+                    setTimeout(() => {
+                        descripcionPresentacion.classList.add('border')
+                    },1800)
+                },500)
+            },1200)
+        },1600)
+    }else{
+       
         setTimeout(()=>{
           
-            setTimeout(() => {
-                if(window.screen.width >= 968){
-                    let time = 0
-                    optionsMenu.forEach(option=>{
-                        time += 100
-                        if(option.classList.contains('nonactived')){
-                            setTimeout(() => {
-                                option.classList.remove('nonactived');
-                          
             
-                            },time)
-                        }
-                    })
-                }
-                setTimeout(()=>{
-                      back.style.fontSize='52px'
-                  front.style.fontSize='52px'
-                },1000)
-            },400)
-            
-            setTimeout(() => {
-                back.style.transform ='translateX(-150px)'
-                front.style.transform ='translateX(150px)' 
-            },1400)
-          setTimeout(() => {
-            desarrolloTitulo.classList.add('remove');
-    
-                setTimeout(() => {
-                    back.style.transform ='translateY(-190px)'
-                    front.style.transform ='translateY(-150px)'  
-                    
-                        setTimeout(() => {
-                            front.style.fontSize='0'
-                           
-                            descripcionPresentacion.style.display='block';
-                            setTimeout(() => {
-                                 desarrolloTitulo.classList.remove('remove')
-                            desarrolloTitulo.style.color='#fff'
-                            })
-    
-                         setTimeout(() =>{
-                            back.style.fontSize='0'
-                           
-                            btnContact.style.opacity='1';
-    
-                              setTimeout(() =>{
-                                  back.style.display='none'
-                                  front.style.display='none'
-                                  desarrolloTitulo.style.margin='0px auto'
-                            desarrolloTitulo.style.transform=' translateY(-190px)'
-                                // descripcionPresentacion.style.fontSize='32px'
-                                 setTimeout(() => {
-                                    line.style.display='block'
-                                    line2.style.display='block'
-                                descripcionPresentacion.style.opacity='1';
-                                setTimeout(() => {
-                                    descripcionPresentacion.style.borderBottom='1px solid #fff'
-                                },800)
-    
-                                 },700)
-                              },200)
-    
-                         
-    
-                    
-        
-                         },500)
-                        
-    
-                        },700)
-                        
-                
-                 
-                },500)
-    
-          },2200)
-    
-        },500)
-        
-    
-    }, 1200);
-}else{
-    setTimeout(()=>{
-        desarrolloTitulo.classList.add('actived');
-
-
-        setTimeout(()=>{
-            front.style.fontSize='28px'
-            back.style.fontSize='28px'
-
             setTimeout(()=>{
-                desarrolloTitulo.classList.add('font0')
-                setTimeout(()=>{
-                    front.style.transform = 'translateX(140px)'
-                    back.style.transform = 'translateX(70px)'
-                    
-                    setTimeout(()=>{
-                        setTimeout(()=>{
-                            
-                                        front.style.opacity='0';
-                                        
-                                        back.style.opacity='0';
-                                        setTimeout(() => {
-                                            front.style.display='none';
-                                            back.style.display='none';
-                                            desarrolloTitulo.classList.remove('font0')
-
-                                            desarrolloTitulo.classList.add('font768')
-                                            setTimeout(() => {
-                                                descripcionPresentacion.style.transform='translateX(0)'
-                                                desarrolloTitulo.style.color='#fff'
-                                                desarrolloTitulo.style.overflow='hidden'
-                                                line.style.display='block'
-                                                setTimeout(() => {
-                                                line2.style.display='block'
-                                                    
-                                                },500)
-                                            },800)
-                                        },800)
-
-                                    
-                            
-                        },500)
-                    },500)
-                })
-                
-            },800)
-        },800)
-    },1200)
+                line.style.display='block'
+                setTimeout(() => {
+                line2.style.display='block'
+                    setTimeout(() => {
+                        descripcionPresentacion.classList.add('border')
+                    },1800)
+                },500)
+            },1200)
+        },2000) 
+    }
 }
+presentationAnimation()
 
 
 
@@ -297,7 +185,7 @@ btnBars.addEventListener('click',()=>{
                 option.classList.remove('nonactived')
                 option.classList.add('actived')
 
-            },time)
+            },time + 100)
         })
         
     }else{
@@ -421,7 +309,8 @@ const scrollEfectsWork = ()=>{
                 tituloWork.style.marginLeft='0'
                 setTimeout(() => {
                     kindWork.style.marginLeft='0'
-                    kindWork.style.transform='translateX(100%)'
+                    kindWork.style.margin='0px auto';
+                    kindWork.style.display='block';
                   
                     }, 800);
                     setTimeout(()=>{
@@ -439,7 +328,9 @@ const scrollEfectsWork = ()=>{
                 tituloWork.style.marginLeft='0'
                 
                 setTimeout(() => {
-                kindWork.style.margin='0'
+                kindWork.style.margin='0px auto'
+                kindWork.style.display='block';
+
                     
                 }, 900);
                 setTimeout(()=>{

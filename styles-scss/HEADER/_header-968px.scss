@@ -1,4 +1,13 @@
 @media screen and(min-width:968px){
+
+    @keyframes opacidad2{
+        0%{opacity:0}
+        100%{opacity:1}
+    }
+    @keyframes translado{
+        0%{transform:translateX(-50px)}
+        100%{transform:translateX(0)}
+    }
     .header{
 
         .logo{
@@ -46,6 +55,9 @@
                         margin-left: 10px;
                         display: inline-block;
                         transition: 1s ease all;
+                        animation-duration: 3s;
+                        animation-iteration-count: initial;
+                        animation-name:zoomInDown;
                         &:hover{
                           border-bottom: 1.5px solid #E29578;
                           font-size: 22px;
@@ -75,6 +87,12 @@
                            
                             }
                         }
+                        &.nonactived{
+                            transform:translate(0) ;
+                            opacity:1;
+       
+       
+                           }
                       
                     }
                     .fist-letter{

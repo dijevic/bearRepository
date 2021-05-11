@@ -297,6 +297,34 @@
 
                 }
             }
+            .heroku{
+                background: url('/assets/images/habilidades/heroku.svg');
+                background-repeat: no-repeat;
+                background-position:center ; 
+                &::before{
+                    content: 'HEROKU';
+                    display: block;
+                    position: absolute;
+                    top: 90%;
+                    width: fit-content;
+                    left: 10%;
+
+                }
+            }
+            .github{
+                background: url('/assets/images/habilidades/github-2.svg');
+                background-repeat: no-repeat;
+                background-position:center ; 
+                &::before{
+                    content: 'GITHUB';
+                    display: block;
+                    position: absolute;
+                    top: 90%;
+                    width: fit-content;
+                    left: 10%;
+
+                }
+            }
 
           
         }

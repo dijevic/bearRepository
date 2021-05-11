@@ -17,6 +17,19 @@
     100%{margin-left:120%;}
 }
 
+@keyframes tt{
+    0%{margin-left:-100%}
+    100%{margin:none ;}
+}
+@keyframes fontsize{
+    0%{font-size:0px}
+    100%{font-size:52px}
+}
+@keyframes fontsize2{
+    0%{font-size:0px}
+    100%{font-size:32px}
+}
+
     .main{
         .container-presentation{
             height: 1000px;
@@ -24,6 +37,7 @@
             .presentation{
                 padding-left: 20px;
                 overflow: hidden;
+                height: 70%;
              
                 .desarrollo-titulo{
                     font-size: 52px;
@@ -33,6 +47,14 @@
                     overflow: hidden;
                     height:72px;
                     position: relative;
+                    animation-name: backInDown;
+                    animation-duration: 2s;
+                    animation-iteration-count: initial;
+                    opacity: 1;
+                    margin: 0px auto;
+              
+                    
+
                    .line{
                         content:'';
                         color:#fff;
@@ -44,7 +66,17 @@
                         height:10px;
                         animation: afterall 3.5s infinite alternate steps(36);
                         display: none;
+                        &.display{
+                            display: block;
+                        }
                        
+                    }
+                 
+                    &.margin{
+                        margin: 0px auto;
+                    }
+                    &.white{
+                        color: #fff;
                     }
                     &.actived{
                         transform:translateX(0);
@@ -75,40 +107,47 @@
 
                     
                    width: 100%;
+                   &.font{
+                    font-size :52px;
+                  }
+                  &.trasladar{
+                    transform: translateX(150px);
+
+                 }
+                 &.trasladar-2{
+                    transform: translateY(-150px) ;
+
+                 }
+                 &.font0{
+                    font-size:0px;
+                }
+                .display-none{
+                    display: none;
+                }
                 
 
                 }
-                .back{ 
-                     font-size: 0px;
-                    line-height: 72px;
-                    transition: 1s ease all;
-                    right: 0px;
-                    display: none;
-                    transition: 0.5s ease all;
-                    text-align: center;
-                    width: 100%;
-                    display: inline;
-                    color: #fff;
-
-                   
-
-                }
+               
               
                
                 .description{
                     line-height: 42px;
                     font-size: 32px;
-                    display: none;
-                    transform:translateY(-190px) ;
                     margin: 0px auto;
                     transition: 1s ease all;
                     position:relative;
                     overflow: hidden;
                     padding-bottom: 20px;
-                   
                     animation-duration: 2s;
                     animation-iteration-count: initial;
-                    opacity: 0;
+                    animation-name:backInUp;
+                    opacity: 1;
+                    margin: 0px auto;
+               
+                  
+                    &.display-block{
+                        display: block;
+                    }
                     .line2{
                         color:#fff;
                         background: #fff;
@@ -120,6 +159,9 @@
                         animation: afterall2 3.5s infinite alternate steps(36);
                         display: none;
                         margin-top: 0px;
+                        &.display{
+                            display: block;
+                        }
                     }
                
 
@@ -129,7 +171,7 @@
                     margin-left: 0;
                     display:none;
                     position:relative;
-                    top: -30px;
+                  
                     margin: 0px auto;
                     &:hover{
                         color: #fff;
