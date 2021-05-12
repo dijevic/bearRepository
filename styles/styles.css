@@ -707,7 +707,6 @@ body .punto {
   width: 100%;
   background: #fff;
   background: url("/assets/images/mountains.svg");
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1003,6 +1002,7 @@ body .punto {
     padding-left: 20px;
     overflow: hidden;
     height: 70%;
+    background-attachment: fixed;
   }
   .main .container-presentation .presentation .desarrollo-titulo {
     font-size: 52px;
