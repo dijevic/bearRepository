@@ -9,10 +9,13 @@
         100%{transform:translateX(0)}
     }
     .header{
+     .contenedor-logo{
+        margin-left: 150px;
 
+     }
         .logo{
             font-size: 25px;
-            margin-left: 50px;
+            margin-left: 0px;
             .desarrollo-titulo{
                 display: inline;
                 font-size: 25px;
@@ -42,7 +45,7 @@
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
-                margin-right: 50px;
+                margin-right: 150px;
                 margin-top: 16px;
                
                
@@ -52,7 +55,7 @@
                     .navBarOptions{
                         padding: 0px;
                         font-size: 18px;
-                        margin-left: 10px;
+                        margin-left: 25px;
                         display: inline-block;
                         transition: 1s ease all;
                         animation-duration: 3s;

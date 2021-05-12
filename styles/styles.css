@@ -421,9 +421,12 @@ body .punto {
               transform: translateX(0);
     }
   }
+  .header .contenedor-logo {
+    margin-left: 150px;
+  }
   .header .logo {
     font-size: 25px;
-    margin-left: 50px;
+    margin-left: 0px;
   }
   .header .logo .desarrollo-titulo {
     display: inline;
@@ -458,13 +461,13 @@ body .punto {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-right: 50px;
+    margin-right: 150px;
     margin-top: 16px;
   }
   .header .menu ul li .navBarOptions {
     padding: 0px;
     font-size: 18px;
-    margin-left: 10px;
+    margin-left: 25px;
     display: inline-block;
     -webkit-transition: 1s ease all;
     transition: 1s ease all;
@@ -534,6 +537,15 @@ body .punto {
     opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header .contenedor-logo {
+    margin-left: 250px;
+  }
+  .header .menu ul {
+    margin-right: 250px;
   }
 }
 
