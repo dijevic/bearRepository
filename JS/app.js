@@ -215,7 +215,7 @@ btnBars.addEventListener('click',()=>{
         setTimeout(() => {
             // remuevo la clase actived a el menu para crear un efecto con delay
             menu.classList.remove('actived');
-        },800);
+        },500);
         
     }
     

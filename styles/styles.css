@@ -300,8 +300,8 @@ body .punto {
   background: rgba(23, 42, 58, 0.8);
   top: 80px;
   border-bottom-right-radius: 15px;
-  -webkit-transition: 0.5s ease-in-out all;
-  transition: 0.5s ease-in-out all;
+  -webkit-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
 }
 
 .header .menu::after {
