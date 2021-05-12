@@ -1020,6 +1020,7 @@ body .punto {
             animation-iteration-count: initial;
     opacity: 1;
     margin: 0px auto;
+    margin-top: 50px;
   }
   .main .container-presentation .presentation .desarrollo-titulo .line {
     content: '';
@@ -1052,39 +1053,6 @@ body .punto {
     font-size: 0px;
     -webkit-transition: 1s ease all;
     transition: 1s ease all;
-  }
-  .main .container-presentation .presentation .front {
-    font-size: 0px;
-    line-height: 72px;
-    display: none;
-    -webkit-transition: 0.5s ease all;
-    transition: 0.5s ease all;
-    text-align: center;
-    display: inline;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    -o-object-fit: cover;
-       object-fit: cover;
-    color: #fff;
-    width: 100%;
-  }
-  .main .container-presentation .presentation .front.font {
-    font-size: 52px;
-  }
-  .main .container-presentation .presentation .front.trasladar {
-    -webkit-transform: translateX(150px);
-            transform: translateX(150px);
-  }
-  .main .container-presentation .presentation .front.trasladar-2 {
-    -webkit-transform: translateY(-150px);
-            transform: translateY(-150px);
-  }
-  .main .container-presentation .presentation .front.font0 {
-    font-size: 0px;
-  }
-  .main .container-presentation .presentation .front .display-none {
-    display: none;
   }
   .main .container-presentation .presentation .description {
     line-height: 42px;

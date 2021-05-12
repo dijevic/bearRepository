@@ -53,6 +53,7 @@
                     animation-iteration-count: initial;
                     opacity: 1;
                     margin: 0px auto;
+                    margin-top: 50px;
               
                     
 
@@ -92,42 +93,7 @@
                    
     
                 }
-                .front{
-                    font-size: 0px;
-                    line-height: 72px;
-                    display: none;
-                    transition: 0.5s ease all;
-                    text-align: center;
-                    display: inline;
-                    
-                    background-position: center center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    object-fit: cover;
-                    color: #fff;
-
-                    
-                   width: 100%;
-                   &.font{
-                    font-size :52px;
-                  }
-                  &.trasladar{
-                    transform: translateX(150px);
-
-                 }
-                 &.trasladar-2{
-                    transform: translateY(-150px) ;
-
-                 }
-                 &.font0{
-                    font-size:0px;
-                }
-                .display-none{
-                    display: none;
-                }
                 
-
-                }
                
               
                
