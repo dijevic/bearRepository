@@ -1001,7 +1001,7 @@ body .punto {
   .main .container-presentation .presentation {
     padding-left: 20px;
     overflow: hidden;
-    height: 70%;
+    height: 100%;
     background-attachment: fixed;
   }
   .main .container-presentation .presentation .desarrollo-titulo {
