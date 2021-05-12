@@ -160,9 +160,6 @@ body .punto {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: #172A3A;
-  border-bottom: #fff 10px solid;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -174,7 +171,6 @@ body .punto {
 
 .header.green {
   background: #fff;
-  border-bottom: 10px solid #004346;
 }
 
 .header .contenedor-logo {
@@ -295,7 +291,7 @@ body .punto {
 }
 
 .header .menu {
-  width: 50%;
+  width: 100%;
   margin-left: -100%;
   height: 400px;
   position: absolute;
@@ -303,8 +299,6 @@ body .punto {
   border-bottom: 2px solid #ffffff;
   background: rgba(23, 42, 58, 0.8);
   top: 80px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   -webkit-transition: 0.5s ease-in-out all;
   transition: 0.5s ease-in-out all;
