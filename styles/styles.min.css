@@ -1585,7 +1585,6 @@ body .punto {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   width: 100%;
   min-height: 100vh;
   height: 1000px;
@@ -2060,7 +2059,6 @@ body .punto {
   background: url("/assets/images/sunset-scene-vector.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 
 .main .habilities .contenedor-title {
@@ -2788,4 +2786,4 @@ body .punto {
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
 }
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles.min.css.map */
