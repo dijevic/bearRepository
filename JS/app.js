@@ -55,7 +55,7 @@ let num = 0;
 setTimeout(()=>{
     animateWelcome.style.transition='0.8s ease all';
     animateWelcome.style.opacity='1'
-    animateWelcome.style.transform ='translateX(0px)'
+    animateWelcome.style.animationName ='lightSpeedInLeft'
    
 },600)
 setTimeout(()=>{
@@ -215,7 +215,7 @@ btnBars.addEventListener('click',()=>{
         setTimeout(() => {
             // remuevo la clase actived a el menu para crear un efecto con delay
             menu.classList.remove('actived');
-        },800);
+        },600);
         
     }
     

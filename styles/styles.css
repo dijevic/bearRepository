@@ -206,9 +206,11 @@ body .punto {
   font-size: 25px;
   color: #fff;
   font-weight: 500;
-  -webkit-transform: translateX(-113px);
-          transform: translateX(-113px);
   opacity: 0;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
 }
 
 .header .btn-bars {
@@ -293,14 +295,12 @@ body .punto {
 .header .menu {
   width: 100%;
   margin-left: -100%;
-  height: 600px;
+  height: 100vh;
   position: absolute;
   border-top: 2px solid #ffffff;
-  border-bottom: 2px solid #ffffff;
   background: rgba(23, 42, 58, 0.8);
   top: 80px;
   opacity: 0;
-  border-bottom-right-radius: 15px;
   -webkit-transition: 0.3s ease-in-out all;
   transition: 0.3s ease-in-out all;
 }
@@ -309,7 +309,7 @@ body .punto {
   content: '';
   display: block;
   width: 30%;
-  background: #DEFFFC;
+  background: #fff;
   height: 5px;
   position: absolute;
   bottom: 10px;
@@ -755,6 +755,7 @@ body .punto {
 }
 
 .main .container-presentation .presentation .desarrollo-titulo {
+  margin-top: 25px;
   color: #FFF;
   font-family: 'Oswald';
   display: block;
@@ -790,7 +791,7 @@ body .punto {
   width: 50px;
   position: absolute;
   bottom: 0;
-  height: 10px;
+  height: 5px;
   -webkit-animation: afterall 3.5s infinite alternate steps(36);
           animation: afterall 3.5s infinite alternate steps(36);
   display: none;
@@ -798,20 +799,6 @@ body .punto {
 
 .main .container-presentation .presentation .desarrollo-titulo .line.display-block {
   display: block;
-}
-
-.main .container-presentation .presentation .front, .main .container-presentation .presentation .back {
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
-  display: block;
-  color: #fff;
-  font-size: 0px;
-  -webkit-transform: translateX(100px);
-          transform: translateX(100px);
-}
-
-.main .container-presentation .presentation .front.font, .main .container-presentation .presentation .back.font {
-  font-size: 28px;
 }
 
 .main .container-presentation .presentation .description {
@@ -843,7 +830,7 @@ body .punto {
   width: 50px;
   position: absolute;
   bottom: 0;
-  height: 10px;
+  height: 5px;
   -webkit-animation: afterall2 3.5s infinite alternate steps(36);
           animation: afterall2 3.5s infinite alternate steps(36);
   display: none;

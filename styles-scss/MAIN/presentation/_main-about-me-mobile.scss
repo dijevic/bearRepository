@@ -72,6 +72,7 @@
             margin-bottom: 20px;
             overflow: hidden;
             .desarrollo-titulo{
+              margin-top: 25px;
                 color: #FFF;
                 font-family: 'Oswald';
                 display: block;
@@ -100,7 +101,7 @@
                   width: 50px;
                   position: absolute;
                   bottom: 0;
-                  height:10px;
+                  height:5px;
                   animation: afterall 3.5s infinite alternate steps(36);
                   display: none;
                   &.display-block{
@@ -111,18 +112,6 @@
                 
             }
            
-            .front,.back{
-              transition: 0.8s;
-              display: block;
-              color: #fff;
-              font-size:0px;
-              transform: translateX(100px);
-              &.font{
-                font-size :28px;
-              }
-             
-             
-            }
             .description{
                 color: #fff;
                 font-family: 'Oswald';
@@ -146,7 +135,7 @@
                   width: 50px;
                   position: absolute;
                   bottom: 0;
-                  height:10px;
+                  height:5px;
                   animation: afterall2 3.5s infinite alternate steps(36);
                   display: none;
                   margin-top: 0px;
