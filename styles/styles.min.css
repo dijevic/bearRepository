@@ -472,8 +472,8 @@ body .punto {
     font-size: 18px;
     margin-left: 35px;
     display: inline-block;
-    -webkit-transition: 1s ease all;
-    transition: 1s ease all;
+    -webkit-transition: 0.2s ease all;
+    transition: 0.2s ease all;
     -webkit-animation-duration: 3s;
             animation-duration: 3s;
     -webkit-animation-iteration-count: initial;
@@ -1637,8 +1637,8 @@ body .punto {
           animation-duration: 1s;
   -webkit-animation-iteration-count: initial;
           animation-iteration-count: initial;
-  -webkit-animation-name: fontsize3;
-          animation-name: fontsize3;
+  -webkit-animation-name: fadeInTopRight;
+          animation-name: fadeInTopRight;
   display: none;
 }
 

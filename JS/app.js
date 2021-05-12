@@ -60,8 +60,13 @@ setTimeout(()=>{
 },600)
 setTimeout(()=>{
     animateWelcome.style.transition='0.8s ease all';
+    animateWelcome.style.animationName ='flipOutY'
 
-    animateWelcome.style.transform ='translateY(-200px)'
+    // animateWelcome.style.transform ='translateY(-200px)'
+    setTimeout(() => {
+    animateWelcome.style.display='none'
+    },1000)
+
 },4200)
 
 
