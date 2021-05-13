@@ -11,6 +11,11 @@
     .header{
      .contenedor-logo{
         margin-left: 150px;
+        &:hover{
+            animation-name:rubberBand;
+            animation-duration:1s;
+            animation-iteration-count: initial;
+        }
 
      }
         .logo{
@@ -55,7 +60,7 @@
                 
                     .navBarOptions{
                         padding: 0px;
-                        font-size: 18px;
+                        font-size: 20px;
                         margin-left: 35px;
                         display: inline-block;
                         transition: 0.2s ease all;
@@ -102,6 +107,7 @@
                     .fist-letter{
                         color: #E29578;
                         display: inline-block;
+                        font-size: 24px;
                        
                         &.green{
                             color: #004346;

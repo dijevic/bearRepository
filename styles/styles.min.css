@@ -180,6 +180,10 @@ body .punto {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
 }
 
 .header .contenedor-logo .logo {
@@ -426,6 +430,14 @@ body .punto {
   .header .contenedor-logo {
     margin-left: 150px;
   }
+  .header .contenedor-logo:hover {
+    -webkit-animation-name: rubberBand;
+            animation-name: rubberBand;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: initial;
+            animation-iteration-count: initial;
+  }
   .header .logo {
     font-size: 25px;
     margin-left: 0px;
@@ -469,7 +481,7 @@ body .punto {
   }
   .header .menu ul li .navBarOptions {
     padding: 0px;
-    font-size: 18px;
+    font-size: 20px;
     margin-left: 35px;
     display: inline-block;
     -webkit-transition: 0.2s ease all;
@@ -511,6 +523,7 @@ body .punto {
   .header .menu ul li .fist-letter {
     color: #E29578;
     display: inline-block;
+    font-size: 24px;
   }
   .header .menu ul li .fist-letter.green {
     color: #004346;
@@ -1099,16 +1112,17 @@ body .punto {
     display: none;
     position: relative;
     margin: 0px auto;
+    width: 150px;
+    font-size: 20px;
   }
   .main .container-presentation .presentation .start-here:hover {
     color: #fff;
-    -webkit-transition: 0.6s ease all;
-    transition: 0.6s ease all;
-    -webkit-box-shadow: 5px 2px #000;
-            box-shadow: 5px 2px #000;
-    -webkit-transition: 0.7s;
-    transition: 0.7s;
-    text-shadow: 3px 3px 3px #000;
+    -webkit-animation-name: backInUp ,rubberBand;
+            animation-name: backInUp ,rubberBand;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: initial;
+            animation-iteration-count: initial;
   }
 }
 
@@ -2114,8 +2128,12 @@ body .punto {
 }
 
 .main .habilities .contenedor-habilidades.animate {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
   opacity: 1;
 }
 
@@ -2382,6 +2400,9 @@ body .punto {
   background: url("/assets/images/habilidades/heroku.svg");
   background-repeat: no-repeat;
   background-position: center;
+  width: 50px;
+  -webkit-transform: translateX(14px);
+          transform: translateX(14px);
 }
 
 .main .habilities .contenedor-habilidades .heroku::before {
@@ -2399,6 +2420,9 @@ body .punto {
   background: url("/assets/images/habilidades/github-2.svg");
   background-repeat: no-repeat;
   background-position: center;
+  width: 50px;
+  -webkit-transform: translateX(15px);
+          transform: translateX(15px);
 }
 
 .main .habilities .contenedor-habilidades .github::before {
@@ -2416,6 +2440,14 @@ body .punto {
   .main .habilities .titulo-habilities {
     font-size: 34px;
     line-height: 46px;
+  }
+  .main .habilities .contenedor-habilidades .icon:hover:hover {
+    -webkit-animation-name: rubberBand;
+            animation-name: rubberBand;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: initial alternate;
+            animation-iteration-count: initial alternate;
   }
 }
 
@@ -2785,5 +2817,18 @@ body .punto {
 .footer p {
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
+}
+
+.about {
+  width: 100%;
+  background: #fff;
+  margin-top: 35px;
+}
+
+.about .greet {
+  font-size: 32px;
+  color: #000;
+  text-align: center;
+  margin-top: 35px;
 }
 /*# sourceMappingURL=styles.min.css.map */

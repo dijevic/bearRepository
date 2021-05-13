@@ -50,7 +50,9 @@
 .contenedor-logo{
     display: flex;
     align-items: center;
-
+    animation-duration:1s;
+    animation-iteration-count: initial;
+    
         .logo{
         margin-left: 20px;
         background: url('/assets/images/bear22.svg');

@@ -43,7 +43,8 @@ const front                   = document.getElementById('front');
 const back                    = document.getElementById('back');
 const line                    = document.querySelector('.line');
 const line2                    = document.querySelector('.line2');
-const borderP                 = document.getElementById('border-p')
+const borderP                 = document.getElementById('border-p');
+const logo                     = document.getElementById('logo')
 
 
 let num = 0;
@@ -52,15 +53,22 @@ let num = 0;
 
 
 // codigo que me permite agregar un efecto con el mensaje 'welcome en la parte del header *INICIO*
+setTimeout(() => {
+    logo.style.animationName='rubberBand'
+
+},250)
 setTimeout(()=>{
     animateWelcome.style.transition='0.8s ease all';
     animateWelcome.style.opacity='1'
-    animateWelcome.style.animationName ='lightSpeedInLeft'
+    animateWelcome.style.animationName ='lightSpeedInLeft';
+    // logo.style.animationName='rubberBand'
    
 },600)
 setTimeout(()=>{
     animateWelcome.style.transition='0.8s ease all';
-    animateWelcome.style.animationName ='flipOutY'
+    animateWelcome.style.animationName ='flipOutY';
+    logo.style.animationName=''
+
 
     // animateWelcome.style.transform ='translateY(-200px)'
     setTimeout(() => {
@@ -375,7 +383,7 @@ const scrollEfectsHabilities = ()=>{
                 contenedorHabilidades.style.opacity='1' ;
                contenedorHabilidades.classList.add('animate')
                     
-                }, 1000);
+                }, 800);
             }
         })
     }
