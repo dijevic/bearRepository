@@ -334,21 +334,10 @@ body .punto {
 }
 
 .header .menu ul li .fist-letter {
-  color: #fff;
-  font-family: 'Oswald';
-  font-weight: 494;
-  font-size: 26px;
-}
-
-.header .menu ul li .fist-letter.blue {
-  font-family: 'Oswald';
-  font-weight: 494;
-  font-size: 26px;
-  color: #508991;
-}
-
-.header .menu ul li .fist-letter .pink {
   color: #E29578;
+  font-family: 'Oswald';
+  font-weight: 494;
+  font-size: 26px;
 }
 
 @media screen and (max-width: 320px) {
