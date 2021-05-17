@@ -169,10 +169,6 @@ body .punto {
   z-index: 500;
 }
 
-.header.green {
-  background: #fff;
-}
-
 .header .contenedor-logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -184,10 +180,10 @@ body .punto {
           animation-duration: 1s;
   -webkit-animation-iteration-count: initial;
           animation-iteration-count: initial;
+  margin-left: 20px;
 }
 
 .header .contenedor-logo .logo {
-  margin-left: 20px;
   background: url("/assets/images/bear22.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -309,18 +305,6 @@ body .punto {
   transition: 0.3s ease-in-out all;
 }
 
-.header .menu::after {
-  content: '';
-  display: block;
-  width: 30%;
-  background: #fff;
-  height: 5px;
-  position: absolute;
-  bottom: 10px;
-  left: 36%;
-  border-radius: 15px;
-}
-
 .header .menu.actived {
   margin: 0;
   opacity: 1;
@@ -349,12 +333,8 @@ body .punto {
   opacity: 0;
 }
 
-.header .menu ul li a.green {
-  color: #004346;
-}
-
 .header .menu ul li .fist-letter {
-  color: #E29578;
+  color: #fff;
   font-family: 'Oswald';
   font-weight: 494;
   font-size: 26px;
@@ -440,7 +420,6 @@ body .punto {
   }
   .header .logo {
     font-size: 25px;
-    margin-left: 0px;
   }
   .header .logo .desarrollo-titulo {
     display: inline;
@@ -507,14 +486,6 @@ body .punto {
   .header .menu ul li .navBarOptions.blue:hover .fist-letter {
     color: #508991;
   }
-  .header .menu ul li .navBarOptions.green {
-    color: #004346;
-    text-shadow: none;
-  }
-  .header .menu ul li .navBarOptions.green:hover {
-    border-bottom: 1.5px solid #004346;
-    color: #004346;
-  }
   .header .menu ul li .navBarOptions.nonactived {
     -webkit-transform: translate(0);
             transform: translate(0);
@@ -524,9 +495,6 @@ body .punto {
     color: #E29578;
     display: inline-block;
     font-size: 24px;
-  }
-  .header .menu ul li .fist-letter.green {
-    color: #004346;
   }
 }
 
@@ -558,10 +526,10 @@ body .punto {
 
 @media screen and (min-width: 1200px) {
   .header .contenedor-logo {
-    margin-left: 250px;
+    margin-left: 210px;
   }
   .header .menu ul {
-    margin-right: 250px;
+    margin-right: 210px;
   }
 }
 
@@ -1247,9 +1215,6 @@ body .punto {
   background: #508991;
   height: 120px;
   color: #fff;
-  border-bottom: 1px solid #fff;
-  -webkit-box-shadow: 5px 5px 50px #000;
-          box-shadow: 5px 5px 50px #000;
   text-shadow: 2px 2px 2px #000;
   margin-top: 15px;
   height: 49px;
@@ -1274,6 +1239,10 @@ body .punto {
       grid-template-columns: repeat(1, 1fr);
   justify-items: center;
   grid-gap: 30px;
+  max-width: 1100px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .main .about-me .contenedor .story, .main .about-me .contenedor .story2 {
@@ -1486,10 +1455,20 @@ body .punto {
   .main .about-me .titulo-about {
     font-size: 34px;
     line-height: 46px;
+    display: block;
+    text-align: center;
+    border: none;
+    margin: 0px;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: initial;
+            animation-iteration-count: initial;
+    opacity: 0;
   }
   .main .about-me .contenedor {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
     margin-top: 22px;
   }
   .main .about-me .contenedor .card2, .main .about-me .contenedor .card4 {
@@ -1600,7 +1579,6 @@ body .punto {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 100vh;
   height: 1000px;
 }
 
@@ -1616,11 +1594,9 @@ body .punto {
   font-weight: 500;
   margin: 0 auto;
   display: inline;
-  background: #172A3A;
   padding: 0px 20px 0px 20px;
   height: 120px;
   color: #fff;
-  border-bottom: 1px solid #fff;
   text-shadow: 2px 2px 2px #000;
   margin-left: -100%;
   -webkit-transition: 0.6s ease all;
@@ -1638,7 +1614,6 @@ body .punto {
   position: relative;
   top: 50px;
   text-align: center;
-  background: #fff;
   color: #000;
   font-size: 25px;
   font-family: 'oswald';
@@ -1651,6 +1626,8 @@ body .punto {
           animation-duration: 1s;
   -webkit-animation-iteration-count: initial;
           animation-iteration-count: initial;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
   -webkit-animation-name: fadeInTopRight;
           animation-name: fadeInTopRight;
   display: none;
@@ -1662,11 +1639,19 @@ body .punto {
   width: 100%;
   margin: 0 auto;
   max-width: 900px;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
   opacity: 0;
   -webkit-transition: 0.6s ease all;
   transition: 0.6s ease all;
+}
+
+.main .work .contenedor-slider.animate {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+  opacity: 1;
 }
 
 .main .work .contenedor-slider .slider {
@@ -2018,6 +2003,14 @@ body .punto {
   .main .work .titulo-work {
     font-size: 34px;
     line-height: 46px;
+    display: block;
+    text-align: center;
+    margin: 0;
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: initial;
+            animation-iteration-count: initial;
   }
   .main .work .kind-work {
     font-size: 31px;
@@ -2068,8 +2061,7 @@ body .punto {
 
 .main .habilities {
   width: 100%;
-  min-height: 100vh;
-  height: 1000px;
+  height: 850px;
   background: url("/assets/images/sunset-scene-vector.jpg");
   background-size: cover;
   background-position: center;
@@ -2085,12 +2077,8 @@ body .punto {
   font-size: 28px;
   line-height: 42px;
   font-weight: 500;
-  margin: 0 auto;
-  display: inline;
-  background: #172A3A;
   padding: 0px 20px 0px 20px;
   color: #fff;
-  border-bottom: 1px solid #fff;
   text-shadow: 2px 2px 2px #000;
   margin-left: -100%;
   -webkit-transition: 0.6s ease all;
@@ -2118,12 +2106,10 @@ body .punto {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 800px;
   justify-items: center;
+  max-width: 800px;
   -webkit-transition: 1s ease all;
   transition: 1s ease all;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
   opacity: 0;
 }
 
@@ -2150,6 +2136,10 @@ body .punto {
   font: 22px;
   position: relative;
   top: 40px;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
 }
 
 .main .habilities .contenedor-habilidades .contenedor-icon {
@@ -2440,14 +2430,18 @@ body .punto {
   .main .habilities .titulo-habilities {
     font-size: 34px;
     line-height: 46px;
-  }
-  .main .habilities .contenedor-habilidades .icon:hover:hover {
-    -webkit-animation-name: rubberBand;
-            animation-name: rubberBand;
+    display: block;
+    text-align: center;
+    font-size: 34px;
+    line-height: 46px;
+    display: block;
+    text-align: center;
+    margin: 0;
+    opacity: 0;
     -webkit-animation-duration: 1s;
             animation-duration: 1s;
-    -webkit-animation-iteration-count: initial alternate;
-            animation-iteration-count: initial alternate;
+    -webkit-animation-iteration-count: initial;
+            animation-iteration-count: initial;
   }
 }
 
@@ -2496,11 +2490,9 @@ body .punto {
 }
 
 .main .contacto {
-  background: #004346;
+  background: #172A3A;
   width: 100%;
-  height: 1000px;
-  max-height: 850px;
-  min-height: 100vh;
+  height: 850px;
 }
 
 .main .contacto .contenedor {
@@ -2523,16 +2515,19 @@ body .punto {
   margin: 0 auto;
   display: inline;
   padding: 0px 20px 0px 20px;
-  background: #004346;
+  background: #172A3A;
   height: 120px;
   color: #fff;
-  border-bottom: 1px solid #004346;
+  border-bottom: 1px solid #172A3A;
   margin-top: 15px;
   -webkit-box-shadow: 2px 2px 5px #000;
           box-shadow: 2px 2px 5px #000;
   margin-left: -100%;
   -webkit-transition: 0.6s ease all;
   transition: 0.6s ease all;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .main .contacto .titulo-contact .letter {
@@ -2557,16 +2552,18 @@ body .punto {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #fff;
   max-width: 600px;
-  -webkit-box-shadow: 5px 5px 50px #000;
-          box-shadow: 5px 5px 50px #000;
+  -webkit-box-shadow: 5px 5px 10px #000;
+          box-shadow: 5px 5px 10px #000;
   opacity: 0;
   -webkit-transform: translateY(50px);
           transform: translateY(50px);
   -webkit-transition: 0.8s ease all;
   transition: 0.8s ease all;
   border-radius: 10px;
+  background: #172A3A;
+  color: #fff;
+  overflow: hidden;
 }
 
 .main .contacto .contact-options.animation {
@@ -2576,8 +2573,8 @@ body .punto {
 }
 
 .main .contacto .contact-options .ubication {
-  color: #fff;
-  background: #004346;
+  color: #172A3A;
+  background: #fff;
   width: 100%;
   text-align: center;
   margin-top: 10px;
@@ -2588,7 +2585,7 @@ body .punto {
   font-size: 18px;
   font-family: 'oswald';
   line-height: 25px;
-  color: #172A3A;
+  color: #fff;
 }
 
 .main .contacto .contact-options .direct-ways .direct-option {
@@ -2601,7 +2598,7 @@ body .punto {
 }
 
 .main .contacto .contact-options .last-option {
-  color: #172A3A;
+  color: #fff;
   text-align: center;
 }
 
@@ -2638,7 +2635,7 @@ body .punto {
 }
 
 .main .contacto .contact-options .my-email .fa-copy {
-  color: #172A3A;
+  color: #fff;
   font-size: 20px;
   margin-right: 8px;
 }
@@ -2659,14 +2656,14 @@ body .punto {
 .main .contacto .formulario {
   width: 90%;
   max-width: 500px;
-  background: #004346;
+  background: #172A3A;
   height: 450px;
   position: relative;
   top: 100px;
   margin: auto;
   padding: 20px;
-  -webkit-box-shadow: 5px 5px 50px #000;
-          box-shadow: 5px 5px 50px #000;
+  -webkit-box-shadow: 5px 5px 10px #000;
+          box-shadow: 5px 5px 10px #000;
   opacity: 0;
   -webkit-transform: translateY(50px);
           transform: translateY(50px);
@@ -2781,10 +2778,17 @@ body .punto {
   .main .contacto .contenedor .contact-options .ubication {
     position: absolute;
     bottom: 0;
-    color: #fff;
-    background: #004346;
     width: 100%;
     text-align: center;
+  }
+  .main .contacto .contenedor .contact-options .whatsapp, .main .contacto .contenedor .contact-options .linke, .main .contacto .contenedor .contact-options .github {
+    font-size: 50px;
+  }
+  .main .contacto .contenedor .contact-options .linke {
+    font-size: 50px;
+  }
+  .main .contacto .contenedor .contact-options .github {
+    font-size: 50px;
   }
   .main .contacto .contenedor .formulario {
     margin-left: 20px;

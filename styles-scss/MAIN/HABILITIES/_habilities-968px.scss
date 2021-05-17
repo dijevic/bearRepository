@@ -4,18 +4,20 @@
             .titulo-habilities{
                 font-size: 34px;
                 line-height: 46px;
+                display: block;
+                text-align: center;
+                font-size: 34px;
+                line-height: 46px;
+                display: block;
+                text-align: center;
+                margin: 0;
+                opacity: 0;
+                animation-duration: 1s;
+                animation-iteration-count: initial;
+
+
             }
-            .contenedor-habilidades{
-                .icon{
-                    &:hover{
-                        &:hover{
-                            animation-name:rubberBand;
-                            animation-duration:1s;
-                            animation-iteration-count: initial alternate;
-                        }
-                    }
-                }
-            }
+            
         }
     }
 }

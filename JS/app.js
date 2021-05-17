@@ -44,7 +44,8 @@ const back                    = document.getElementById('back');
 const line                    = document.querySelector('.line');
 const line2                    = document.querySelector('.line2');
 const borderP                 = document.getElementById('border-p');
-const logo                     = document.getElementById('logo')
+const logo                     = document.getElementById('logo');
+const icons                   = document.querySelectorAll('.icon')
 
 
 let num = 0;
@@ -251,27 +252,28 @@ const scrollEfectsHeader = ()=>{
              let alturaTitulo = tituloAbout.offsetTop;
             
              if(alturaTitulo +400 < y){
-                aboutTitulo.style.marginLeft='0'
+                aboutTitulo.style.opacity='1'
+                aboutTitulo.style.animationName ='zoomInUp';
 
              }
               if(altura - 500 < y){
 
             cards[i].classList.add('animacion')
                 
-                 
-             }else if(altura -800 < y){
+                 }
+                //  else if(altura -800 < y){
                 
-                 firstLetter.forEach(letter=>{
-                letter.classList.add('blue') 
-                 })
+            //      firstLetter.forEach(letter=>{
+            //     letter.classList.add('blue') 
+            //      })
                
-                 navBarOptions.forEach(option=>{
-                     option.classList.add('blue')
-                 })
-                //  tituloAbout.classList.add('animacion')
+            //      navBarOptions.forEach(option=>{
+            //          option.classList.add('blue')
+            //      })
+            //     //  tituloAbout.classList.add('animacion')
 
                  
-             }
+            //  }
              else{
                 
                  firstLetter.forEach(letter=>{
@@ -294,7 +296,7 @@ const scrollEfectsHeader = ()=>{
              }
          }
      }
-    }else{
+    }else if(window.screen.width <850){
     
         window.onscroll = ()=>{
             let y = window. scrollY
@@ -319,7 +321,8 @@ const scrollEfectsWork = ()=>{
             let y = window.scrollY
             let altura = tituloWork.offsetTop;
             if(altura +1790 <= y){
-                tituloWork.style.marginLeft='0'
+                tituloWork.style.opacity='1'
+                tituloWork.style.animationName='zoomInUp'
                 setTimeout(() => {
                     kindWork.style.marginLeft='0'
                     kindWork.style.margin='0px auto';
@@ -347,8 +350,8 @@ const scrollEfectsWork = ()=>{
                     
                 }, 900);
                 setTimeout(()=>{
-                    sliderContenedor.style.transform='translateY(0)'
                     sliderContenedor.style.opacity='1'
+                    sliderContenedor.classList.add('animate')
                 },1400)
             }
         }) 
@@ -364,9 +367,14 @@ const scrollEfectsHabilities = ()=>{
             let altura = tituloHabilidades.offsetTop;
         
             if(altura +2785 <= y){
-                tituloHabilidades.style.marginLeft='0'
+                tituloHabilidades.style.opacity='1'
+                tituloHabilidades.style.animationName='zoomInUp'
                 setTimeout(() => {
                     contenedorHabilidades.classList.add('animate')
+                    icons.forEach(icon=>{
+                        icon.style.animationName = 'rollIn'
+                      
+                    })
                     }, 1000);
             
                 
@@ -382,6 +390,9 @@ const scrollEfectsHabilities = ()=>{
                 setTimeout(() => {
                 contenedorHabilidades.style.opacity='1' ;
                contenedorHabilidades.classList.add('animate')
+               icons.forEach(icon=>{
+                icon.style.animationName = 'rollIn'
+            })
                     
                 }, 800);
             }
@@ -399,18 +410,7 @@ const scrollEfectsContact = ()=>{
             if(altura + 3869 <= y){
                 tituloContact.style.marginLeft='0';
                 btnContact.style.display='none';
-                header.classList.add('green')
-                firstLetter.forEach(op=>{
-                    op.classList.add('pink')
-                    op.classList.remove('blue')
-
-                })
-                navBarOptions.forEach(op=>{
-                   
-                    op.classList.add('green')
-                    op.classList.remove('blue')
-
-                })
+                
 
                 setTimeout(() => {
                     contactOptions.classList.add('animation');
@@ -422,14 +422,8 @@ const scrollEfectsContact = ()=>{
                 
             }else{
                 btnContact.style.display='block';
-                header.classList.remove('green')
-                firstLetter.forEach(op=>{
-                    op.classList.remove('pink')
-
-                })
-                navBarOptions.forEach(op=>{
-                    op.classList.remove('green')
-                })
+              
+             
             }
         })
     }else{

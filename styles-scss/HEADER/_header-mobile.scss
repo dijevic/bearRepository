@@ -44,17 +44,16 @@
     position: sticky;
     top: 0;
     z-index: 500;
-    &.green{
-        background: #fff;
-    }
+
 .contenedor-logo{
     display: flex;
     align-items: center;
     animation-duration:1s;
     animation-iteration-count: initial;
+    margin-left: 20px;
+
     
         .logo{
-        margin-left: 20px;
         background: url('/assets/images/bear22.svg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -168,18 +167,6 @@
         top: 80px;
         opacity: 0;
         transition: 0.3s ease-in-out all;
-        &::after{
-            content: '';
-            display: block;
-            width: 30%;
-            background:#fff;
-            height:5px;
-            position: absolute;
-            bottom:10px;
-            left: 36%;
-            border-radius: 15px;
-         
-        }
         &.actived{
             margin: 0;
             opacity: 1;
@@ -208,9 +195,7 @@
 
                     }
                  
-                    &.green{
-                        color: #004346;
-                    }
+                  
                    
                     
                     
@@ -218,7 +203,7 @@
              
                 
                 .fist-letter{
-                    color: #E29578;
+                    color: #fff;
                     font-family: 'Oswald';
                     font-weight: 494;
                     font-size:26px;

@@ -20,7 +20,7 @@
      }
         .logo{
             font-size: 25px;
-            margin-left: 0px;
+            
             .desarrollo-titulo{
                 display: inline;
                 font-size: 25px;
@@ -85,17 +85,6 @@
 
                             }
                         }
-                        &.green{
-                            color: #004346;
-                            text-shadow: none;
-
-                            &:hover{
-                            border-bottom: 1.5px solid #004346;
-                            color: #004346;
-
-                           
-                            }
-                        }
                         &.nonactived{
                             transform:translate(0) ;
                             opacity:1;
@@ -109,9 +98,7 @@
                         display: inline-block;
                         font-size: 24px;
                        
-                        &.green{
-                            color: #004346;
-                        }
+                       
                     }
                 }
 

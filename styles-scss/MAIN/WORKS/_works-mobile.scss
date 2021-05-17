@@ -6,7 +6,7 @@
        background-position: center;
        background-repeat: no-repeat;
        width: 100%;
-       min-height: 100vh;
+
        height: 1000px;
     .contenedor-title{
         position: relative;
@@ -19,11 +19,9 @@
         font-weight: 500;
         margin: 0 auto;
         display: inline;
-        background:#172A3A;
         padding: 0px 20px 0px 20px;
         height: 120px;
         color: #fff;
-        border-bottom: 1px solid #fff;
         text-shadow: 2px 2px 2px #000;
         margin-left: -100%;
         transition: 0.6s ease all;
@@ -46,7 +44,6 @@
         position: relative;
         top: 50px;
         text-align: center;
-        background:#fff ;
         color: #000;
         font-size: 25px;
         font-family: 'oswald';
@@ -56,6 +53,8 @@
         margin-left: -100%;
         animation-duration: 1s;
         animation-iteration-count: initial;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 10px;
         animation-name: fadeInTopRight;
         display:none;
 
@@ -68,9 +67,14 @@
         width: 100%;
         margin: 0 auto;
         max-width: 900px;
-        transform: translateY(50px);
         opacity: 0;
         transition: 0.6s ease all;
+        &.animate{
+            animation-name:fadeInUp;
+            animation-duration:1s;
+            animation-iteration-count: initial;
+            opacity: 1;
+        }
         .slider{
             width: 80%;
             margin: auto;
