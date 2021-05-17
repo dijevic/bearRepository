@@ -2000,6 +2000,9 @@ body .punto {
       font-size: 31px;
     }
   }
+  .main .work {
+    overflow: hidden;
+  }
   .main .work .titulo-work {
     font-size: 34px;
     line-height: 46px;
