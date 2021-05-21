@@ -125,6 +125,51 @@
                 animation-name:backInUp;
                 animation-iteration-count: initial;
                 animation-duration:2s;
+                position: relative;
+                overflow-y: visible;
+                &::before{
+                  content:"";
+                  position: absolute;
+                  bottom: 0;
+                  left: 0px;
+                  display: block;
+                  width: 0px;
+                  height: 1px; 
+                  background: #fff;
+                  margin-top: 5px;
+                  transition: 2s;
+
+                }
+                &.border-bottom{
+                  &::before{
+                    content:"";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0px;
+                    display: block;
+                    width: 100%;
+                    height: 1px; 
+                    background: #fff;
+                    margin-top: 5px;
+                    transition: 2s;
+  
+                  }
+                  &:hover{
+                    &::before{
+                      content:"";
+                      position: absolute;
+                      bottom: 0;
+                      left: 0px;
+                      display: block;
+                      width: 0%;
+                      height: 1px; 
+                      background: #fff;
+                      margin-top: 5px;
+                      transition: 2s;
+    
+                    }
+                  }
+                }
             
                 &.border{
                   border-bottom: 1px solid #fff;

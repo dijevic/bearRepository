@@ -334,7 +334,7 @@ body .punto {
 }
 
 .header .menu ul li .fist-letter {
-  color: #E29578;
+  color: #508991;
   font-family: 'Oswald';
   font-weight: 494;
   font-size: 26px;
@@ -481,7 +481,7 @@ body .punto {
     opacity: 1;
   }
   .header .menu ul li .fist-letter {
-    color: #E29578;
+    color: #508991;
     display: inline-block;
     font-size: 24px;
   }
@@ -788,6 +788,50 @@ body .punto {
           animation-iteration-count: initial;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+  position: relative;
+  overflow-y: visible;
+}
+
+.main .container-presentation .presentation .description::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  display: block;
+  width: 0px;
+  height: 1px;
+  background: #fff;
+  margin-top: 5px;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.main .container-presentation .presentation .description.border-bottom::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  margin-top: 5px;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.main .container-presentation .presentation .description.border-bottom:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  display: block;
+  width: 0%;
+  height: 1px;
+  background: #fff;
+  margin-top: 5px;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 .main .container-presentation .presentation .description.border {
@@ -1214,7 +1258,7 @@ body .punto {
 
 .main .about-me .titulo-about .letter {
   font-size: 75px;
-  color: #E29578;
+  color: #508991;
   line-height: 42px;
   text-shadow: 4px 4px 4px #000;
 }
@@ -1299,8 +1343,7 @@ body .punto {
   font-weight: 494;
   color: #fff;
   margin-right: -10px;
-  font-size: 30px;
-  text-shadow: 4px 4px 4px #000;
+  font-size: 28px;
 }
 
 .main .about-me .contenedor .story .subtitulo .letter, .main .about-me .contenedor .story2 .subtitulo .letter {
@@ -1355,7 +1398,7 @@ body .punto {
 .main .about-me .contenedor .story2 .subtitulo {
   margin-right: auto;
   margin-left: auto;
-  font-size: 25px;
+  font-size: 28px;
 }
 
 .main .about-me .contenedor .story2 .text .bs-as {
@@ -1595,7 +1638,7 @@ body .punto {
 
 .main .work .titulo-work .letter {
   font-size: 75px;
-  color: #E29578;
+  color: #508991;
   line-height: 42px;
   text-shadow: 4px 4px 4px #000;
 }
@@ -2080,7 +2123,7 @@ body .punto {
 
 .main .habilities .titulo-habilities .letter {
   font-size: 75px;
-  color: #E29578;
+  color: #508991;
   line-height: 42px;
   text-shadow: 4px 4px 4px #000;
 }

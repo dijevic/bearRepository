@@ -88,7 +88,7 @@ const presentationAnimation = ()=>{
                 setTimeout(() => {
                 line2.style.display='block'
                     setTimeout(() => {
-                        descripcionPresentacion.classList.add('border')
+                        descripcionPresentacion.classList.add('border-bottom')
                     },1800)
                 },500)
             },1200)
@@ -103,7 +103,7 @@ const presentationAnimation = ()=>{
                 setTimeout(() => {
                 line2.style.display='block'
                     setTimeout(() => {
-                        descripcionPresentacion.classList.add('border')
+                        descripcionPresentacion.classList.add('border-bottom')
                     },1800)
                 },500)
             },1200)
