@@ -91,6 +91,40 @@
                 }
 
             }
+            
+            
+            .tailwind{
+                background: url('/assets/images/habilidades/tailwindcss-mark.cb8046c163f77190406dfbf4dec89848.svg');
+                background-repeat: no-repeat;
+                background-position:center ;
+                width: 60px;
+                margin-left: 10px;
+                &::before{
+                    content: 'TAILWIND';
+                    display: block;
+                    position: absolute;
+                    top: 80%;
+                    width: 100px;
+                    left: 10%;
+                }
+            }
+            .git{
+                background: url('/assets/images/habilidades/giticono.svg');
+                background-repeat: no-repeat;
+                background-position:center ;
+                background-size: contain;
+                width: 50px;
+                margin-left: 10px;
+                &::before{
+                    content: 'HTML';
+                    display: block;
+                    position: absolute;
+                    top: 80%;
+                    width: 100px;
+                    left: 30%;
+                }
+
+            }
             .js{
                 background: url('/assets/images/habilidades/icons8-js-squared.svg');
                 background-repeat: no-repeat;

@@ -52,7 +52,7 @@
                 justify-content: flex-end;
                 align-items: center;
                 margin-right: 150px;
-                margin-top: 16px;
+                margin-top: 22px;
                
                
                 li{
@@ -61,30 +61,48 @@
                     .navBarOptions{
                         padding: 0px;
                         font-size: 20px;
+                        line-height: 26px;
                         margin-left: 35px;
                         display: inline-block;
                         transition: 0.2s ease all;
                         animation-duration: 3s;
                         animation-iteration-count: initial;
                         animation-name:zoomInDown;
+                         padding-bottom: 10px;
+                        position: relative;
+                    
+                        &::before{
+                            content:'';
+                            display: block;
+                            width: 0%;
+                            background: #E29578;
+                            height: 1px;
+                            bottom: 0;
+                            left:0;
+                            position: absolute;
+
+                        }
                         &:hover{
-                          border-bottom: 1.5px solid #E29578;
-                          font-size: 22px;
-                          text-shadow: 2px 2px 2px #000;
-                          .fist-letter{
-                              font-size: 22px;
-                          }
 
-                        }
-                        &.blue{
-                            &:hover{
-                            border-bottom: 1.5px solid #508991;
-                            .fist-letter{
-                                color: #508991;
-                            }
+                            font-size: 22px;
+                           
+                            text-shadow: 2px 2px 2px #000;
+                           
+                            &::before{
+                            transition: 0.3s ease all;
 
+                                content:'';
+                                display: block;
+                                width: 100%;
+                                background: #E29578;
+                                height: 1px;
+                                bottom: 0;
+                                left:0;
+                                position: absolute;
+                                
                             }
                         }
+                       
                         &.nonactived{
                             transform:translate(0) ;
                             opacity:1;

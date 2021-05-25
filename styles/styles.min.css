@@ -445,11 +445,12 @@ body .punto {
         -ms-flex-align: center;
             align-items: center;
     margin-right: 150px;
-    margin-top: 16px;
+    margin-top: 22px;
   }
   .header .menu ul li .navBarOptions {
     padding: 0px;
     font-size: 20px;
+    line-height: 26px;
     margin-left: 35px;
     display: inline-block;
     -webkit-transition: 0.2s ease all;
@@ -460,20 +461,34 @@ body .punto {
             animation-iteration-count: initial;
     -webkit-animation-name: zoomInDown;
             animation-name: zoomInDown;
+    padding-bottom: 10px;
+    position: relative;
+  }
+  .header .menu ul li .navBarOptions::before {
+    content: '';
+    display: block;
+    width: 0%;
+    background: #E29578;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
   }
   .header .menu ul li .navBarOptions:hover {
-    border-bottom: 1.5px solid #E29578;
     font-size: 22px;
     text-shadow: 2px 2px 2px #000;
   }
-  .header .menu ul li .navBarOptions:hover .fist-letter {
-    font-size: 22px;
-  }
-  .header .menu ul li .navBarOptions.blue:hover {
-    border-bottom: 1.5px solid #508991;
-  }
-  .header .menu ul li .navBarOptions.blue:hover .fist-letter {
-    color: #508991;
+  .header .menu ul li .navBarOptions:hover::before {
+    -webkit-transition: 0.3s ease all;
+    transition: 0.3s ease all;
+    content: '';
+    display: block;
+    width: 100%;
+    background: #E29578;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
   }
   .header .menu ul li .navBarOptions.nonactived {
     -webkit-transform: translate(0);
@@ -1037,6 +1052,7 @@ body .punto {
     opacity: 1;
     margin: 0px auto;
     margin-top: 50px;
+    position: relative;
   }
   .main .container-presentation .presentation .desarrollo-titulo .line {
     content: '';
@@ -1240,12 +1256,11 @@ body .punto {
   text-align: left;
   margin: 0 auto;
   font-size: 28px;
-  line-height: 42px;
+  line-height: 36px;
   font-weight: 500;
   margin: 0 auto;
   display: inline;
   padding: 0px 20px 0px 20px;
-  background: #508991;
   height: 120px;
   color: #fff;
   text-shadow: 2px 2px 2px #000;
@@ -1343,13 +1358,15 @@ body .punto {
   font-weight: 494;
   color: #fff;
   margin-right: -10px;
-  font-size: 28px;
+  font-size: 24px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #fff;
 }
 
 .main .about-me .contenedor .story .subtitulo .letter, .main .about-me .contenedor .story2 .subtitulo .letter {
   color: #172A3A;
   font-family: 'oswald';
-  font-size: 42px;
+  font-size: 28px;
   text-shadow: none;
 }
 
@@ -1357,11 +1374,11 @@ body .punto {
   color: #fff;
   font-size: 22px;
   text-align: left;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .main .about-me .contenedor .story .text .name, .main .about-me .contenedor .story2 .text .name, .main .about-me .contenedor .story .text .carrera, .main .about-me .contenedor .story2 .text .carrera {
-  color: #E29578;
+  color: #172A3A;
   font-family: 'oswald';
   font-weight: 400;
   font-size: 29px;
@@ -1398,7 +1415,9 @@ body .punto {
 .main .about-me .contenedor .story2 .subtitulo {
   margin-right: auto;
   margin-left: auto;
-  font-size: 28px;
+  font-size: 24px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #fff;
 }
 
 .main .about-me .contenedor .story2 .text .bs-as {
@@ -1428,7 +1447,7 @@ body .punto {
 }
 
 .main .about-me .contenedor .story2 .new-skills, .main .about-me .contenedor .story2 .text .word {
-  color: #E29578;
+  color: #172A3A;
 }
 
 .main .about-me .contenedor .card.animacion1 {
@@ -1485,8 +1504,8 @@ body .punto {
 
 @media screen and (min-width: 850px) {
   .main .about-me .titulo-about {
-    font-size: 34px;
-    line-height: 46px;
+    font-size: 46px;
+    line-height: 52px;
     display: block;
     text-align: center;
     border: none;
@@ -1503,13 +1522,21 @@ body .punto {
     grid-gap: 30px;
     margin-top: 22px;
   }
-  .main .about-me .contenedor .card2, .main .about-me .contenedor .card4 {
+  .main .about-me .contenedor .card2, .main .about-me .contenedor .card4, .main .about-me .contenedor .card1, .main .about-me .contenedor .card3, .main .about-me .contenedor .card4, .main .about-me .contenedor .card3 {
     position: relative;
     top: 50px;
+  }
+  .main .about-me .contenedor .card2 .text, .main .about-me .contenedor .card4 .text, .main .about-me .contenedor .card1 .text, .main .about-me .contenedor .card3 .text, .main .about-me .contenedor .card4 .text, .main .about-me .contenedor .card3 .text {
+    font-size: 28px;
+    color: #fff;
   }
   .main .about-me .contenedor .card4 {
     position: relative;
     top: 20px;
+  }
+  .main .about-me .contenedor .card4 .text {
+    font-size: 28px;
+    color: #fff;
   }
   .main .about-me .contenedor .card1, .main .about-me .contenedor .card3 {
     -webkit-animation-name: lightSpeedInLeft;
@@ -1638,7 +1665,7 @@ body .punto {
 
 .main .work .titulo-work .letter {
   font-size: 75px;
-  color: #508991;
+  color: #E29578;
   line-height: 42px;
   text-shadow: 4px 4px 4px #000;
 }
@@ -1722,7 +1749,7 @@ body .punto {
   z-index: 200;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta, .main .work .contenedor-slider .contenedor-tarjeta2, .main .work .contenedor-slider .contenedor-tarjeta3, .main .work .contenedor-slider .contenedor-tarjeta4, .main .work .contenedor-slider .contenedor-tarjeta5, .main .work .contenedor-slider .contenedor-tarjeta6, .main .work .contenedor-slider .contenedor-tarjeta7 {
+.main .work .contenedor-slider .contenedor-tarjeta, .main .work .contenedor-slider .contenedor-tarjeta2, .main .work .contenedor-slider .contenedor-tarjeta3, .main .work .contenedor-slider .contenedor-tarjeta4, .main .work .contenedor-slider .contenedor-tarjeta5, .main .work .contenedor-slider .contenedor-tarjeta6, .main .work .contenedor-slider .contenedor-tarjeta7, .main .work .contenedor-slider .contenedor-tarjeta8 {
   width: 100%;
   height: 100%;
   z-index: 100;
@@ -1730,8 +1757,8 @@ body .punto {
   position: relative;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta::before, .main .work .contenedor-slider .contenedor-tarjeta2::before, .main .work .contenedor-slider .contenedor-tarjeta3::before, .main .work .contenedor-slider .contenedor-tarjeta4::before, .main .work .contenedor-slider .contenedor-tarjeta5::before, .main .work .contenedor-slider .contenedor-tarjeta6::before, .main .work .contenedor-slider .contenedor-tarjeta7::before {
-  content: '1/7';
+.main .work .contenedor-slider .contenedor-tarjeta::before, .main .work .contenedor-slider .contenedor-tarjeta2::before, .main .work .contenedor-slider .contenedor-tarjeta3::before, .main .work .contenedor-slider .contenedor-tarjeta4::before, .main .work .contenedor-slider .contenedor-tarjeta5::before, .main .work .contenedor-slider .contenedor-tarjeta6::before, .main .work .contenedor-slider .contenedor-tarjeta7::before, .main .work .contenedor-slider .contenedor-tarjeta8::before {
+  content: '1/8';
   position: absolute;
   font-size: 22px;
   top: 10px;
@@ -1744,7 +1771,7 @@ body .punto {
   text-align: center;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta .img, .main .work .contenedor-slider .contenedor-tarjeta2 .img, .main .work .contenedor-slider .contenedor-tarjeta3 .img, .main .work .contenedor-slider .contenedor-tarjeta4 .img, .main .work .contenedor-slider .contenedor-tarjeta5 .img, .main .work .contenedor-slider .contenedor-tarjeta6 .img, .main .work .contenedor-slider .contenedor-tarjeta7 .img {
+.main .work .contenedor-slider .contenedor-tarjeta .img, .main .work .contenedor-slider .contenedor-tarjeta2 .img, .main .work .contenedor-slider .contenedor-tarjeta3 .img, .main .work .contenedor-slider .contenedor-tarjeta4 .img, .main .work .contenedor-slider .contenedor-tarjeta5 .img, .main .work .contenedor-slider .contenedor-tarjeta6 .img, .main .work .contenedor-slider .contenedor-tarjeta7 .img, .main .work .contenedor-slider .contenedor-tarjeta8 .img {
   background: url("/assets/images/trabajos/gifos.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -1756,26 +1783,26 @@ body .punto {
           box-shadow: 5px 5px 50px #000;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta .name-project, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project, .main .work .contenedor-slider .contenedor-tarjeta5 .name-project, .main .work .contenedor-slider .contenedor-tarjeta6 .name-project, .main .work .contenedor-slider .contenedor-tarjeta7 .name-project {
+.main .work .contenedor-slider .contenedor-tarjeta .name-project, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project, .main .work .contenedor-slider .contenedor-tarjeta5 .name-project, .main .work .contenedor-slider .contenedor-tarjeta6 .name-project, .main .work .contenedor-slider .contenedor-tarjeta7 .name-project, .main .work .contenedor-slider .contenedor-tarjeta8 .name-project {
   color: #DEFFFC;
   font-size: 22px;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta5 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta6 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta7 .name-project .go-there {
+.main .work .contenedor-slider .contenedor-tarjeta .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta5 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta6 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta7 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta8 .name-project .go-there {
   color: #508991;
   border-bottom: 1px solid #508991;
   display: inline-block;
   padding: 2px;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta2 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta3 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta4 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta5 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta6 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta7 .tecnologies {
+.main .work .contenedor-slider .contenedor-tarjeta .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta2 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta3 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta4 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta5 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta6 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta7 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta8 .tecnologies {
   color: #E29578;
   font-size: 18px;
   text-shadow: 2px 2px 2px #000;
 }
 
 .main .work .contenedor-slider .contenedor-tarjeta2::before {
-  content: '2/7';
+  content: '2/8';
   position: absolute;
   font-size: 22px;
   top: 10px;
@@ -1820,8 +1847,8 @@ body .punto {
   text-shadow: 2px 2px 2px #000;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta3::before, .main .work .contenedor-slider .contenedor-tarjeta4::before, .main .work .contenedor-slider .contenedor-tarjeta5::before, .main .work .contenedor-slider .contenedor-tarjeta6::before, .main .work .contenedor-slider .contenedor-tarjeta7::before {
-  content: '3/7';
+.main .work .contenedor-slider .contenedor-tarjeta3::before, .main .work .contenedor-slider .contenedor-tarjeta4::before, .main .work .contenedor-slider .contenedor-tarjeta5::before, .main .work .contenedor-slider .contenedor-tarjeta6::before, .main .work .contenedor-slider .contenedor-tarjeta7::before, .main .work .contenedor-slider .contenedor-tarjeta8::before {
+  content: '3/8';
   position: absolute;
   font-size: 22px;
   top: 10px;
@@ -1834,7 +1861,7 @@ body .punto {
   text-align: center;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta3 .img, .main .work .contenedor-slider .contenedor-tarjeta4 .img, .main .work .contenedor-slider .contenedor-tarjeta5 .img, .main .work .contenedor-slider .contenedor-tarjeta6 .img, .main .work .contenedor-slider .contenedor-tarjeta7 .img {
+.main .work .contenedor-slider .contenedor-tarjeta3 .img, .main .work .contenedor-slider .contenedor-tarjeta4 .img, .main .work .contenedor-slider .contenedor-tarjeta5 .img, .main .work .contenedor-slider .contenedor-tarjeta6 .img, .main .work .contenedor-slider .contenedor-tarjeta7 .img, .main .work .contenedor-slider .contenedor-tarjeta8 .img {
   background: url("/assets/images/trabajos/viajes.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -1848,26 +1875,26 @@ body .punto {
           box-shadow: 5px 5px 50px #000;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta3 .name-project, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project, .main .work .contenedor-slider .contenedor-tarjeta5 .name-project, .main .work .contenedor-slider .contenedor-tarjeta6 .name-project, .main .work .contenedor-slider .contenedor-tarjeta7 .name-project {
+.main .work .contenedor-slider .contenedor-tarjeta3 .name-project, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project, .main .work .contenedor-slider .contenedor-tarjeta5 .name-project, .main .work .contenedor-slider .contenedor-tarjeta6 .name-project, .main .work .contenedor-slider .contenedor-tarjeta7 .name-project, .main .work .contenedor-slider .contenedor-tarjeta8 .name-project {
   color: #DEFFFC;
   font-size: 22px;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta3 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta5 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta6 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta7 .name-project .go-there {
+.main .work .contenedor-slider .contenedor-tarjeta3 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta5 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta6 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta7 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta8 .name-project .go-there {
   color: #508991;
   border-bottom: 1px solid #508991;
   display: inline-block;
   padding: 2px;
 }
 
-.main .work .contenedor-slider .contenedor-tarjeta3 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta4 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta5 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta6 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta7 .tecnologies {
+.main .work .contenedor-slider .contenedor-tarjeta3 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta4 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta5 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta6 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta7 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta8 .tecnologies {
   color: #E29578;
   font-size: 18px;
   text-shadow: 2px 2px 2px #000;
 }
 
 .main .work .contenedor-slider .contenedor-tarjeta4::before {
-  content: '4/7';
+  content: '4/8';
   position: absolute;
   font-size: 22px;
   top: 10px;
@@ -1896,7 +1923,7 @@ body .punto {
 }
 
 .main .work .contenedor-slider .contenedor-tarjeta5::before {
-  content: '5/7';
+  content: '5/8';
   position: absolute;
   font-size: 22px;
   top: 10px;
@@ -1925,7 +1952,7 @@ body .punto {
 }
 
 .main .work .contenedor-slider .contenedor-tarjeta6::before {
-  content: '6/7';
+  content: '6/8';
   position: absolute;
   font-size: 22px;
   top: 10px;
@@ -1954,7 +1981,7 @@ body .punto {
 }
 
 .main .work .contenedor-slider .contenedor-tarjeta7::before {
-  content: '7/7';
+  content: '7/8';
   position: absolute;
   font-size: 22px;
   top: 10px;
@@ -1971,6 +1998,35 @@ body .punto {
   -o-object-fit: cover;
      object-fit: cover;
   background: url("/assets/images/trabajos/consoleapp.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  margin-top: 2px;
+  -webkit-box-shadow: 5px 5px 50px #000;
+          box-shadow: 5px 5px 50px #000;
+}
+
+.main .work .contenedor-slider .contenedor-tarjeta8::before {
+  content: '8/8';
+  position: absolute;
+  font-size: 22px;
+  top: 10px;
+  left: 10px;
+  display: block;
+  width: 50px;
+  background: #172A3A;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.main .work .contenedor-slider .contenedor-tarjeta8 .img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: url("/assets/images/trabajos/boru.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
@@ -2037,8 +2093,8 @@ body .punto {
     overflow: hidden;
   }
   .main .work .titulo-work {
-    font-size: 34px;
-    line-height: 46px;
+    font-size: 46px;
+    line-height: 52px;
     display: block;
     text-align: center;
     margin: 0;
@@ -2066,18 +2122,18 @@ body .punto {
   .main .work .contenedor-slider .tajeta-work {
     background-position: bottom;
   }
-  .main .work .contenedor-slider .contenedor-tarjeta .name-project, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project, .main .work .contenedor-slider .contenedor-tarjeta5 .name-project, .main .work .contenedor-slider .contenedor-tarjeta6 .name-project, .main .work .contenedor-slider .contenedor-tarjeta7 .name-project {
+  .main .work .contenedor-slider .contenedor-tarjeta .name-project, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project, .main .work .contenedor-slider .contenedor-tarjeta5 .name-project, .main .work .contenedor-slider .contenedor-tarjeta6 .name-project, .main .work .contenedor-slider .contenedor-tarjeta7 .name-project, .main .work .contenedor-slider .contenedor-tarjeta8 .name-project {
     font-size: 28px;
   }
-  .main .work .contenedor-slider .contenedor-tarjeta .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta5 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta6 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta7 .name-project .go-there {
+  .main .work .contenedor-slider .contenedor-tarjeta .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta5 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta6 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta7 .name-project .go-there, .main .work .contenedor-slider .contenedor-tarjeta8 .name-project .go-there {
     -webkit-transition: 0.3s ease all;
     transition: 0.3s ease all;
   }
-  .main .work .contenedor-slider .contenedor-tarjeta .name-project .go-there:hover, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project .go-there:hover, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project .go-there:hover, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project .go-there:hover, .main .work .contenedor-slider .contenedor-tarjeta5 .name-project .go-there:hover, .main .work .contenedor-slider .contenedor-tarjeta6 .name-project .go-there:hover, .main .work .contenedor-slider .contenedor-tarjeta7 .name-project .go-there:hover {
+  .main .work .contenedor-slider .contenedor-tarjeta .name-project .go-there:hover, .main .work .contenedor-slider .contenedor-tarjeta2 .name-project .go-there:hover, .main .work .contenedor-slider .contenedor-tarjeta3 .name-project .go-there:hover, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project .go-there:hover, .main .work .contenedor-slider .contenedor-tarjeta5 .name-project .go-there:hover, .main .work .contenedor-slider .contenedor-tarjeta6 .name-project .go-there:hover, .main .work .contenedor-slider .contenedor-tarjeta7 .name-project .go-there:hover, .main .work .contenedor-slider .contenedor-tarjeta8 .name-project .go-there:hover {
     font-size: 32px;
     text-shadow: 3px 3px 3px #000;
   }
-  .main .work .contenedor-slider .contenedor-tarjeta .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta2 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta3 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta4 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta5 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta6 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta7 .tecnologies {
+  .main .work .contenedor-slider .contenedor-tarjeta .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta2 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta3 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta4 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta5 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta6 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta7 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta8 .tecnologies {
     font-size: 24px;
   }
   .main .work .contenedor-slider .contenedor-tarjeta2 .name-project {
@@ -2087,10 +2143,10 @@ body .punto {
     color: #E29578;
     font-size: 24px;
   }
-  .main .work .contenedor-slider .contenedor-tarjeta3 .name-project, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project, .main .work .contenedor-slider .contenedor-tarjeta5 .name-project, .main .work .contenedor-slider .contenedor-tarjeta6 .name-project, .main .work .contenedor-slider .contenedor-tarjeta7 .name-project {
+  .main .work .contenedor-slider .contenedor-tarjeta3 .name-project, .main .work .contenedor-slider .contenedor-tarjeta4 .name-project, .main .work .contenedor-slider .contenedor-tarjeta5 .name-project, .main .work .contenedor-slider .contenedor-tarjeta6 .name-project, .main .work .contenedor-slider .contenedor-tarjeta7 .name-project, .main .work .contenedor-slider .contenedor-tarjeta8 .name-project {
     font-size: 28px;
   }
-  .main .work .contenedor-slider .contenedor-tarjeta3 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta4 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta5 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta6 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta7 .tecnologies {
+  .main .work .contenedor-slider .contenedor-tarjeta3 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta4 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta5 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta6 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta7 .tecnologies, .main .work .contenedor-slider .contenedor-tarjeta8 .tecnologies {
     font-size: 24px;
   }
 }
@@ -2197,6 +2253,41 @@ body .punto {
 }
 
 .main .habilities .contenedor-habilidades .html::before {
+  content: 'HTML';
+  display: block;
+  position: absolute;
+  top: 80%;
+  width: 100px;
+  left: 30%;
+}
+
+.main .habilities .contenedor-habilidades .tailwind {
+  background: url("/assets/images/habilidades/tailwindcss-mark.cb8046c163f77190406dfbf4dec89848.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 60px;
+  margin-left: 10px;
+}
+
+.main .habilities .contenedor-habilidades .tailwind::before {
+  content: 'TAILWIND';
+  display: block;
+  position: absolute;
+  top: 80%;
+  width: 100px;
+  left: 10%;
+}
+
+.main .habilities .contenedor-habilidades .git {
+  background: url("/assets/images/habilidades/giticono.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 50px;
+  margin-left: 10px;
+}
+
+.main .habilities .contenedor-habilidades .git::before {
   content: 'HTML';
   display: block;
   position: absolute;
@@ -2463,13 +2554,11 @@ body .punto {
 }
 
 @media screen and (min-width: 968px) {
-  .main .habilities .titulo-habilities {
-    font-size: 34px;
-    line-height: 46px;
+  .main .habilities .contenedor-title .titulo-habilities {
     display: block;
     text-align: center;
-    font-size: 34px;
-    line-height: 46px;
+    font-size: 46px;
+    line-height: 52px;
     display: block;
     text-align: center;
     margin: 0;

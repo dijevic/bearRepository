@@ -35,7 +35,7 @@
 
             .letter{
                 font-size: 75px;
-                color: #508991;
+                color: #E29578;
                 line-height: 42px;
                 text-shadow: 4px 4px 4px #000;
 
@@ -116,7 +116,7 @@
             min-width: 100%;
             position: relative;
             &::before{
-                content: '1/7';
+                content: '1/8';
                 position: absolute;
                 font-size: 22px;
                 top: 10px;
@@ -164,7 +164,7 @@
             .contenedor-tarjeta2{
                 @extend .contenedor-tarjeta;
                 &::before{
-                    content: '2/7';
+                    content: '2/8';
                     position: absolute;
                     font-size: 22px;
                     top: 10px;
@@ -208,7 +208,7 @@
             .contenedor-tarjeta3{
                 @extend .contenedor-tarjeta;
                 &::before{
-                    content: '3/7';
+                    content: '3/8';
                     position: absolute;
                     font-size: 22px;
                     top: 10px;
@@ -252,7 +252,7 @@
             .contenedor-tarjeta4{
                 @extend .contenedor-tarjeta3;
                 &::before{
-                    content: '4/7';
+                    content: '4/8';
                     position: absolute;
                     font-size: 22px;
                     top: 10px;
@@ -282,7 +282,7 @@
             .contenedor-tarjeta5{
                 @extend .contenedor-tarjeta3;
                 &::before{
-                    content: '5/7';
+                    content: '5/8';
                     position: absolute;
                     font-size: 22px;
                     top: 10px;
@@ -312,7 +312,7 @@
             .contenedor-tarjeta6{
                 @extend .contenedor-tarjeta3;
                 &::before{
-                    content: '6/7';
+                    content: '6/8';
                     position: absolute;
                     font-size: 22px;
                     top: 10px;
@@ -342,7 +342,7 @@
             .contenedor-tarjeta7{
                 @extend .contenedor-tarjeta3;
                 &::before{
-                    content: '7/7';
+                    content: '7/8';
                     position: absolute;
                     font-size: 22px;
                     top: 10px;
@@ -359,6 +359,36 @@
                 .img{
                     object-fit: cover;
                     background: url('/assets/images/trabajos/consoleapp.png');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: left;
+                    width: 100%;
+                    height: 75%;
+                    object-fit: cover;
+                    margin-top: 2px;
+                    box-shadow: 5px 5px 50px #000;
+                }
+            }
+            .contenedor-tarjeta8{
+                @extend .contenedor-tarjeta3;
+                &::before{
+                    content: '8/8';
+                    position: absolute;
+                    font-size: 22px;
+                    top: 10px;
+                    left: 10px;
+                    display: block;
+                    width: 50px;
+                    background: #172A3A;
+                    border-radius:20px ;
+                    color: #fff;
+                    text-align: center;
+
+                    
+                }
+                .img{
+                    object-fit: cover;
+                    background: url('/assets/images/trabajos/boru.png');
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-position: left;

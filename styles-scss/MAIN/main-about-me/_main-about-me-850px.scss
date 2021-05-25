@@ -2,8 +2,8 @@
     .main{
         .about-me{
             .titulo-about{
-                font-size: 34px;
-                line-height: 46px;
+                font-size: 46px;
+                line-height: 52px;
                 display:block;
                 text-align:center;
                 border:none;
@@ -16,14 +16,22 @@
                 grid-template-columns: repeat(2,1fr);
                 grid-gap:30px;
                 margin-top: 22px;
-                .card2{
+                .card2,.card1,.card4, .card3{
                     position: relative;
                     top: 50px;
+                    .text{
+                        font-size:28px;
+                        color: #fff
+                    }
                 }
               
                 .card4{
                     position: relative;
                     top: 20px;
+                    .text{
+                        font-size:28px;
+                        color: #fff
+                    }
                 }
                  .card1{
                      animation-name: lightSpeedInLeft;
@@ -59,6 +67,8 @@
                         transition: 5s ease all;
                         animation-duration: 0.8s;
                         animation-iteration-count: initial;
+                    
+
                      }
                     }
                
@@ -93,12 +103,14 @@
                       transition: 5s ease all;
                       animation-duration: 0.8s;
                       animation-iteration-count: initial;
+                      
                    }
                     
                 }
                
             }
             .card3{
+                
               @extend .card1;
             }.card4{
               @extend .card2;
