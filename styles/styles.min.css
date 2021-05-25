@@ -1353,7 +1353,7 @@ body .punto {
   width: 100%;
   text-align: center;
   margin: 0px auto;
-  margin-top: 10px;
+  margin-top: 25px;
   font-family: 'oswald';
   font-weight: 494;
   color: #fff;
@@ -1375,6 +1375,7 @@ body .punto {
   font-size: 22px;
   text-align: left;
   margin-top: 30px;
+  line-height: 30px;
 }
 
 .main .about-me .contenedor .story .text .name, .main .about-me .contenedor .story2 .text .name, .main .about-me .contenedor .story .text .carrera, .main .about-me .contenedor .story2 .text .carrera {
